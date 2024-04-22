@@ -17,7 +17,7 @@
     --green: #5C8F21;
     --red: #BF1717;
     --yellow: #F9DC5C;
-    --light-blue: #edeff0;
+    --white: #edeff0;
     --grey: #696969;
 }
 
@@ -46,13 +46,13 @@ body {
 }
 
 .light {
-    background-color: var(--light-blue);
+    background-color: var(--white);
     color: var(--dark-blue);
 }
 
 .dark {
     background-color: var(--dark-blue);
-    color: var(--light-blue);
+    color: var(--white);
 }
 
 main {
@@ -104,7 +104,7 @@ footer p {
     float: left;
 }
 
-.logo img {
+#logo {
     height: 25px;
 }
 
@@ -129,6 +129,10 @@ footer p {
 
 .nav-button {
     border: none;
+}
+
+#sun {
+    display: none;
 }
 
 /* ============================================================================================================
@@ -163,8 +167,8 @@ footer p {
 }
 
 .home h2 {
-    border-top: 2px dashed var(--dark-blue);
-    border-bottom: 2px dashed var(--dark-blue);
+    border-top: 2px dashed inherit;
+    border-bottom: 2px dashed inherit;
     padding: 5px;
     width: fit-content;
 }
