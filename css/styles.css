@@ -1,0 +1,200 @@
+/* ============================================================================================================
+                                                
+                                            GENERAL STYLING
+
+===============================================================================================================*/
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dark-blue: #163746;
+    --green: #5C8F21;
+    --red: #BF1717;
+    --yellow: #F9DC5C;
+    --light-blue: #edeff0;
+    --grey: #696969;
+}
+
+.varela-round-regular {
+    font-family: "Varela Round", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.unica-one-regular {
+    font-family: "Unica One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+a,
+a:visited {
+    color: currentColor;
+    text-decoration: none;
+}
+
+body {
+    /* opacity: 0;
+    transition: opacity 500ms; */
+    font-family: "Varela Round", sans-serif;
+}
+
+.light {
+    background-color: var(--light-blue);
+    color: var(--dark-blue);
+}
+
+.dark {
+    background-color: var(--dark-blue);
+    color: var(--light-blue);
+}
+
+main {
+    position: fixed;
+    top: calc(6vh + 29px);
+    bottom: calc(6vh + 11px);
+    right: 0;
+    left: 0;
+    padding: 5vh 5vw;
+}
+
+/* ============================================================================================================
+                                                
+                                        HEADER/FOOTER STYLING
+
+===============================================================================================================*/
+
+header,
+footer {
+    padding: 0 6vw;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    right: 0;
+}
+
+header {
+    top: 6vh;
+    z-index: 3;
+}
+
+footer {
+    bottom: 6vh;
+}
+
+footer p {
+    font-size: xx-small;
+    text-align: center;
+}
+
+.header-left,
+.header-right {
+    width: 50%;
+}
+
+.header-left {
+    float: left;
+}
+
+.logo img {
+    height: 25px;
+}
+
+.header-right {
+    float: right;
+}
+
+.header-right ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+}
+
+.header-right li {
+    margin-left: 20px;
+}
+
+.language-switch a {
+    font-size: small;
+    font-weight: 600;
+}
+
+.nav-button {
+    border: none;
+}
+
+/* ============================================================================================================
+                                                
+                                       HOME PAGE STYLING
+
+===============================================================================================================*/
+
+.home {
+    text-align: center;
+    font-family: 'Unica One', 'Varela Round', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home h1 {
+    font-size: 1rem;
+}
+
+.name {
+    text-shadow: 2px 2px 4px var(--grey);
+}
+
+.full-name {
+    font-size: 1.5rem;
+}
+
+.nickname {
+    font-size: 1.75rem;
+}
+
+.home h2 {
+    border-top: 2px dashed var(--dark-blue);
+    border-bottom: 2px dashed var(--dark-blue);
+    padding: 5px;
+    width: fit-content;
+}
+
+.home h2,
+.home-links-container {
+    margin-top: 5px;
+}
+
+.home h2,
+.home-link {
+    font-size: .8rem;
+}
+
+.home-links-container {
+    display: flex;
+    justify-content: space-between;
+    width: fit-content;
+}
+
+.home-link-wrapper:first-of-type {
+    margin-right: 7px;
+}
+
+.home-link {
+    font-weight: 600;
+}
+
+.arrow {
+    margin-right: 5px;
+}
+
+
