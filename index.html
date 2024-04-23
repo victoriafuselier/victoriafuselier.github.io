@@ -11,6 +11,28 @@
     <title>Home</title>
 </head>
 <body class="light">
+    <div class="nav">
+        <div class="nav-wrapper">
+            <ul>
+                <li>
+                    <i class="fa-solid fa-arrow-right arrow"></i>
+                    <span class="nav-link" onclick="transitionToPage('index.html')">Home</span>
+                </li>
+                <li>
+                    <i class="fa-solid fa-arrow-right arrow"></i>
+                    <span class="nav-link" onclick="transitionToPage('about.html')">About</span>
+                </li>
+                <li>
+                    <i class="fa-solid fa-arrow-right arrow"></i>
+                    <span class="nav-link" onclick="transitionToPage('portfolio.html')">Work</span>
+                </li>
+                <li>
+                    <i class="fa-solid fa-arrow-right arrow"></i>
+                    <span class="nav-link" onclick="transitionToPage('contact.html')">Contact</span>
+                </li>
+            </ul>
+        </div>
+    </div>
     <header>
         <div class="header-left">
             <div class="logo-container">
@@ -27,7 +49,7 @@
                     <i id="sun" class="fa-solid fa-sun fa-lg"></i>
                 </li>
                 <li class="nav-button-container">
-                    <i id="nav-button" class="fa-solid fa-bars fa-xl"></i>
+                    <i id="nav-button" class="fa-solid fa-bars fa-xl" aria-expanded="false"></i>
                 </li>
             </ul>
         </div>
@@ -48,6 +70,7 @@
         <p>Designed and coded by Vic &copy; 2024</p>
     </footer>
     <script src="js/theme.js"></script>
+    <script src="js/nav.js"></script>
     <script src="https://kit.fontawesome.com/a876f253a3.js" crossorigin="anonymous"></script>
 </body>
 </html>

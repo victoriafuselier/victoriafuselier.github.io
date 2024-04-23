@@ -19,6 +19,7 @@
     --yellow: #F9DC5C;
     --white: #edeff0;
     --grey: #696969;
+    --nav-accent-color: #F9DC5C;
 }
 
 .varela-round-regular {
@@ -55,13 +56,21 @@ body {
     color: var(--white);
 }
 
-main {
+main,
+.nav {
     position: fixed;
     top: calc(6vh + 29px);
     bottom: calc(6vh + 11px);
     right: 0;
     left: 0;
     padding: 5vh 5vw;
+}
+
+.home,
+h1,
+h2,
+.nav {
+    font-family: 'Unica One', 'Varela Round', sans-serif;
 }
 
 /* ============================================================================================================
@@ -133,8 +142,64 @@ footer p {
     border: none;
 }
 
+.nav {
+    display: none;
+}
+
 #sun {
     display: none;
+}
+
+/* ============================================================================================================
+                                                
+                                            NAV STYLING
+
+===============================================================================================================*/
+
+.nav-wrapper {
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+}
+
+.nav ul {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    list-style-type: none;
+    max-height: 200px;
+    padding-left: 15vw;
+}
+
+.nav li {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.nav-link {
+    z-index: 3;
+    transition: border 2s ease;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+.nav-link::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 6px;
+    background-color: var(--nav-accent-color);
+    transition: width .5s ease-out;
+}
+
+.nav-link:hover::before {
+    width: 100%;
 }
 
 /* ============================================================================================================
@@ -145,7 +210,6 @@ footer p {
 
 .home {
     text-align: center;
-    font-family: 'Unica One', 'Varela Round', sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -179,10 +243,6 @@ footer p {
 
 .home h2 {
     margin: 5px 0 7px;
-}
-
-.home h2,
-.home-link {
     font-size: .8rem;
 }
 
@@ -198,6 +258,12 @@ footer p {
 
 .home-link {
     font-weight: 600;
+    font-size: .9rem;
+}
+
+.home-link-wrapper:hover,
+.home-link-wrapper:focus {
+    scale: 1.2;
 }
 
 .arrow {
@@ -224,6 +290,14 @@ footer p {
         margin-left: 30px;
     }
 
+    .nav ul {
+        max-height: 250px;
+    }
+
+    .nav li {
+        font-size: 2.5rem;
+    }
+
     .home h1 {
         font-size: 1.25rem;
     }
@@ -238,11 +312,19 @@ footer p {
 
     .home h2 {
         margin: 7px 0 10px;
+        font-size: 1rem;
     }
 
-    .home h2,
+    .home-links-container {
+        flex-direction: column;
+    }
+
+    .home-link-wrapper:first-of-type {
+        margin: 5px 0 10px;
+    }
+
     .home-link {
-            font-size: 1rem;
+        font-size: 1.2rem;
     }
 
     footer p {
@@ -264,6 +346,15 @@ footer p {
         margin-left: 40px;
     }
 
+    .nav ul {
+        max-height: 300px;
+        padding-left: 20vw;
+    }
+
+    .nav li {
+        font-size: 3rem;
+    }
+
     .home h1 {
         font-size: 1.5rem;
     }
@@ -278,11 +369,11 @@ footer p {
 
     .home h2 {
         margin: 10px 0 15px;
+        font-size: 1.3rem;
     }
 
-    .home h2,
     .home-link {
-            font-size: 1.3rem;
+        font-size: 1.5rem;
     }
 
     footer p {
@@ -304,25 +395,33 @@ footer p {
         margin-left: 50px;
     }
 
+    .nav ul {
+        max-height: 400px;
+    }
+
+    .nav li {
+        font-size: 3.75rem;
+    }
+
     .home h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .full-name {
-        font-size: 3rem;
+        font-size: 3.3rem;
     }
 
     .nickname {
-        font-size: 3.5rem;
+        font-size: 3.75rem;
     }
 
     .home h2 {
         margin: 15px 0 20px;
+        font-size: 1.75rem;
     }
 
-    .home h2,
     .home-link {
-            font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     footer p {
