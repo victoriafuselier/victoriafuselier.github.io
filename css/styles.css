@@ -91,8 +91,10 @@ footer {
 }
 
 footer p {
-    font-size: xx-small;
+    font-size: x-small;
     text-align: center;
+    font-family: 'Unica One', 'Varela Round', sans-serif;
+    font-weight: 600;
 }
 
 .header-left,
@@ -105,7 +107,7 @@ footer p {
 }
 
 #logo {
-    height: 25px;
+    height: 30px;
 }
 
 .header-right {
@@ -148,6 +150,7 @@ footer p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-transform: uppercase;
 }
 
 .home h1 {
@@ -156,6 +159,7 @@ footer p {
 
 .name {
     text-shadow: 2px 2px 4px var(--grey);
+    letter-spacing: 1px;
 }
 
 .full-name {
@@ -167,15 +171,14 @@ footer p {
 }
 
 .home h2 {
-    border-top: 2px dashed inherit;
-    border-bottom: 2px dashed inherit;
+    border-top: 2px dashed currentColor;
+    border-bottom: 2px dashed currentColor;
     padding: 5px;
     width: fit-content;
 }
 
-.home h2,
-.home-links-container {
-    margin-top: 5px;
+.home h2 {
+    margin: 5px 0 7px;
 }
 
 .home h2,
@@ -190,7 +193,7 @@ footer p {
 }
 
 .home-link-wrapper:first-of-type {
-    margin-right: 7px;
+    margin-right: 15px;
 }
 
 .home-link {
@@ -200,5 +203,132 @@ footer p {
 .arrow {
     margin-right: 5px;
 }
+
+/* ============================================================================================================
+                                                
+                                            MEDIA QUERIES
+
+===============================================================================================================*/
+
+@media screen and (min-width: 320px) and (min-height: 400px) {
+
+    header {
+        font-size: medium;
+    }
+
+    #logo {
+        height: 35px;
+    }
+
+    .header-right li {
+        margin-left: 30px;
+    }
+
+    .home h1 {
+        font-size: 1.25rem;
+    }
+
+    .full-name {
+        font-size: 2rem;
+    }
+
+    .nickname {
+        font-size: 2.5rem;
+    }
+
+    .home h2 {
+        margin: 7px 0 10px;
+    }
+
+    .home h2,
+    .home-link {
+            font-size: 1rem;
+    }
+
+    footer p {
+        font-size: small;
+    }
+}
+
+@media screen and (min-width: 768px) and (min-height: 400px) {
+
+    header {
+        font-size: large;
+    }
+
+    #logo {
+        height: 50px;
+    }
+
+    .header-right li {
+        margin-left: 40px;
+    }
+
+    .home h1 {
+        font-size: 1.5rem;
+    }
+
+    .full-name {
+        font-size: 2.5rem;
+    }
+
+    .nickname {
+        font-size: 3rem;
+    }
+
+    .home h2 {
+        margin: 10px 0 15px;
+    }
+
+    .home h2,
+    .home-link {
+            font-size: 1.3rem;
+    }
+
+    footer p {
+        font-size: medium;
+    }
+}
+
+@media screen and (min-width: 1024px) and (min-height: 450px) {
+
+    header {
+        font-size: x-large;
+    }
+
+    #logo {
+        height: 60px;
+    }
+
+    .header-right li {
+        margin-left: 50px;
+    }
+
+    .home h1 {
+        font-size: 2rem;
+    }
+
+    .full-name {
+        font-size: 3rem;
+    }
+
+    .nickname {
+        font-size: 3.5rem;
+    }
+
+    .home h2 {
+        margin: 15px 0 20px;
+    }
+
+    .home h2,
+    .home-link {
+            font-size: 1.5rem;
+    }
+
+    footer p {
+        font-size: large;
+    }
+}
+
 
 
