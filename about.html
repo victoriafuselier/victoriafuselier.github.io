@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/logo-dark.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Unica+One&family=Varela+Round&display=swap" rel="stylesheet">
+    <title>About</title>
+</head>
+<body class="light">
+    <div class="nav">
+        <div class="nav-wrapper">
+            <ul>
+                <li>
+                    <i class="fa-solid fa-arrow-right arrow"></i>
+                    <span class="nav-link" onclick="transitionToPage('index.html')">Home</span>
+                </li>
+                <li>
+                    <i class="fa-solid fa-arrow-right arrow"></i>
+                    <span class="nav-link" onclick="transitionToPage('about.html')">About</span>
+                </li>
+                <li>
+                    <i class="fa-solid fa-arrow-right arrow"></i>
+                    <span class="nav-link" onclick="transitionToPage('work.html')">Work</span>
+                </li>
+                <li>
+                    <i class="fa-solid fa-arrow-right arrow"></i>
+                    <span class="nav-link" onclick="transitionToPage('contact.html')">Contact</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <header>
+        <div class="header-left">
+            <div class="logo-container">
+                <img id="logo" src="images/logo-dark.png">
+            </div>
+        </div>
+        <div class="header-right">
+            <ul>
+                <li class="language-switch-container">
+                    <a class="language-switch" id="language-switch">FR</a>
+                </li>
+                <li class="theme-switch-container">
+                    <i id="moon" class="fa-solid fa-moon fa-lg"></i>
+                    <i id="sun" class="fa-solid fa-sun fa-lg"></i>
+                </li>
+                <li class="nav-button-container">
+                    <i id="nav-button" class="fa-solid fa-bars fa-xl" aria-expanded="false"></i>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <main class="about">
+        <div id="pop-up-div" class="hidden pop-up-div"></div>
+        <div class="about-wrapper">
+            <div class="about-left">
+                <div class="about-heading">
+                    <h1>About Me</h1>
+                </div>
+                <hr class="divider-line">
+                <p class="about-p">Hi, my name is Victoria. My friends call me Vic. I'm an aspiring web developer in search of an entry-level position in front-end web development. My strengths include a good eye for design, exceptional grammar/writing skills, time-management proficiency, and great teamwork capabilities. If I sound like a good fit for your team, please <span class="message-link" onclick="transitionToPage('contact.html')">send me a message</span>.</p>                        
+                    <!-- <a class="message-link" href="contact.html">send me a message</a>.</p> -->
+                <div class="about-button-container">
+                    <div class="about-button-wrapper">
+                        <button class="about-button" id="education-button" href="education.html"><img class="arrow" src="images/arrow.png"></img>Education</button>
+                    </div>
+                    <div class="about-button-wrapper">
+                        <button class="about-button" id="skills-button" href="skills"><img class="arrow" src="images/arrow.png"></img>Skills</button>
+                    </div>
+                </div> 
+            </div>
+            <div class="about-right">
+                <img class="profile-img" src="images/me.jpeg" alt="Victoria smiling, wearing hat and sunglasses">
+            </div>
+        </div>
+    </main>
+    <footer>        
+    </footer>
+    <script src="js/theme.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/about.js"></script>
+    <script src="https://kit.fontawesome.com/a876f253a3.js" crossorigin="anonymous"></script>
+</body>
+</html>
