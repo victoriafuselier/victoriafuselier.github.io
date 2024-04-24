@@ -565,9 +565,6 @@ footer p {
     color: var(--white);
     background-color: var(--green);
     -webkit-transform: scale(1.1);
-    border: none;
-    text-decoration: none;
-    padding: 5px 10px;
 }
 
 .photo-overlay {
