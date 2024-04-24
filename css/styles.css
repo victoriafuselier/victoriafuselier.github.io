@@ -14,6 +14,7 @@
 
 :root {
     --dark-blue: #163746;
+    --blue: #1f6585;
     --green: #5C8F21;
     --red: #BF1717;
     --yellow: #F9DC5C;
@@ -69,7 +70,8 @@ main,
 .home,
 h1,
 h2,
-.nav {
+.nav,
+.photo-overlay {
     font-family: 'Unica One', 'Varela Round', sans-serif;
 }
 
@@ -281,8 +283,14 @@ footer p {
 ===============================================================================================================*/
 
 .about {
+    position: absolute;
+    bottom: 0;
+}
+
+.about-wrapper {
     display: flex;
     flex-direction: column-reverse;
+    margin: 0 auto;
 }
 
 .about h1,
@@ -482,9 +490,14 @@ footer p {
 
 /* ============================================================================================================
                                                 
-                                            PORTFOLIO PAGE
+                                            WORK PAGE
 
 ===============================================================================================================*/
+
+.work {
+    position: absolute;
+    bottom: unset;
+}
 
 .projects-wrapper {
     padding: 20px 10px;
@@ -532,24 +545,24 @@ footer p {
 }
 
 .project-photo a {
-    color: white;
-    font-weight: 500;
+    color: var(--white);
+    font-weight: 600;
     font-size: .8rem;
     cursor: pointer;
     position: absolute;
-    bottom: 8px;
-    background-color: var(--blue);
+    bottom: 10px;
+    background-color: var(--grey);
     border-radius: 5px;
-    padding: 5px 8px;
+    padding: 2px 8px;
     -webkit-transition: transform .5s ease-in-out, background-color .25s ease-in-out;
-    border: 1px solid var(--blue);
+    border: 1px solid var(--grey);
     text-decoration: none;
 }
 
 .project-photo a:hover,
 .project-photo a:focus {
-    color: white;
-    background-color: var(--bright-green);
+    color: var(--white);
+    background-color: var(--green);
     -webkit-transform: scale(1.1);
     border: none;
     text-decoration: none;
@@ -557,7 +570,7 @@ footer p {
 }
 
 .photo-overlay {
-	color: white;
+	color: var(--white);
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -572,9 +585,9 @@ footer p {
 	background: rgba(0, 0, 0, .8); 
     opacity: 0;
     -webkit-transition-property: opacity;
-    -webkit-transition-duration: .5s;
-    font-family: 'Fira Sans Condensed', sans-serif;
+    -webkit-transition-duration: 1s;
     text-transform: uppercase;
+    font-weight: 600;
 }
 
 .photo-overlay h2 {
@@ -586,13 +599,11 @@ footer p {
 
 .photo-overlay p {
     font-size: .9rem;
-    font-weight: 500;
     width: 98%;
     max-width: 98%;
     text-align: center;
     margin: 0;
     line-height: 1;
-    font-family: 'Fira Sans Condensed', sans-serif;
 }
 
 .projects-footer {
@@ -616,6 +627,8 @@ footer p {
 
 
 .contact {
+    position: absolute;
+    bottom: unset;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -626,13 +639,11 @@ footer p {
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 10px;
 }
 
 .contact-left,
 .contact-right {
     padding: 10px;
-    max-width: 90vw;
     margin: 0 auto;
 }
 
@@ -647,8 +658,7 @@ footer p {
 }
 
 .contact-right {
-    max-width: 95vw;
-    width: 95%;
+    
 }
 
 form,
@@ -700,9 +710,9 @@ path {
 }
 
 .form {
-    padding: 30px 40px;
-    background-color: var(--medium-blue);
-    color: white;
+    padding: 30px 15px;
+    background-color: var(--blue);
+    color: var(--white);
     border-radius: 5px;
     letter-spacing: .5px;
 }
@@ -710,12 +720,15 @@ path {
 .form-control h2 {
     text-align: center;
     font-size: 1.2rem;
+    font-family: 'Varela Round';
+    text-transform: uppercase;
 }
 
 .form-control {
     margin-bottom: 10px;
     padding-bottom: 20px;
     position: relative;
+    text-transform: uppercase;
 }
 
 .form-control label {
@@ -732,7 +745,7 @@ path {
     font-family: 'Poppins', sans-serif;
     font-size: 1rem;
     width: 100%;
-    padding: 10px;
+    padding: 10px 35px 10px 10px;
 }
 
 .form-control i {
@@ -758,12 +771,21 @@ path {
     margin: 0 auto;
     padding: 5px 40px;
     background-color: var(--dark-blue);
-    color: white;
+    color: var(--white);
     border-radius: 5px;
     font-family: inherit;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 600;
     letter-spacing: .5px;
+    text-transform: uppercase;
+    transition: all .5s ease;
+    border: none;
+}
+
+#send-button:hover,
+#send-button:focus {
+    transform: scale(1.2);
+    background-color: var(--green);
 }
 
 /* ============================================================================================================
@@ -774,7 +796,7 @@ path {
 
 @media screen and (min-width: 320px) and (min-height: 400px) {
     .projects-footer {
-        width: 350px;
+        max-width: 350px;
     }
 
     #portfolio-container {
@@ -813,7 +835,7 @@ path {
         font-size: 2.5rem;
     }
 
-    .about {
+    .about-wrapper {
         width: 95%;
         flex-direction: row;
         justify-content: center;
@@ -865,6 +887,18 @@ path {
     #education li, #skills li {
         font-size: 1.1rem;
     }
+
+    .about {
+        bottom: 0;
+    }
+}
+
+@media screen and (min-height: 600px) {
+    
+    .contact {
+        bottom: 0;
+    }
+
 }
 
 @media screen and (min-width: 320px) and (min-height: 400px) {
@@ -978,7 +1012,7 @@ path {
         font-size: 2.75rem;
     }
 
-    .about {
+    .about-wrapper {
         width: 650px;
     }
 
@@ -1008,7 +1042,7 @@ path {
 	}
 
     .projects-footer {
-        width: 500px;
+        max-width: 500px;
         font-size: 1.25rem;
     }
     
@@ -1069,7 +1103,7 @@ path {
         font-size: large;
     }
 
-    .about {
+    .about-wrapper {
         width: 900px;
     }
 
