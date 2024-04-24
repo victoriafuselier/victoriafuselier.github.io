@@ -680,10 +680,16 @@ form,
 .contact svg {
     height: 35px;
     width: 45px;
+    transition: transform .5s ease;
 }
 
 .contact-icons {
     fill: var(--dark-blue);
+}
+
+.contact svg:hover,
+.contact svg:focus {
+    transform: rotate(15deg) scale(1.2);
 }
 
 .form {
