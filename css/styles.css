@@ -682,28 +682,7 @@ form,
     width: 45px;
 }
 
-.mail,
-.mail path,
-.mail polyline {
-    fill: none;
-}
-
-.contact svg:hover,
-.contact svg:focus {
-    -webkit-transform: rotate(15deg) scale(1.2);
-}
-
-.github, 
-.linkedIn,
-.treehouse,
-.mail {
-    stroke: var(--dark-blue);
-}
-
-.github,
-.linkedIn,
-.treehouse,
-path {
+.contact-icons {
     fill: var(--dark-blue);
 }
 
