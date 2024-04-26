@@ -42,21 +42,24 @@ window.addEventListener('load', (e) => {
     }
 });
 
-window.addEventListener("DOMContentLoaded", () => {
-    const themeSwitch = document.querySelector('.theme-switch-container');
-    const body = document.querySelector('body');
-    themeSwitch.addEventListener('click', () => {
-        if (body.classList.contains('light')) {
-            localStorage.clear();
-            localStorage.setItem('theme', 'dark');
-            setDarkMode();
-        } else if (body.classList.contains('dark')) {
-            localStorage.clear();
-            localStorage.setItem('theme', 'light');
-            setLightMode();
-        }
+if (document.getElementById("theme-switch") != null) {
+    window.addEventListener("DOMContentLoaded", () => {
+        const themeSwitch = document.querySelector('.theme-switch-container');
+        const body = document.querySelector('body');
+        themeSwitch.addEventListener('click', () => {
+            if (body.classList.contains('light')) {
+                localStorage.clear();
+                localStorage.setItem('theme', 'dark');
+                setDarkMode();
+            } else if (body.classList.contains('dark')) {
+                localStorage.clear();
+                localStorage.setItem('theme', 'light');
+                setLightMode();
+            }
+        });
     });
-});
+}
+
 
 
 
