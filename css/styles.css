@@ -137,6 +137,7 @@ body,
 .nav-link,
 .home-link,
 .about-button,
+.message-link,
 .photo-overlay a,
 #send-button {
     cursor: pointer;
@@ -366,7 +367,7 @@ footer p {
 .about h1,
 .projects h1,
 .contact h1 {
-    font-size: 2.25rem;
+    font-size: 2.75rem;
 }
 
 .divider-line {
@@ -406,16 +407,16 @@ footer p {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    margin: 0 0 5vh;
+    margin: 30px 0 60px;
 }
 
 .about-button-wrapper:first-of-type {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .about-button {
     border: none;
-    font-size: 1.25rem;
+    font-size: 1.75rem;
     font-weight: 600;
     background: transparent;
     color: currentColor;
@@ -945,7 +946,7 @@ form,
     .about h1,
     .projects h1,
     .contact h1 {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
 
     .about-wrapper {
@@ -978,6 +979,14 @@ form,
 
     .about-button-container {
         margin: 0;
+    }
+
+    .about-button-wrapper:first-of-type {
+        margin-bottom: 10px;
+    }
+
+    .about-button {
+        font-size: 1.5rem;
     }
 
     .profile-img {
@@ -1127,7 +1136,7 @@ form,
     .about h1,
     .projects h1,
     .contact h1 {
-        font-size: 2.75rem;
+        font-size: 3.25rem;
     }
 
     .about-wrapper {
@@ -1138,9 +1147,9 @@ form,
         font-size: 1rem;
     }
 
-    .about-button {
+    /* .about-button {
         font-size: 1.5rem;
-    }
+    } */
 
     #pop-up-box {
         width: fit-content;
@@ -1250,7 +1259,7 @@ form,
     .about h1,
     .projects h1,
     .contact h1 {
-        font-size: 3rem;
+        font-size: 3.5rem;
     }
 
     .about-p {
