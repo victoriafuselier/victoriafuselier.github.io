@@ -976,7 +976,9 @@ form,
     #education li, #skills li {
         font-size: 1.1rem;
     }
+}
 
+@media screen and (min-width: 600px) and (min-height: 500px) {
     .about {
         bottom: 0;
         display: flex;
