@@ -208,10 +208,10 @@ footer p {
     font-size: larger;
 }
 
-.language-switch-container,
-.theme-switch-container {
+/* #language-switch,
+#theme-switch {
     transition: tranform 1s ease;
-}
+} */
 
 .nav-button {
     border: none;

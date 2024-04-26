@@ -13,12 +13,12 @@ educationButton.addEventListener('click', () => {
     
     popUpDiv.innerHTML = `<div id='pop-up-box'>
                             <button class="close">x</button>
-                            <h2>Education</h2>
+                            <h2>Éducation</h2>
                             <ul id="education">
-                                <li>Bachelor's Degree, Louisiana State University</li>
+                                <li>Baccalauréat, Université d'État de Louisiane</li>
                                 <li>FreeCodeCamp</li>
-                                <li>Front-End Web Development Track, Treehouse</li>
-                                <li>Front-End Web Development Techdegree, Treehouse</li>
+                                <li>Piste de développement Web front-end, Treehouse</li>
+                                <li>Diplôme technologique en développement Web front-end, Treehouse</li>
                             </ul>
                         </div>`;
 
@@ -44,44 +44,43 @@ skillsButton.addEventListener('click', () => {
                                             <li>HTML</li>
                                             <li>CSS</li>
                                                 <ul class="sublist">
-                                                    <li>Grid</li>
-                                                    <li>Flexbox</li>
-                                                    <li>Transforms and Transitions</li>
-                                                    <li>Keyframe Animations</li>
+                                                    <li>Grille</li>
+                                                    <li>Boîte flexible</li>
+                                                    <li>Transformations et transitions</li>
+                                                    <li>Animations d'images clés</li>
                                                     <li>Sass</li>
                                                     <ul>
-                                                        <li class="sublist-level-2">and more!</li>
+                                                        <li class="sublist-level-2">et plus!</li>
                                                     </ul>                            
                                                 </ul>
                                             <li>JavaScript</li>
                                                 <ul class="sublist">
-                                                    <li>DOM Selectors</li>
-                                                    <li>DOM Manipulation</li>
-                                                    <li>DOM Traversal</li>
-                                                    <li>Callback functions</li>
-                                                    <li>Array Methods</li>
-                                                    <li>Array Iteration Methods</li>
-                                                    <li>Object-Oriented JavaScript</li>
-                                                    <li>Object Interactions</li>
-                                                    <li>Fetch API</li>
+                                                    <li>Sélecteurs DOM</li>
+                                                    <li>Manipulation du DOM</li>
+                                                    <li>Traversée du DOM</li>
+                                                    <li>Fonctions de rappel</li>
+                                                    <li>Méthodes de tableau</li>
+                                                    <li>Méthodes d'itération de tableau</li>
+                                                    <li>JavaScript orienté objet</li>
+                                                    <li>Interactions d'objets</li>
+                                                    <li>Récupérer l'API</li>
                                                         <ul>
-                                                            <li class="sublist-level-2">and more!</li>
+                                                            <li class="sublist-level-2">et plus!</li>
                                                         </ul>
                                                 </ul>
-                                            <li>Responsive Design</li>
+                                            <li>Conception réactive</li>
                                             <li>Bootstrap</li>
                                             <li>Github</li>
-                                            <li>SVG Basics</li>
+                                            <li>Les bases du SVG</li>
                                             <li>JQuery</li>
-                                            <li>AJAX Basics</li>
-                                            <li>Debugging with Chrome DevTools</li>
-                                            <li>Web Design</li>
-                                            <li>Accessibility</li>
+                                            <li>Les bases d'AJAX</li>
+                                            <li>Débogage avec Chrome DevTools</li>
+                                            <li>Création de sites web</li>
+                                            <li>Accessibilité</li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>`;
-
     let closeButton = document.querySelector('.close');
     closeButton.focus();                            
 });

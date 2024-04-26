@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/icons/logo-dark.png">
+    <script src="https://kit.fontawesome.com/38b77c3a56.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Unica+One&family=Varela+Round&display=swap" rel="stylesheet">
+    <title>Travail</title>
+</head>
+<body class="light">
+    <div class="nav">
+        <div class="nav-wrapper">
+            <ul>
+                <li>
+                    <i class="fa-solid fa-arrow-right"></i>
+                    <span class="nav-link" onclick="transitionToPage('fr-index.html')">Accueil</span>
+                </li>
+                <li>
+                    <i class="fa-solid fa-arrow-right"></i>
+                    <span class="nav-link" onclick="transitionToPage('fr-about.html')">Sur Moi</span>
+                </li>
+                <li>
+                    <i class="fa-solid fa-arrow-right"></i>
+                    <span class="nav-link" onclick="transitionToPage('fr-work.html')">Travail</span>
+                </li>
+                <li>
+                    <i class="fa-solid fa-arrow-right"></i>
+                    <span class="nav-link" onclick="transitionToPage('fr-contact.html')">Contact</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <header>
+        <div class="header-left">
+            <div class="logo-container">
+                <img id="logo" src="images/icons/logo-dark.png">
+            </div>
+        </div>
+        <div class="header-right">
+            <ul>
+                <li class="language-switch-container">
+                    <a class="language-switch" id="language-switch">FR</a>
+                </li>
+                <li class="theme-switch-container">
+                    <i id="moon" class="fa-solid fa-moon fa-xl"></i>
+                    <i id="sun" class="fa-solid fa-sun fa-xl"></i>
+                </li>
+                <li class="nav-button-container">
+                    <i id="nav-button" class="fa-solid fa-bars fa-xl" aria-expanded="false"></i>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <main class="work">
+        <div class="projects">
+            <div class="projects-wrapper">
+                <div class="projects-heading">
+                    <h1>Mon Travail</h1>
+                    <hr class="divider-line">
+                </div>
+                <div id="portfolio-container">
+                    <div class="project-container">
+                        <div class="project-photo">
+                            <img src="images/projects/personal-profile-page.PNG" alt="Personal Profile Page Project">
+                            <div class="photo-overlay">
+                                <h2>PROFIL PERSONNEL</h2>
+                                <p>EN METTANT EN PRATIQUE MES COMPÉTENCES HTML ET CSS, J'AI CRÉÉ UNE PAGE DE PROFIL PERSONNEL.</p>
+                                <a href="https://victoriafuselier.github.io/personal-profile-page/" target="_blank" class="project-links">VOIR LE PROJET</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-container">
+                        <div class="project-photo">
+                            <img src="images/projects/mobile-first-responsive-layout.PNG" alt="Mobile-First Responsive Layout Project">
+                            <div class="photo-overlay">
+                                <h2>MISE EN PAGE RÉACTIVE</h2>
+                                <p>À PARTIR D’IMAGES DE MAQUETTE, J’AI CRÉÉ UN SITE AVEC UNE MISE EN PAGE RÉACTIVE ADAPTÉE AUX MOBILES.</p>
+                                <a href="https://victoriafuselier.github.io/mobile-first-responsive-layout/" target="_blank" class="project-links">VOIR LE PROJET</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-container">
+                        <div class="project-photo">
+                            <img src="images/projects/online-registration-form.PNG" alt="Online Registration Form Project">
+                            <div class="photo-overlay">
+                                <h2>FORMULAIRE D'INSCRIPTION</h2>
+                                <p>EN M'APPUYANT SUR MES COMPÉTENCES EN HTML, CSS ET EN MISE EN PAGE RÉACTIVE, J'AI CRÉÉ UN FORMULAIRE D'INSCRIPTION EN LIGNE.</p>
+                                <a href="https://victoriafuselier.github.io/online-registration-form" target="_blank" class="project-links">VOIR LE PROJET</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-container">
+                        <div class="project-photo">
+                            <img src="images/projects/web-style-guide.PNG" alt="Web Style Guide Project">
+                            <div class="photo-overlay">
+                                <h2>GUIDE DE STYLE WEB</h2>
+                                <p>J'AI CONSTRUIT UN MICRO-FRAMEWORK SASS UTILE QUE JE PEUX UTILISER POUR PROTOTYPER RAPIDEMENT D'AUTRES SITES WEB.</p>
+                                <a href="https://victoriafuselier.github.io/web-style-guide/" target="_blank" class="project-links">VOIR LE PROJET</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-container">
+                        <div class="project-photo">
+                            <img src="images/projects/interactive-photo-gallery.PNG" alt="Interactive Photo Gallery Project">
+                            <div class="photo-overlay">
+                                <h2>GALERIE DE PHOTOS</h2>
+                                <p>J'AI CRÉÉ UNE GALERIE DE PHOTOS INTERACTIVE POUR CORRESPONDRE À UNE IMAGE DE MAQUETTE EN UTILISANT JAVASCRIPT ET CSS GRID LAYOUT.</p>
+                                <a href="https://victoriafuselier.github.io/interactive-photo-gallery/" target="_blank" class="project-links">VOIR LE PROJET</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-container">
+                        <div class="project-photo">
+                            <img src="images/projects/game-show-app.PNG" alt="Game Show App Project">
+                            <div class="photo-overlay">
+                                <h2>APPLICATION DE JEU TÉLÉVISÉ</h2>
+                                <p>J'AI AMÉLIORÉ MES COMPÉTENCES EN JAVASCRIPT EN CRÉANT UNE VERSION POUR NAVIGATEUR D'UN JEU DE DEVINETTES DE MOTS DE TYPE "WHEEL OF FORTUNE".</p>
+                                <a href="https://victoriafuselier.github.io/game-show-app/" target="_blank" class="project-links">VOIR LE PROJET</a>
+                            </div>
+                        </div>
+                    </div>   
+                    <div class="project-container">
+                        <div class="project-photo">
+                            <img src="images/projects/web-app-dashboard.PNG" alt="Web App Dashboard Project">
+                            <div class="photo-overlay">
+                                <h2>L'APPLICATION WEB</h2>
+                                <p>J'AI UTILISÉ UNE MAQUETTE ET DES ICÔNES SVG POUR CRÉER UN TABLEAU DE BORD WEB AVEC DES TABLEAUX ET DES GRAPHIQUES BASÉS SUR JAVASCRIPT.</p>
+                                <a href="https://victoriafuselier.github.io/web-app-dashboard/" target="_blank" class="project-links">VOIR LE PROJET</a>
+                            </div>
+                        </div>
+                    </div>           
+                    <div class="project-container">
+                        <div class="project-photo">
+                            <img src="images/projects/employee-directory.PNG" alt="Employee Directory Project">
+                            <div class="photo-overlay">
+                                <h2>ANNUAIRE DES EMPLOYÉS</h2>
+                                <p>J'AI UTILISÉ UNE API POUR CRÉER UN ANNUAIRE D'EMPLOYÉS POUR UNE STARTUP FICTIVE.</p>
+                                <a href="https://victoriafuselier.github.io/employee-directory/" target="_blank" class="project-links">VOIR LE PROJET</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-container">
+                        <div class="project-photo">
+                            <img src="images/projects/off-the-hook.PNG" alt="Off the Hook Project">
+                            <div class="photo-overlay">
+                                <h2>DÉCROCHÉ</h2>
+                                <p>J'AI CRÉÉ UN SITE WEB POUR UNE START-UP DE PETITE ENTREPRISE AFIN DE TOUCHER PLUS DE CLIENTS.</p>
+                                <a href="https://victoriafuselier.github.io/off-the-hook/" target="_blank" class="project-links">VOIR LE PROJET</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-container" tabindex="0">
+                        <div class="project-photo">
+                            <img src="images/projects/project-placeholder.PNG" alt="Upcoming Project">
+                            <div class="photo-overlay">
+                                <h2>À VENIR</h2>
+                                <p>JE VAIS CRÉER UN SITE WEB PRO BONO POUR UN MUSICIEN LOCAL. ELLE VA ADORER ÇA ET RÉSERVER TOUS LES CONCERTS.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="projects-footer">VOUS VOULEZ VOIR COMMENT J’AI CONSTRUIT CES PROJETS?</p>
+                <p class="projects-footer">CONSULTEZ <a href="https://github.com/victoriafuselier?tab=repositories" target="_blank">MON CODE</a> SUR GITHUB</p>
+            </div>
+        </div>
+    </main>
+    <script src="js/theme.js"></script>
+    <script src="js/nav.js"></script>
+</body>
+</html>

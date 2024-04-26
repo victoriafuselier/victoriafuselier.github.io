@@ -36,5 +36,11 @@ window.transitionToPage = function(href) {
 }
 
 document.addEventListener('DOMContentLoaded', function(event) {
-    document.querySelector('body').style.opacity = 1
+    document.querySelector('body').style.opacity = 1;
+    // const themeSwitch = document.querySelector('#theme-switch');
+    // const languageSwitch = document.querySelector('#language-switch');
+    // setTimeout(function() { 
+    //     themeSwitch.style.transform = "translateY(-100px)";
+    //     languageSwitch.style.transform = "translateY(-100px)";
+    // }, 500)
 })
