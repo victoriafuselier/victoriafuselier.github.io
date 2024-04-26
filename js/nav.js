@@ -10,12 +10,16 @@ navButton.addEventListener('click', () => {
         navButton.setAttribute('aria-expanded', 'true');
         main.style.display ='none';
         navDiv.style.display ='block';
-        footer.style.display = 'none';
+        if (document.querySelector('footer') !== null) {
+            footer.style.display = 'none';
+        }
     } else {
         navButton.setAttribute('aria-expanded', 'false');
         navDiv.style.display = 'none';
         main.style.display = 'flex';    
-        footer.style.display = 'block';   
+        if (document.querySelector('footer') !== null) {
+            footer.style.display = 'block';
+        }   
     }
 })
 
