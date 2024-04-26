@@ -727,11 +727,12 @@ scrollbar-width: none;  /* Firefox */
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
+    height: 100%;
 }
 
 .contact-left,
 .contact-right {
-    padding: 10px;
+    padding: 15px 10px;
     margin: 0 auto;
 }
 
@@ -746,7 +747,9 @@ scrollbar-width: none;  /* Firefox */
 }
 
 .contact-right {
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 form,
@@ -768,8 +771,8 @@ form,
 }
 
 .contact svg {
-    height: 35px;
-    width: 45px;
+    height: 40px;
+    width: 50px;
     transition: transform .5s ease;
 }
 
@@ -1137,8 +1140,8 @@ form,
     }
 
     .contact svg {
-        height: 40px;
-        width: 60px;
+        height: 45px;
+        width: 55px;
     }
 
     #portfolio-container {
@@ -1258,8 +1261,8 @@ form,
     }
 
     .contact svg {
-        height: 45px;
-        width: 65px;
+        height: 50px;
+        width: 60px;
     }
 
     #portfolio-container {
