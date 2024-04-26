@@ -730,6 +730,7 @@ scrollbar-width: none;  /* Firefox */
     justify-content: center;
     flex-wrap: wrap;
     height: 100%;
+    margin: 0 0 40px;
 }
 
 .contact-left,
