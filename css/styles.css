@@ -757,7 +757,7 @@ form,
 
 .contact svg:hover,
 .contact svg:focus {
-    transform: rotate(15deg) scale(1.2);
+    transform: rotate(10deg) scale(1.2);
 }
 
 .form {
