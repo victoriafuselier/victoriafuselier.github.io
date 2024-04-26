@@ -1,37 +1,50 @@
-const body = document.querySelector('body');
-const moon = document.querySelector('#moon');
-const sun = document.querySelector('#sun');
-const logo = document.querySelector('#logo');
-const nav = document.querySelector('#nav-button');
-const themeSwitch = document.querySelector('.theme-switch-container');
-const dividerLine = document.querySelector('.divider-line');
 const contactIconArray = document.getElementsByClassName('contact-icons');
 
-themeSwitch.addEventListener('click', () => {
-    if (body.classList.contains('light')) {
-        body.classList.remove('light');
-        body.classList.add('dark');
-        logo.src = 'images/logo-light.png';
-        nav.style.color = '#edeff0';
-        moon.style.display = 'none';
-        sun.style.display = 'inline-block';
-        dividerLine.style.backgroundColor = '#edeff0';
-        
-        for (let i = 0; i < contactIconArray.length; i++) {
-            contactIconArray[i].style.fill = "#edeff0";
-        }
-
-    } else {
-        body.classList.add('light');
-        body.classList.remove('dark');
-        logo.src = 'images/logo-dark.png';
-        nav.style.color = '#163746';
-        moon.style.display = 'inline-block';
-        sun.style.display = 'none';
-        dividerLine.style.backgroundColor = '#163746';
-
-        for (let i = 0; i < contactIconArray.length; i++) {
-            contactIconArray[i].style.fill = "#163746";
-        }
+function setLightMode() {
+    const body = document.querySelector('body');
+    body.classList.add('light');
+    body.classList.remove('dark');
+    logo.src = 'images/icons/logo-dark.png';
+    for (let i = 0; i < contactIconArray.length; i++) {
+        contactIconArray[i].style.fill = "#163746";
     }
+};
+
+function setDarkMode() {
+    const body = document.querySelector('body');
+    body.classList.remove('light');
+    body.classList.add('dark');
+    logo.src = 'images/icons/logo-light.png';
+    for (let i = 0; i < contactIconArray.length; i++) {
+        contactIconArray[i].style.fill = "#edeff0";
+    }
+};
+
+function checkTheme() {
+    const theme = localStorage.getItem('theme');
+    if (theme === 'light') {
+        setLightMode();        
+    } else if (theme === 'dark') {
+        setDarkMode();
+    }
+};
+
+document.addEventListener('onload', () => {
+    checkTheme();
 });
+
+window.addEventListener("DOMContentLoaded", (event) => {
+    const themeSwitch = document.querySelector('.theme-switch-container');
+    const body = document.querySelector('body');
+    themeSwitch.addEventListener('click', () => {
+        if (body.classList.contains('light')) {
+            setDarkMode();
+        } else if (body.classList.contains('dark')) {
+            setLightMode();
+        }
+    });
+});
+
+
+
+

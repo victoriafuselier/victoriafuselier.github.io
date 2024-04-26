@@ -20,7 +20,6 @@
     --yellow: #F9DC5C;
     --white: #edeff0;
     --grey: #696969;
-    --nav-accent-color: #F9DC5C;
 }
 
 .varela-round-regular {
@@ -52,9 +51,51 @@ body {
     color: var(--dark-blue);
 }
 
+.light .divider-line {
+    background-color: var(--dark-blue);
+}
+
+.light .profile-img,
+.light #pop-up-box {
+    box-shadow: 4px 4px 10px var(--dark-blue), -4px -4px 10px var(--dark-blue), 4px -4px 10px var(--dark-blue), -4px 4px 10px var(--dark-blue);
+}
+
+.light #nav-button {
+    color: var(--dark-blue);
+}
+
+.light #sun {
+    display: none;
+}
+
+.light #moon {
+    display: block;
+}
+
 .dark {
     background-color: var(--dark-blue);
     color: var(--white);
+}
+
+.dark .divider-line {
+    background-color: var(--white);
+}
+
+.dark .profile-img,
+.dark #pop-up-box {
+    box-shadow: 4px 4px 10px var(--grey), -4px -4px 10px var(--grey), 4px -4px 10px var(--grey), -4px 4px 10px var(--grey);
+}
+
+.dark #nav-button {
+    color: var(--white);
+}
+
+.dark #sun {
+    display: block;
+}
+
+.dark #moon {
+    display: none;
 }
 
 main,
@@ -77,6 +118,17 @@ h2,
 
 .hidden {
     display: none;
+}
+
+.language-switch-container,
+.theme-switch-container,
+.nav-button-container,
+.nav-link,
+.home-link,
+.about-button,
+.photo-overlay a,
+#send-button {
+    cursor: pointer;
 }
 
 /* ============================================================================================================
@@ -133,15 +185,18 @@ footer p {
     display: flex;
     justify-content: flex-end;
     list-style-type: none;
+    align-items: center;
 }
 
 .header-right li {
     margin-left: 20px;
 }
 
-.language-switch a {
-    font-size: small;
+.language-switch {
     font-weight: 600;
+    font-family: 'fira sans condensed';
+    letter-spacing: 1px;
+    font-size: larger;
 }
 
 .nav-button {
@@ -190,7 +245,6 @@ footer p {
     transition: border 2s ease;
     display: inline-block;
     position: relative;
-    cursor: pointer;
 }
 
 .nav-link::before {
@@ -200,7 +254,7 @@ footer p {
     bottom: 0;
     width: 0;
     height: 6px;
-    background-color: var(--nav-accent-color);
+    background-color: var(--yellow);
     transition: width .5s ease-out;
 }
 
@@ -362,7 +416,6 @@ footer p {
 .profile-img {
     width: 100%;
     border-radius: 20px;
-    box-shadow: 4px 4px 4px var(--dark-blue), -4px -4px 4px var(--dark-blue), 4px -4px 4px var(--dark-blue), -4px 4px 4px var(--dark-blue);
 }
 
 #message-link {
@@ -496,6 +549,9 @@ footer p {
 .work {
     position: absolute;
     bottom: unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .projects-wrapper {
@@ -535,7 +591,8 @@ footer p {
 
 .project-photo {
 	position: relative;
-	overflow: hidden;
+	/* overflow: hidden; */
+    /* box-shadow: 4px 4px 2px var(--grey), -4px -4px 2px var(--grey), 4px -4px 2px var(--grey), -4px 4px 2px var(--grey); */
 }
 
 .project-container:focus .photo-overlay,
@@ -548,7 +605,6 @@ footer p {
     color: var(--white);
     font-weight: 600;
     font-size: .8rem;
-    cursor: pointer;
     position: absolute;
     bottom: 10px;
     background-color: var(--grey);
@@ -596,8 +652,8 @@ footer p {
 
 .photo-overlay p {
     font-size: .9rem;
-    width: 98%;
-    max-width: 98%;
+    /* width: 98%;
+    max-width: 98%; */
     text-align: center;
     margin: 0;
     line-height: 1;
@@ -1161,10 +1217,6 @@ form,
     .contact svg {
         height: 45px;
         width: 65px;
-    }
-
-    textarea {
-        height: 75px;
     }
 
     #portfolio-container {
