@@ -400,7 +400,7 @@ footer p {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    margin: 0 0 10vh;
+    margin: 0 0 5vh;
 }
 
 .about-button-wrapper:first-of-type {
@@ -895,7 +895,7 @@ form,
 
 ===============================================================================================================*/
 
-@media screen and (min-width: 320px) and (min-height: 400px) {
+@media screen and (min-width: 320px) and (min-height: 300px) {
     .projects-footer {
         max-width: 350px;
     }
@@ -965,7 +965,7 @@ form,
     }
 
     .about-button-container {
-        margin-top: 0;
+        margin: 0;
     }
 
     .profile-img {
