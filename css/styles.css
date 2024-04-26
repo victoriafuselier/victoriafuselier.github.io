@@ -394,6 +394,7 @@ footer p {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    margin: 10vh 0;
 }
 
 .about-button-wrapper:first-of-type {
