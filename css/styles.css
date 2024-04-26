@@ -395,6 +395,11 @@ footer p {
     margin: 20px 0;
 }
 
+.message-link {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
 .about-button-container {
     display: flex;
     flex-direction: column;
