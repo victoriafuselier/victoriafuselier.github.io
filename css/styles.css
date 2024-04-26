@@ -41,9 +41,8 @@ a:visited {
 }
 
 body {
-    /* opacity: 0;
-    transition: opacity 500ms; */
-    font-family: "Varela Round", sans-serif;
+    opacity: 0;
+    transition: opacity 500ms;
 }
 
 .light {
@@ -113,8 +112,18 @@ main,
 h1,
 h2,
 .nav,
-.photo-overlay {
+.about-button,
+#pop-up-box h2,
+.photo-overlay,
+footer p,
+#pop-up-box h2 {
     font-family: 'Unica One', 'Varela Round', sans-serif;
+}
+
+body,
+#pop-up-box,
+.form-control {
+    font-family: "Varela Round", "Fira Sans Condensed", sans-serif;
 }
 
 .hidden {
@@ -161,7 +170,6 @@ footer {
 footer p {
     font-size: x-small;
     text-align: center;
-    font-family: 'Unica One', 'Varela Round', sans-serif;
     font-weight: 600;
 }
 
@@ -195,7 +203,6 @@ footer p {
 
 .language-switch {
     font-weight: 600;
-    font-family: 'fira sans condensed';
     letter-spacing: 1px;
     font-size: larger;
 }
@@ -395,7 +402,6 @@ footer p {
 
 .about-button {
     border: none;
-    font-family: 'Unica One';
     font-size: 1.25rem;
     font-weight: 600;
     background: transparent;
@@ -447,14 +453,12 @@ footer p {
     text-align: center;
     margin-bottom: 20px;
     font-weight: 900;
-    font-family: 'Unica One', sans-serif;
     font-size: 1.5rem;
 }
 
 #pop-up-box {
     font-size: 1rem;
     background-color: white;
-    font-family: 'Poppins', sans-serif;
     color: var(--dark-blue);
     border: none;
     padding: 25px;
@@ -654,6 +658,7 @@ scrollbar-width: none;  /* Firefox */
     -webkit-transition-duration: 1s;
     text-transform: uppercase;
     font-weight: 600;
+    letter-spacing: .5px;
 }
 
 .photo-overlay h2 {
@@ -678,6 +683,7 @@ scrollbar-width: none;  /* Firefox */
     text-align: center;
     margin: 0px auto;
     padding: 0 10px;
+    text-transform: uppercase;
 }
 
 .projects-footer a {
@@ -771,7 +777,6 @@ form,
 .form-control h2 {
     text-align: center;
     font-size: 1.2rem;
-    font-family: 'Varela Round', sans-serif;
 }
 
 .form-control {
