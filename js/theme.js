@@ -42,10 +42,10 @@ window.addEventListener('load', (e) => {
     }
 });
 
-if (document.getElementById("theme-switch") != null) {
-    window.addEventListener("DOMContentLoaded", () => {
-        const themeSwitch = document.querySelector('.theme-switch-container');
-        const body = document.querySelector('body');
+window.addEventListener("DOMContentLoaded", () => {
+    const themeSwitch = document.querySelector('.theme-switch-container');
+    const body = document.querySelector('body');
+    if (document.getElementById("theme-switch") != null) {
         themeSwitch.addEventListener('click', () => {
             if (body.classList.contains('light')) {
                 localStorage.clear();
@@ -57,9 +57,8 @@ if (document.getElementById("theme-switch") != null) {
                 setLightMode();
             }
         });
-    });
-}
-
+    }
+});
 
 
 
