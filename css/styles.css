@@ -122,7 +122,8 @@ footer p,
 
 body,
 #pop-up-box,
-.form-control {
+.form-control,
+.form-control h2 {
     font-family: "Varela Round", "Fira Sans Condensed", sans-serif;
 }
 
@@ -1165,7 +1166,7 @@ form,
     }
 }
 
-@media screen and (min-width: 1024px) and (min-height: 450px) {
+@media screen and (min-width: 1024px) and (min-height: 550px) {
 
     header {
         font-size: x-large;
