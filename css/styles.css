@@ -42,7 +42,7 @@ a:visited {
 
 body {
     opacity: 0;
-    transition: opacity 500ms;
+    transition: opacity 2s;
 }
 
 .light {
@@ -137,6 +137,7 @@ body,
 .nav-link,
 .home-link,
 .about-button,
+.close,
 .message-link,
 .photo-overlay a,
 #send-button {
