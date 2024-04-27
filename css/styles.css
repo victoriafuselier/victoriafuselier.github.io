@@ -161,13 +161,15 @@ footer {
 }
 
 header {
-    top: 6vh;
     z-index: 3;
     font-size: small;
+    top: -100%;
+    transition: top .5s ease;
 }
 
 footer {
-    bottom: 6vh;
+    bottom: -100%;
+    transition: bottom .5s ease;
 }
 
 footer p {
@@ -209,11 +211,6 @@ footer p {
     letter-spacing: 1px;
     font-size: larger;
 }
-
-/* #language-switch,
-#theme-switch {
-    transition: tranform 1s ease;
-} */
 
 .nav-button {
     border: none;
