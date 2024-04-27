@@ -588,9 +588,9 @@ scrollbar-width: none;  /* Firefox */
 
 .projects h1,
 .projects .divider-line {
-    width: 80%;
+    width: 90%;
     margin: 5px auto;
-    max-width: 900px;
+    max-width: 950px;
 }
 
 #portfolio-container {
