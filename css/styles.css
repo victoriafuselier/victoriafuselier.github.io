@@ -40,9 +40,30 @@ a:visited {
     text-decoration: none;
 }
 
-body {
+body,
+main {
+    transition: all .5s ease;
+}
+
+main,
+.nav {
     opacity: 0;
-    transition: opacity 2s;
+}
+
+.nav,
+#language-switch-container,
+#theme-switch-container {
+    transition: all .3s ease;
+}
+
+main,
+.nav {
+    position: fixed;
+    top: calc(6vh + 29px);
+    bottom: calc(6vh + 11px);
+    right: 0;
+    left: 0;
+    padding: 5vh 5vw;
 }
 
 .light {
@@ -96,16 +117,6 @@ body {
 
 .dark #moon {
     display: none;
-}
-
-main,
-.nav {
-    position: fixed;
-    top: calc(6vh + 29px);
-    bottom: calc(6vh + 11px);
-    right: 0;
-    left: 0;
-    padding: 5vh 5vw;
 }
 
 .home,
@@ -170,7 +181,7 @@ header {
 
 footer {
     bottom: -100%;
-    transition: bottom .5s ease;
+    transition: all .5s ease;
 }
 
 footer p {
