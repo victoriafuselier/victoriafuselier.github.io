@@ -59,7 +59,6 @@ form.addEventListener("submit", function(event) {
 	validateForm();
 	if (validateForm()) {
 	  this.submit();
-	  alert("Your message has been sent. Thanks!");
 	}
 });
   
