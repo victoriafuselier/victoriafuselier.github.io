@@ -37,7 +37,7 @@ skillsButton.addEventListener('click', () => {
     
     popUpDiv.innerHTML =    `<div id="pop-up-box">
                                 <button class="close">x</button>
-                                <h2>Skills</h2>
+                                <h2>Compétences</h2>
                                 <div id="pop-up-content">
                                     <div id="pop-up-list">
                                         <ul id="skills">

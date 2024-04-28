@@ -260,7 +260,7 @@ footer p {
 
 .nav-link {
     z-index: 3;
-    transition: border 2s ease;
+    transition: border .5s ease;
     display: inline-block;
     position: relative;
     padding-bottom: 7px;
