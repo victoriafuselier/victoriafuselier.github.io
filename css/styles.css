@@ -40,20 +40,9 @@ a:visited {
     text-decoration: none;
 }
 
-body,
-main {
-    transition: all .5s ease;
-}
-
-main,
-.nav {
+body {
+    transition: opacity 1s ease;
     opacity: 0;
-}
-
-.nav,
-#language-switch-container,
-#theme-switch-container {
-    transition: all 1s ease;
 }
 
 main,
@@ -64,6 +53,7 @@ main,
     right: 0;
     left: 0;
     padding: 5vh 5vw;
+    transition: all 1s ease;
 }
 
 .light {
@@ -113,6 +103,7 @@ main,
 
 .dark #sun {
     display: block;
+    color: var(--white);
 }
 
 .dark #moon {
@@ -175,13 +166,13 @@ footer {
 header {
     z-index: 3;
     font-size: small;
-    top: -100%;
-    transition: top 2s ease;
+    top: -6vh;
+    transition: top 1s ease;
 }
 
 footer {
-    bottom: -100%;
-    transition: all 2s ease;
+    bottom: -6vh;
+    transition: all 1s ease;
 }
 
 footer p {
@@ -218,6 +209,11 @@ footer p {
     margin-left: 20px;
 }
 
+#language-switch-container,
+#theme-switch-container {
+    transition: opacity 1.5s ease;
+}
+
 .language-switch {
     font-weight: 600;
     letter-spacing: 1px;
@@ -228,19 +224,16 @@ footer p {
     border: none;
 }
 
-.nav {
-    display: none;
-}
-
-#sun {
-    display: none;
-}
 
 /* ============================================================================================================
                                                 
                                             NAV STYLING
 
 ===============================================================================================================*/
+
+.nav {
+    display: none;
+}
 
 .nav-wrapper {
     height: 100%;
