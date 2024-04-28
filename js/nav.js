@@ -13,31 +13,35 @@ navButton.addEventListener('click', () => {
     if (isOpened === 'false') {
         navButton.setAttribute('aria-expanded', 'true');
         main.style.opacity = 0;
+        if (document.querySelector('footer') !== null) {
+            footer.style.bottom = '-100%';
+        }
+        languageSwitchContainer.style.opacity = 0;
+        themeSwitchContainer.style.opacity = 0;
         setTimeout(function() {
             navDiv.style.display ='block';
             navDiv.style.opacity = 1;
             main.style.display = 'none';
             main.style.opacity = 0;
-            languageSwitchContainer.style.opacity = 0;
-            themeSwitchContainer.style.opacity = 0;
+            themeSwitchContainer.style.display = 'none';
+            languageSwitchContainer.style.display = 'none';
         }, 1000)
-        if (document.querySelector('footer') !== null) {
-            footer.style.bottom = '-100%';
-        }
     } else {
         navButton.setAttribute('aria-expanded', 'false');
         navDiv.style.opacity = 0;
-        setTimeout(function() {
-            main.style.display = 'flex';
-            main.style.opacity = 1;    
-            if (document.querySelector('footer') !== null) {
-                footer.style.display = 'block';
-                footer.style.bottom = '6vh';
-            }
+        themeSwitchContainer.style.display = 'block';
+        languageSwitchContainer.style.display = 'block';
+        if (document.querySelector('footer') !== null) {
+            footer.style.display = 'block';
+            footer.style.bottom = '6vh';
+        }
+        setTimeout(function() {   
             if (window.location.href.includes('index.html') || window.location.href.includes('fr-index.html')) {
                 languageSwitchContainer.style.opacity = 1;
                 themeSwitchContainer.style.opacity = 1;
             }
+            main.style.display = 'flex';
+            main.style.opacity = 1; 
         }, 1000)
     }
 })
@@ -51,15 +55,13 @@ window.transitionToPage = function(href) {
 
 document.addEventListener('DOMContentLoaded', function(event) {
     document.querySelector('main').style.opacity = 1;
-    setTimeout(function() {
-        header.style.top = '6vh';
-        if (footer !== null) {
-            footer.style.bottom = '6vh';
-        }
-        if (window.location.href.includes("about.html") || window.location.href.includes("fr-about.html") || window.location.href.includes("work.html") || window.location.href.includes("fr-work.html") || window.location.href.includes("contact.html") || window.location.href.includes("fr-contact.html")) {
-            languageSwitchContainer.style.display = "none";
-            themeSwitchContainer.style.display= "none";
-        }
-    }, 500)
+    header.style.top = '6vh';
+    if (footer !== null) {
+        footer.style.bottom = '6vh';
+    }
+    if (window.location.href.includes("about.html") || window.location.href.includes("fr-about.html") || window.location.href.includes("work.html") || window.location.href.includes("fr-work.html") || window.location.href.includes("contact.html") || window.location.href.includes("fr-contact.html")) {
+        languageSwitchContainer.style.display = "none";
+        themeSwitchContainer.style.display= "none";
+    }
 });
 
