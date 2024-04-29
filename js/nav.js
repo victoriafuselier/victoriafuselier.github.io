@@ -12,6 +12,7 @@ navButton.addEventListener('click', () => {
     const isOpened = navButton.getAttribute('aria-expanded');
     if (isOpened === 'false') {
         main.style.opacity = 0;
+        navButton.style.opacity = 0;
         if (document.querySelector('footer') !== null) {
             footer.style.bottom = '-6vh';
             footer.style.opacity = 0;
@@ -24,17 +25,23 @@ navButton.addEventListener('click', () => {
             main.style.display = 'none';
             themeSwitchContainer.style.display = 'none';
             languageSwitchContainer.style.display = 'none';
-            navDiv.style.display ='block';
             navButton.setAttribute('aria-expanded', 'true');
+            navButton.classList.remove('fa-bars');
+            navButton.classList.add('fa-xmark');
+            navDiv.style.display ='block';
         }, 1000)
         setTimeout(function() {
             navDiv.style.opacity = 1;
+            navButton.style.opacity = 1;
         }, 1100)
     } else {
         navDiv.style.opacity = 0;
+        navButton.style.opacity = 0;
         setTimeout(function() {   
-            navDiv.style.display = 'none';
+            navButton.classList.remove('fa-xmark');
+            navButton.classList.add('fa-bars');
             navButton.setAttribute('aria-expanded', 'false');
+            navDiv.style.display = 'none';
             main.style.display = 'flex';
             if (window.location.href.includes('index.html') || window.location.href.includes('fr-index.html')) {
                 themeSwitchContainer.style.display = 'block';
@@ -43,6 +50,7 @@ navButton.addEventListener('click', () => {
         }, 1000)
         setTimeout(function() {
             main.style.opacity = 1;
+            navButton.style.opacity = 1;
             if (document.querySelector('footer') !== null) {
                 footer.style.bottom = '6vh';
                 footer.style.opacity = 1;

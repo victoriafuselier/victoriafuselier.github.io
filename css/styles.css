@@ -210,8 +210,9 @@ footer p {
 }
 
 #language-switch-container,
-#theme-switch-container {
-    transition: opacity 1s ease;
+#theme-switch-container,
+#nav-button {
+    transition: all 1s ease;
 }
 
 .language-switch {
