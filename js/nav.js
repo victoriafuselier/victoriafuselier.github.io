@@ -88,6 +88,6 @@ document.addEventListener('DOMContentLoaded', function(event) {
             languageSwitchContainer.style.display = "none";
             themeSwitchContainer.style.display= "none";
         }
-    }, 1000)
+    }, 500)
 });
 
