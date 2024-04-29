@@ -43,18 +43,26 @@ window.addEventListener('load', (e) => {
 });
 
 window.addEventListener("DOMContentLoaded", () => {
-    const themeSwitch = document.querySelector('.theme-switch-container');
     const body = document.querySelector('body');
+    const themeSwitch = document.querySelector('#theme-switch');
     if (window.location.href.includes("index.html") || window.location.href.includes("fr-index.html")) {
-        themeSwitch.addEventListener('click', () => {
+        themeSwitchContainer.addEventListener('click', () => {
             if (body.classList.contains('light')) {
                 localStorage.clear();
                 localStorage.setItem('theme', 'dark');
                 setDarkMode();
+                if (themeSwitch.classList.contains('fa-moon')) {
+                    themeSwitch.classList.remove('fa-moon');
+                }
+                themeSwitch.classList.add('fa-sun');
             } else if (body.classList.contains('dark')) {
                 localStorage.clear();
                 localStorage.setItem('theme', 'light');
                 setLightMode();
+                if (themeSwitch.classList.contains('fa-sun')) {
+                    themeSwitch.classList.remove('fa-sun');
+                }
+                themeSwitch.classList.add('fa-moon');
             }
         });
     }

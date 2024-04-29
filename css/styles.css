@@ -70,19 +70,6 @@ main,
     box-shadow: 4px 4px 10px var(--dark-blue), -4px -4px 10px var(--dark-blue), 4px -4px 10px var(--dark-blue), -4px 4px 10px var(--dark-blue);
 }
 
-.light #nav-button {
-    color: var(--dark-blue);
-}
-
-.light #sun {
-    display: none;
-}
-
-.light .fa-moon {
-    display: block;
-    color: var(--dark-blue);
-}
-
 .dark {
     background-color: var(--dark-blue);
     color: var(--white);
@@ -95,19 +82,6 @@ main,
 .dark .profile-img,
 .dark #pop-up-box {
     box-shadow: 4px 4px 10px var(--grey), -4px -4px 10px var(--grey), 4px -4px 10px var(--grey), -4px 4px 10px var(--grey);
-}
-
-.dark #nav-button {
-    color: var(--white);
-}
-
-.dark #sun {
-    display: block;
-    color: var(--white);
-}
-
-.dark #moon {
-    display: none;
 }
 
 .home,
@@ -627,8 +601,6 @@ scrollbar-width: none;  /* Firefox */
 
 .project-photo {
 	position: relative;
-	/* overflow: hidden; */
-    /* box-shadow: 4px 4px 2px var(--grey), -4px -4px 2px var(--grey), 4px -4px 2px var(--grey), -4px 4px 2px var(--grey); */
 }
 
 .project-container:focus .photo-overlay,
@@ -689,8 +661,6 @@ scrollbar-width: none;  /* Firefox */
 
 .photo-overlay-p {
     font-size: .9rem;
-    /* width: 98%;
-    max-width: 98%; */
     text-align: center;
     margin: 0;
     line-height: 1;
@@ -1000,10 +970,6 @@ form,
         max-width: 350px;
     }
     
-    /* form {
-        max-width: 250px;
-    } */
-
     #pop-up-box {
         padding: 40px;
         font-size: 1.1rem;
@@ -1058,7 +1024,7 @@ form,
     }
 
     .home h2 {
-        margin: 7px 0 10px;
+        margin: 15px 0 20px;
         font-size: 1rem;
     }
 
@@ -1067,11 +1033,11 @@ form,
     }
 
     .home-link-wrapper:first-of-type {
-        margin: 5px 0 10px;
+        margin: 0 0 15px;
     }
 
     .home-link {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 
     footer p {
@@ -1131,7 +1097,7 @@ form,
     }
 
     .home-link {
-        font-size: 1.5rem;
+        font-size: 1.75rem;
     }
 
     footer p {
@@ -1151,10 +1117,6 @@ form,
     .about-p {
         font-size: 1rem;
     }
-
-    /* .about-button {
-        font-size: 1.5rem;
-    } */
 
     #pop-up-box {
         width: fit-content;
