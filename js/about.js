@@ -38,48 +38,45 @@ skillsButton.addEventListener('click', () => {
     popUpDiv.innerHTML =    `<div id="pop-up-box">
                                 <button class="close">x</button>
                                 <h2>Skills</h2>
-                                <div id="pop-up-content">
-                                    <div id="pop-up-list">
-                                        <ul id="skills">
-                                            <li>HTML</li>
-                                            <li>CSS</li>
-                                                <ul class="sublist">
-                                                    <li>Grid</li>
-                                                    <li>Flexbox</li>
-                                                    <li>Transforms and Transitions</li>
-                                                    <li>Keyframe Animations</li>
-                                                    <li>Sass</li>
-                                                    <ul>
-                                                        <li class="sublist-level-2">and more!</li>
-                                                    </ul>                            
-                                                </ul>
-                                            <li>JavaScript</li>
-                                                <ul class="sublist">
-                                                    <li>DOM Selectors</li>
-                                                    <li>DOM Manipulation</li>
-                                                    <li>DOM Traversal</li>
-                                                    <li>Callback functions</li>
-                                                    <li>Array Methods</li>
-                                                    <li>Array Iteration Methods</li>
-                                                    <li>Object-Oriented JavaScript</li>
-                                                    <li>Object Interactions</li>
-                                                    <li>Fetch API</li>
-                                                        <ul>
-                                                            <li class="sublist-level-2">and more!</li>
-                                                        </ul>
-                                                </ul>
-                                            <li>Responsive Design</li>
-                                            <li>Bootstrap</li>
-                                            <li>Github</li>
-                                            <li>SVG Basics</li>
-                                            <li>JQuery</li>
-                                            <li>AJAX Basics</li>
-                                            <li>Debugging with Chrome DevTools</li>
-                                            <li>Web Design</li>
-                                            <li>Accessibility</li>
+                                <ul id="skills">
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                        <ul class="sublist">
+                                            <li>Grid</li>
+                                            <li>Flexbox</li>
+                                            <li>Transforms and Transitions</li>
+                                            <li>Keyframe Animations</li>
+                                            <li>Sass</li>
+                                            <ul>
+                                                <li class="sublist-level-2">and more!</li>
+                                            </ul>                            
                                         </ul>
-                                    </div>
-                                </div>
+                                    <li>JavaScript</li>
+                                        <ul class="sublist">
+                                            <li>DOM Selectors</li>
+                                            <li>DOM Manipulation</li>
+                                            <li>DOM Traversal</li>
+                                            <li>Callback functions</li>
+                                            <li>Array Methods</li>
+                                            <li>Array Iteration Methods</li>
+                                            <li>Object-Oriented JavaScript</li>
+                                            <li>Object Interactions</li>
+                                            <li>Fetch API</li>
+                                                <ul>
+                                                    <li class="sublist-level-2">and more!</li>
+                                                </ul>
+                                        </ul>
+                                    <li>Responsive Design</li>
+                                    <li>Bootstrap</li>
+                                    <li>Github</li>
+                                    <li>SVG Basics</li>
+                                    <li>JQuery</li>
+                                    <li>AJAX Basics</li>
+                                    <li>Debugging with Chrome DevTools</li>
+                                    <li>Web Design</li>
+                                    <li>Accessibility</li>
+                                </ul>
+                                <p>If you'd like to see a complete list of what <br>I've been learning, check out my <br><a class="treehouse-link" href="https://teamtreehouse.com/profiles/victoriafuselier" target="_blank">Treehouse Profile</a>.</p>
                             </div>`;
 
     let closeButton = document.querySelector('.close');

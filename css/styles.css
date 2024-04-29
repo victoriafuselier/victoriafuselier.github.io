@@ -401,7 +401,8 @@ footer p {
     margin: 20px 0;
 }
 
-.message-link {
+.message-link,
+.treehouse-link {
     text-decoration: underline;
     text-underline-offset: 3px;
 }
