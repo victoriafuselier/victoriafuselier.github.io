@@ -211,7 +211,7 @@ footer p {
 
 #language-switch-container,
 #theme-switch-container {
-    transition: opacity 1.5s ease;
+    transition: opacity 1s ease;
 }
 
 .language-switch {
@@ -377,6 +377,7 @@ footer p {
     height: 5px;
     background: var(--dark-blue);
     border: none;
+    transition: background-color 1s ease;
 }
 
 .about-right,
@@ -778,11 +779,12 @@ form,
 .contact svg {
     height: 40px;
     width: 50px;
-    transition: transform .5s ease;
+    transition: transform .5s ease, opacity 1s ease;
 }
 
 .contact-icons {
     fill: var(--dark-blue);
+    transition: fill 1s ease;
 }
 
 .contact svg:hover,
