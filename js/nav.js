@@ -47,10 +47,10 @@ navButton.addEventListener('click', () => {
             navButton.setAttribute('aria-expanded', 'false');
             navDiv.style.display = 'none';
             main.style.display = 'flex';
-            if (window.location.href.includes('index.html') || window.location.href.includes('fr-index.html')) {
+            // if (window.location.href.includes('index.html') || window.location.href.includes('fr-index.html')) {
                 themeSwitchContainer.style.display = 'block';
                 languageSwitchContainer.style.display = 'block';
-            }
+            // }
         }, 1000)
         setTimeout(function() {
             main.style.opacity = 1;
