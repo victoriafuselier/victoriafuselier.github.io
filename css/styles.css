@@ -233,6 +233,7 @@ footer p {
 
 .nav {
     display: none;
+    opacity: 0;
 }
 
 .nav-wrapper {

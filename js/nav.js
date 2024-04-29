@@ -29,7 +29,7 @@ navButton.addEventListener('click', () => {
         }, 1000)
         setTimeout(function() {
             navDiv.style.opacity = 1;
-        }, 1500)
+        }, 1100)
     } else {
         navDiv.style.opacity = 0;
         setTimeout(function() {   
@@ -51,7 +51,7 @@ navButton.addEventListener('click', () => {
                 languageSwitchContainer.style.opacity = 1;
                 themeSwitchContainer.style.opacity = 1;
             }
-        }, 1500)
+        }, 1100)
     }
 })
 
