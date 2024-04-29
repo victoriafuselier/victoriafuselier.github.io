@@ -5,8 +5,6 @@ const footer = document.querySelector('footer');
 const body = document.querySelector('body');
 const languageSwitchContainer = document.querySelector('#language-switch-container');
 const themeSwitchContainer = document.querySelector('#theme-switch-container');
-const languageSwitch = document.querySelector('#language-switch');
-const themeSwitch = document.querySelector('#theme-switch');
 const navButtonContainer = document.querySelector('#nav-button-container');
 const header = document.querySelector("header");
 const logo = document.querySelector('#logo');
@@ -22,13 +20,13 @@ navButton.addEventListener('click', () => {
             footer.style.opacity = 0;
         }
         if (window.location.href.includes('index.html') || window.location.href.includes('fr-index.html')) {
-            languageSwitch.style.opacity = 0;
-            themeSwitch.style.opacity = 0;
+            languageSwitchContainer.style.opacity = 0;
+            themeSwitchContainer.style.opacity = 0;
         }
         setTimeout(function() {
             main.style.display = 'none';
-            themeSwitch.style.display = 'none';
-            languageSwitch.style.display = 'none';
+            themeSwitchContainer.style.display = 'none';
+            languageSwitchContainer.style.display = 'none';
             navButton.setAttribute('aria-expanded', 'true');
             navButton.classList.remove('fa-bars');
             navButton.classList.add('fa-xmark');
@@ -50,8 +48,8 @@ navButton.addEventListener('click', () => {
             navDiv.style.display = 'none';
             main.style.display = 'flex';
             // if (window.location.href.includes('index.html') || window.location.href.includes('fr-index.html')) {
-                themeSwitch.style.display = 'block';
-                languageSwitch.style.display = 'block';
+                themeSwitchContainer.style.display = 'block';
+                languageSwitchContainer.style.display = 'block';
             // }
         }, 1000)
         setTimeout(function() {
@@ -63,10 +61,10 @@ navButton.addEventListener('click', () => {
                 footer.style.opacity = 1;
             }
             if (window.location.href.includes('index.html') || window.location.href.includes('fr-index.html')) {
-                languageSwitch.style.opacity = 1;
-                themeSwitch.style.opacity = 1;
+                languageSwitchContainer.style.opacity = 1;
+                themeSwitchContainer.style.opacity = 1;
             }
-        }, 1500)
+        }, 1100)
     }
 })
 
@@ -100,8 +98,8 @@ document.addEventListener('DOMContentLoaded', function(event) {
             footer.style.bottom = '6vh';
         }
         if (window.location.href.includes("about.html") || window.location.href.includes("fr-about.html") || window.location.href.includes("work.html") || window.location.href.includes("fr-work.html") || window.location.href.includes("contact.html") || window.location.href.includes("fr-contact.html")) {
-            languageSwitch.style.display = "none";
-            themeSwitch.style.display= "none";
+            languageSwitchContainer.style.display = "none";
+            themeSwitchContainer.style.display= "none";
         }
     }, 500)
 });
