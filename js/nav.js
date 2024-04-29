@@ -78,14 +78,16 @@ window.transitionToPage = function(href) {
 }
 
 document.addEventListener('DOMContentLoaded', function(event) {
-    document.querySelector('body').style.opacity = 1;
-    header.style.top = '6vh';
-    if (footer !== null) {
-        footer.style.bottom = '6vh';
-    }
-    if (window.location.href.includes("about.html") || window.location.href.includes("fr-about.html") || window.location.href.includes("work.html") || window.location.href.includes("fr-work.html") || window.location.href.includes("contact.html") || window.location.href.includes("fr-contact.html")) {
-        languageSwitchContainer.style.display = "none";
-        themeSwitchContainer.style.display= "none";
-    }
+    setTimeout(function() {
+        document.querySelector('body').style.opacity = 1;
+        header.style.top = '6vh';
+        if (footer !== null) {
+            footer.style.bottom = '6vh';
+        }
+        if (window.location.href.includes("about.html") || window.location.href.includes("fr-about.html") || window.location.href.includes("work.html") || window.location.href.includes("fr-work.html") || window.location.href.includes("contact.html") || window.location.href.includes("fr-contact.html")) {
+            languageSwitchContainer.style.display = "none";
+            themeSwitchContainer.style.display= "none";
+        }
+    }, 1000)
 });
 
