@@ -7,12 +7,14 @@ const languageSwitchContainer = document.querySelector('#language-switch-contain
 const themeSwitchContainer = document.querySelector('#theme-switch-container');
 const navButtonContainer = document.querySelector('#nav-button-container');
 const header = document.querySelector("header");
+const logo = document.querySelector('#logo');
 
 navButton.addEventListener('click', () => {
     const isOpened = navButton.getAttribute('aria-expanded');
     if (isOpened === 'false') {
         main.style.opacity = 0;
         navButton.style.opacity = 0;
+        logo.style.opacity = 0;
         if (document.querySelector('footer') !== null) {
             footer.style.bottom = '-6vh';
             footer.style.opacity = 0;
@@ -33,10 +35,12 @@ navButton.addEventListener('click', () => {
         setTimeout(function() {
             navDiv.style.opacity = 1;
             navButton.style.opacity = 1;
+            logo.style.opacity = 1;
         }, 1100)
     } else {
         navDiv.style.opacity = 0;
         navButton.style.opacity = 0;
+        logo.style.opacity = 0;
         setTimeout(function() {   
             navButton.classList.remove('fa-xmark');
             navButton.classList.add('fa-bars');
@@ -51,6 +55,7 @@ navButton.addEventListener('click', () => {
         setTimeout(function() {
             main.style.opacity = 1;
             navButton.style.opacity = 1;
+            logo.style.opacity = 1;
             if (document.querySelector('footer') !== null) {
                 footer.style.bottom = '6vh';
                 footer.style.opacity = 1;

@@ -211,7 +211,8 @@ footer p {
 
 #language-switch-container,
 #theme-switch-container,
-#nav-button {
+#nav-button,
+#logo {
     transition: all 1s ease;
 }
 
