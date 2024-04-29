@@ -35,10 +35,12 @@ skillsButton.addEventListener('click', () => {
     popUpDiv.style.height = '100%';
     popUpDiv.style.width = '100%';
     
-    popUpDiv.innerHTML =    `<div id="pop-up-box">
-                                <button class="close">x</button>
-                                <h2>Skills</h2>
-                                <ul id="skills">
+    popUpDiv.innerHTML =    
+                        `<div id="pop-up-box">
+                            <button class="close">x</button>
+                            <h2>Skills</h2>
+                            <div id="skills">
+                                <ul>
                                     <li>HTML</li>
                                     <li>CSS</li>
                                         <ul class="sublist">
@@ -76,8 +78,9 @@ skillsButton.addEventListener('click', () => {
                                     <li>Web Design</li>
                                     <li>Accessibility</li>
                                 </ul>
-                                <p>If you'd like to see a complete list of what <br>I've been learning, check out my <br><a class="treehouse-link" href="https://teamtreehouse.com/profiles/victoriafuselier" target="_blank">Treehouse Profile</a>.</p>
-                            </div>`;
+                                <p>If you'd like to see a complete list of what I've been learning, check out my <a class="treehouse-link" href="https://teamtreehouse.com/profiles/victoriafuselier" target="_blank">Treehouse Profile</a>.</p>
+                            </div>
+                        </div>`;
 
     let closeButton = document.querySelector('.close');
     closeButton.focus();                            
