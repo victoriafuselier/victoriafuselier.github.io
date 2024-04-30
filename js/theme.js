@@ -32,16 +32,6 @@ function setLightMode() {
     localStorage.setItem('theme', 'light');
 }
 
-// window.onload = function() {
-//     setTimeout(loadPage, 2000);
-//     const theme = localStorage.getItem('theme');
-//     if (theme === 'dark') {
-//         setDarkMode();
-//     } else {
-//         setLightMode();
-//     }
-// };
-
 window.addEventListener('load', (e) => {
     e.preventDefault();
     const theme = localStorage.getItem('theme');
