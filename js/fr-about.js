@@ -63,20 +63,20 @@ skillsButton.addEventListener('click', () => {
                                                     <li>Méthodes d'itération de tableau</li>
                                                     <li>JavaScript orienté objet</li>
                                                     <li>Interactions d'objets</li>
+                                                    <li>jQuery</li>
                                                     <li>Récupérer l'API</li>
                                                         <ul>
                                                             <li class="sublist-level-2">et plus!</li>
                                                         </ul>
                                                 </ul>
+                                            <li>Création de sites web</li>
                                             <li>Conception réactive</li>
+                                            <li>Accessibilité</li>
                                             <li>Bootstrap</li>
                                             <li>Github</li>
                                             <li>Les bases du SVG</li>
-                                            <li>JQuery</li>
                                             <li>Les bases d'AJAX</li>
                                             <li>Débogage avec Chrome DevTools</li>
-                                            <li>Création de sites web</li>
-                                            <li>Accessibilité</li>
                                         </ul>
                                     </div>
                                 </div>

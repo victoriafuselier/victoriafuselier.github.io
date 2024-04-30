@@ -63,20 +63,20 @@ skillsButton.addEventListener('click', () => {
                                             <li>Array Iteration Methods</li>
                                             <li>Object-Oriented JavaScript</li>
                                             <li>Object Interactions</li>
+                                            <li>jQuery</li>
                                             <li>Fetch API</li>
                                                 <ul>
                                                     <li class="sublist-level-2">and more!</li>
                                                 </ul>
                                         </ul>
+                                    <li>Web Design</li>
                                     <li>Responsive Design</li>
+                                    <li>Accessibility</li>
                                     <li>Bootstrap</li>
                                     <li>Github</li>
                                     <li>SVG Basics</li>
-                                    <li>JQuery</li>
                                     <li>AJAX Basics</li>
                                     <li>Debugging with Chrome DevTools</li>
-                                    <li>Web Design</li>
-                                    <li>Accessibility</li>
                                 </ul>
                                 <p>If you'd like to see a complete list of what I've been learning, check out my <a class="treehouse-link" href="https://teamtreehouse.com/profiles/victoriafuselier" target="_blank">Treehouse Profile</a>.</p>
                             </div>
