@@ -994,16 +994,16 @@ form,
 
 @media screen and (min-width: 320px) and (min-height: 400px) {
     #logo {
-        height: 40px;
+        height: 50px;
     }
     
     #theme-switch,
     #nav-button {
-        font-size: 25px;
+        font-size: 35px;
     }
 
     #language-switch {
-        font-size: 20px;
+        font-size: 30px;
     }
 
     .header-right li {
@@ -1061,16 +1061,16 @@ form,
 
 @media screen and (min-width: 768px) and (min-height: 400px) {
     #logo {
-        height: 50px;
+        height: 60px;
     }
     
     #theme-switch,
     #nav-button {
-        font-size: 30px;
+        font-size: 40px;
     }
 
     #language-switch {
-        font-size: 25px;
+        font-size: 35px;
     }
 
     .header-right li {
@@ -1176,16 +1176,16 @@ form,
 
 @media screen and (min-width: 1024px) and (min-height: 550px) {
     #logo {
-        height: 60px;
+        height: 70px;
     }
     
     #theme-switch,
     #nav-button {
-        font-size: 35px;
+        font-size: 40px;
     }
 
     #language-switch {
-        font-size: 30px;
+        font-size: 35px;
     }
 
     .header-right li {
