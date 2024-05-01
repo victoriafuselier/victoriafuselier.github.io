@@ -9,7 +9,7 @@ const navButtonContainer = document.querySelector('#nav-button-container');
 const header = document.querySelector("header");
 const logo = document.querySelector('#logo');
 
-navButton.addEventListener('click', () => {
+navButtonContainer.addEventListener('click', () => {
     const isOpened = navButton.getAttribute('aria-expanded');
     if (isOpened === 'false') {
         body.style.opacity = 0;
