@@ -137,7 +137,7 @@ footer {
 }
 
 footer p {
-    font-size: x-small;
+    font-size: small;
     text-align: center;
     font-weight: 600;
     font-family: 'Unica One', sans-serif;
@@ -1048,7 +1048,7 @@ form,
     }
 
     footer p {
-        font-size: small;
+        font-size: medium;
     }
 }
 
@@ -1108,7 +1108,7 @@ form,
     }
 
     footer p {
-        font-size: medium;
+        font-size: large;
     }
 
     .about h1,
@@ -1221,9 +1221,9 @@ form,
         font-size: 2rem;
     }
 
-    footer p {
-        font-size: large;
-    }
+    /* footer p {
+        font-size: x-large;
+    } */
 
     .about-wrapper {
         width: 960px;
