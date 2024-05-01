@@ -22,18 +22,6 @@
     --grey: #696969;
 }
 
-.varela-round-regular {
-    font-family: "Varela Round", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.unica-one-regular {
-    font-family: "Unica One", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
 a,
 a:visited {
     color: currentColor;
@@ -152,6 +140,7 @@ footer p {
     font-size: x-small;
     text-align: center;
     font-weight: 600;
+    font-family: 'Unica One', sans-serif;
 }
 
 .header-left,
@@ -978,7 +967,7 @@ form,
     }
 
     .about-button {
-        font-size: 1.25rem;
+        font-size: 1rem;
     }
 
     .profile-img {
@@ -1133,7 +1122,7 @@ form,
     }
 
     .about-p {
-        font-size: 1rem;
+        font-size: .9rem;
     }
 
     #pop-up-box {
@@ -1255,7 +1244,7 @@ form,
     }
 
     .about-p {
-        font-size: 1.25rem;
+        font-size: 1.2rem;
     }
 
     .about-button-container {
@@ -1263,7 +1252,7 @@ form,
     }
 
     .about-button {
-        font-size: 1.75rem;
+        font-size: 1.25rem;
     }
 
     .contact svg {
