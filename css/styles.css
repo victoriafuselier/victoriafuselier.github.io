@@ -72,22 +72,26 @@ main,
     box-shadow: 4px 4px 10px var(--grey), -4px -4px 10px var(--grey), 4px -4px 10px var(--grey), -4px 4px 10px var(--grey);
 }
 
+body,
+#pop-up-box {
+    font-family: 'Fira Sans Condensed', sans-serif;
+}
+
 .home,
 h1,
 h2,
 .nav,
 .about-button,
-#pop-up-box h2,
+/* #pop-up-box h2, */
 .photo-overlay,
 footer p,
-#pop-up-box h2 {
+.projects-footer {
     font-family: 'Unica One', 'Varela Round', sans-serif;
 }
 
-body,
-#pop-up-box,
 .form-control,
-.form-control h2 {
+.form-control h2,
+#send-button {
     font-family: "Varela Round", "Fira Sans Condensed", sans-serif;
 }
 
@@ -136,7 +140,8 @@ footer {
     transition: all 1s ease;
 }
 
-footer p {
+footer p, 
+.projects-footer {
     font-size: small;
     text-align: center;
     font-weight: 600;
@@ -667,7 +672,6 @@ scrollbar-width: none;  /* Firefox */
 }
 
 .projects-footer {
-    font-size: 12px;
     font-weight: 900;
     text-align: center;
     margin: 0px auto;
@@ -842,10 +846,8 @@ form,
     background-color: var(--dark-blue);
     color: var(--white);
     border-radius: 5px;
-    font-family: inherit;
     font-size: 1rem;
     font-weight: 600;
-    letter-spacing: .5px;
     text-transform: uppercase;
     transition: all .5s ease;
     border: none;
@@ -887,10 +889,6 @@ form,
 ===============================================================================================================*/
 
 @media screen and (min-width: 320px) {
-    .projects-footer {
-        max-width: 350px;
-    }
-
     #portfolio-container {
         width: 300px;
     }
@@ -967,7 +965,7 @@ form,
     }
 
     .about-button {
-        font-size: 1rem;
+        font-size: 1.25rem;
     }
 
     .profile-img {
@@ -1047,7 +1045,8 @@ form,
         font-size: 1.5rem;
     }
 
-    footer p {
+    footer p,
+    .projects-footer {
         font-size: medium;
     }
 }
@@ -1107,7 +1106,8 @@ form,
         font-size: 1.75rem;
     }
 
-    footer p {
+    footer p,
+    .projects-footer {
         font-size: large;
     }
 
@@ -1127,6 +1127,10 @@ form,
 
     #pop-up-box {
         width: fit-content;
+    }
+
+    .about-button {
+    font-size: 1.5rem;
     }
 
     .contact svg {
@@ -1155,11 +1159,6 @@ form,
 		width: 47%;
 		float: left;
 	}
-
-    .projects-footer {
-        max-width: 500px;
-        font-size: 1rem;
-    }
 
     .projects-heading {
         align-items: flex-start;
@@ -1252,7 +1251,7 @@ form,
     }
 
     .about-button {
-        font-size: 1.25rem;
+        font-size: 1.75rem;
     }
 
     .contact svg {
@@ -1283,10 +1282,6 @@ form,
     .photo-overlay-p {
         font-size: 1.2rem;
         padding: 0;
-    }
-
-    .projects-footer {
-        font-size: 1.1rem;
     }
 }
 
