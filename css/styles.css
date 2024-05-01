@@ -140,14 +140,6 @@ footer {
     transition: bottom 1s ease;
 }
 
-footer p, 
-.projects-footer {
-    font-size: small;
-    text-align: center;
-    font-weight: 600;
-    font-family: 'Unica One', sans-serif;
-}
-
 .header-left,
 .header-right {
     width: 50%;
@@ -323,6 +315,13 @@ footer p,
 .arrow,
 .download {
     margin-right: 10px;
+}
+
+footer p {
+    text-align: center;
+    font-weight: 600;
+    font-family: 'Unica One', sans-serif;
+    font-size: x-small;
 }
 
 /* ============================================================================================================
@@ -666,11 +665,13 @@ scrollbar-width: none;  /* Firefox */
 }
 
 .projects-footer {
-    font-weight: 900;
-    text-align: center;
     margin: 0px auto;
     padding: 0 10px;
     text-transform: uppercase;
+    font-size: small;
+    text-align: center;
+    font-weight: 600;
+    font-family: 'Unica One', sans-serif;
 }
 
 .projects-footer a {
@@ -1044,7 +1045,10 @@ form,
         font-size: 1.5rem;
     }
 
-    footer p,
+    footer p {
+        font-size: small;
+    }
+
     .projects-footer {
         font-size: medium;
     }
@@ -1105,9 +1109,8 @@ form,
         font-size: 1.75rem;
     }
 
-    footer p,
-    .projects-footer {
-        font-size: large;
+    footer p {
+        font-size: medium;
     }
 
     .about h1,
@@ -1135,6 +1138,10 @@ form,
     .contact svg {
         height: 45px;
         width: 55px;
+    }
+
+    .projects-footer {
+        font-size: large;
     }
 }
 
@@ -1219,10 +1226,6 @@ form,
         font-size: 2rem;
     }
 
-    /* footer p {
-        font-size: x-large;
-    } */
-
     .about-wrapper {
         width: 960px;
     }
@@ -1256,6 +1259,14 @@ form,
     .contact svg {
         height: 50px;
         width: 60px;
+    }
+
+    footer p {
+        font-size: large;
+    }
+
+    .projects-footer {
+        font-size: x-large;
     }
 }
 
