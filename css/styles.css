@@ -41,7 +41,7 @@ main,
     right: 0;
     left: 0;
     padding: 5vh 5vw;
-    transition: all 1s ease;
+    transition: opacity 1s ease;
 }
 
 .light {
@@ -137,7 +137,7 @@ header {
 
 footer {
     bottom: -6vh;
-    transition: all 1s ease;
+    transition: bottom 1s ease;
 }
 
 footer p, 
@@ -170,13 +170,6 @@ footer p,
 
 .header-right li {
     margin-left: 20px;
-}
-
-#language-switch-container,
-#theme-switch-container,
-#nav-button,
-#logo {
-    transition: all 1s ease;
 }
 
 #logo {
