@@ -912,6 +912,10 @@ form,
 }
 
 @media screen and (min-width: 600px) {
+    .header-right li {
+        margin-left: 40px;
+    }
+    
     .about h1,
     .projects h1,
     .contact h1 {
