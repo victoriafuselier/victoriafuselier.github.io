@@ -44,9 +44,9 @@ window.addEventListener('load', (e) => {
 
 window.addEventListener("DOMContentLoaded", () => {
     const body = document.querySelector('body');
-    const themeSwitch = document.querySelector('#theme-switch');
+    const themeSwitchContainer = document.querySelector('#theme-switch-container');
     if (window.location.href.includes("index.html") || window.location.href.includes("fr-index.html")) {
-        themeSwitch.addEventListener('click', () => {
+        themeSwitchContainer.addEventListener('click', () => {
             if (body.classList.contains('light')) {
                 localStorage.clear();
                 localStorage.setItem('theme', 'dark');
