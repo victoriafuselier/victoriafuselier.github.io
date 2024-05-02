@@ -32,6 +32,7 @@ navButtonContainer.addEventListener('click', () => {
             navButton.setAttribute('aria-expanded', 'true');
             navButton.classList.remove('fa-bars');
             navButton.classList.add('fa-xmark');
+            navButton.setAttribute('title', '');
             navDiv.style.display ='block';
         }, 1000);
         setTimeout(function() {
@@ -56,6 +57,7 @@ navButtonContainer.addEventListener('click', () => {
         setTimeout(function() {   
             navButton.classList.remove('fa-xmark');
             navButton.classList.add('fa-bars');
+            navButton.setAttribute('title', 'Menu');
             navButton.setAttribute('aria-expanded', 'false');
             navDiv.style.display = 'none';
             main.style.display = 'flex';
