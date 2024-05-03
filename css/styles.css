@@ -310,7 +310,7 @@ nav {
 
 .home-link-wrapper:hover,
 .home-link-wrapper:focus {
-    scale: 1.2;
+    transform: scale(1.2);
 }
 
 .arrow,
@@ -405,14 +405,9 @@ footer p {
     align-items: center;
 }
 
-.about-button-wrapper:hover .about-button,
-.about-button-wrapper:focus .about-button {
-    text-shadow: 2px 2px 2px var(--light-blue);
-}
-
 .about-button-wrapper:hover,
 .about-button-wrapper:focus {
-    scale: 1.1;
+    transform: scale(1.1);
 }
 
 .profile-img {
@@ -617,7 +612,7 @@ scrollbar-width: none;  /* Firefox */
     background-color: var(--grey);
     border-radius: 5px;
     padding: 2px 8px;
-    -webkit-transition: transform .5s ease-in-out, background-color .25s ease-in-out;
+    transition: transform .5s ease-in-out, background-color .25s ease-in-out;
     border: 1px solid var(--grey);
     text-decoration: none;
 }
@@ -626,7 +621,7 @@ scrollbar-width: none;  /* Firefox */
 .project-photo a:focus {
     color: var(--white);
     background-color: var(--green);
-    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .photo-overlay {
@@ -644,8 +639,7 @@ scrollbar-width: none;  /* Firefox */
 	align-items: center;
 	background: rgba(0, 0, 0, .8); 
     opacity: 0;
-    -webkit-transition-property: opacity;
-    -webkit-transition-duration: 1s;
+    transition: 1s opacity ease;
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: .5px;
