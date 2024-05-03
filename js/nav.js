@@ -45,16 +45,16 @@ navButtonContainer.addEventListener('click', () => {
                 themeSwitchContainer.style.display = 'block';
                 languageSwitchContainer.style.display = 'block';
             }
-        }, 1000)
+        }, 1000);
         setTimeout(function() {
             body.style.opacity = 1;
             header.style.top = '6vh';
             if (footer !== null) {
                 footer.style.bottom = '6vh';
             }
-        }, 1100)
+        }, 1100);
     }
-})
+});
 
 window.transitionToPage = function(href) {
     document.querySelector('body').style.opacity = 0;
@@ -68,15 +68,15 @@ window.transitionToPage = function(href) {
         setTimeout(function() { 
             navDiv.style.display = 'none';
             body.style.display = 'block';
-    }, 1000)
+    }, 1000);
     }
     setTimeout(function() { 
         window.location.href = href;
-    }, 1000)
+    }, 1000);
     setTimeout(function() { 
         document.querySelector('body').style.opacity = 1;
-    }, 1500)
-}
+    }, 1500);
+};
 
 document.addEventListener('DOMContentLoaded', function(event) {
     setTimeout(function() {
@@ -89,6 +89,6 @@ document.addEventListener('DOMContentLoaded', function(event) {
             languageSwitchContainer.style.display = "none";
             themeSwitchContainer.style.display= "none";
         }
-    }, 500)
+    }, 500);
 });
 

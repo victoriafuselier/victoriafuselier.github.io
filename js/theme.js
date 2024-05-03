@@ -3,6 +3,7 @@ const contactIconArray = document.getElementsByClassName('contact-icons');
 function setDarkMode() {
     const body = document.querySelector('body');
     const themeSwitch = document.querySelector('#theme-switch');
+    const logo = document.getElementById('logo');
     body.classList.remove('light');
     body.classList.add('dark');
     logo.src = 'images/icons/logo-light.png';
@@ -19,6 +20,7 @@ function setDarkMode() {
 function setLightMode() {
     const body = document.querySelector('body');
     const themeSwitch = document.querySelector('#theme-switch');
+    const logo = document.getElementById('logo');
     body.classList.add('light');
     body.classList.remove('dark');
     logo.src = 'images/icons/logo-dark.png';
