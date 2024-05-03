@@ -184,10 +184,11 @@ footer {
     border: none;
 }
 
-#theme-switch,
-#nav-button,
-#language-switch {
+#theme-switch-container,
+#nav-button-container,
+#language-switch-container {
     z-index: 10;
+    position: relative;
 }
 
 
