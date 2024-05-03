@@ -45,8 +45,7 @@ window.addEventListener('load', (e) => {
 window.addEventListener("DOMContentLoaded", () => {
     const body = document.querySelector('body');
     const themeSwitch = document.querySelector('#theme-switch');
-    if (window.location.href.includes("index.html") || window.location.href.includes("fr-index.html")) {
-        themeSwitch.addEventListener('click', () => {
+    themeSwitch.addEventListener('click', () => {
             if (body.classList.contains('light')) {
                 localStorage.clear();
                 localStorage.setItem('theme', 'dark');
@@ -57,7 +56,6 @@ window.addEventListener("DOMContentLoaded", () => {
                 setLightMode();
             }
         });
-    }
 });
 
 
