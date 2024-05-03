@@ -13,26 +13,26 @@
 </head>
 <body class="light">
     <div class="nav">
-        <div class="nav-wrapper">
+        <nav>
             <ul>
                 <li>
                     <i class="fa-solid fa-arrow-right"></i>
-                    <span class="nav-link" onclick="transitionToPage('fr-index.html')">Accueil</span>
+                    <a class="nav-link" onclick="transitionToPage('fr-index.html')">Accueil</a>
                 </li>
                 <li>
                     <i class="fa-solid fa-arrow-right"></i>
-                    <span class="nav-link" onclick="transitionToPage('fr-about.html')">À Propos</span>
+                    <a class="nav-link" onclick="transitionToPage('fr-about.html')">À Propos</a>
                 </li>
                 <li>
                     <i class="fa-solid fa-arrow-right"></i>
-                    <span class="nav-link" onclick="transitionToPage('fr-work.html')">Projets</span>
+                    <a class="nav-link" onclick="transitionToPage('fr-work.html')">Projets</a>
                 </li>
                 <li>
                     <i class="fa-solid fa-arrow-right"></i>
-                    <span class="nav-link" onclick="transitionToPage('fr-contact.html')">Contact</span>
+                    <a class="nav-link" onclick="transitionToPage('fr-contact.html')">Contact</a>
                 </li>
             </ul>
-        </div>
+        </nav>
     </div>
     <header>
         <div class="header-left">
@@ -49,7 +49,7 @@
                     <i title="Theme" id="theme-switch" class="fa-solid fa-moon fa-xl"></i>
                 </li>
                 <li id="nav-button-container" class="nav-button-container">
-                    <i title="Menu" id="nav-button" class="fa-solid fa-bars fa-xl" aria-expanded="false"></i>
+                    <i title="Menu" id="nav-button" class="fa-solid fa-bars fa-xl" aria-expanded="false" role="navigation"></i>
                 </li>
             </ul>
         </div>
@@ -128,7 +128,6 @@
                 </form>
             </div>       
         </div>
-    </div>
     </main>
     <script src="js/theme.js"></script>
     <script src="js/nav.js"></script>

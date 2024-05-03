@@ -13,26 +13,26 @@
 </head>
 <body class="light">
     <div class="nav">
-        <div class="nav-wrapper">
+        <nav>
             <ul>
                 <li>
                     <i class="fa-solid fa-arrow-right"></i>
-                    <span class="nav-link" onclick="transitionToPage('fr-index.html')">Accueil</span>
+                    <a class="nav-link" onclick="transitionToPage('fr-index.html')">Accueil</a>
                 </li>
                 <li>
                     <i class="fa-solid fa-arrow-right"></i>
-                    <span class="nav-link" onclick="transitionToPage('fr-about.html')">À Propos</span>
+                    <a class="nav-link" onclick="transitionToPage('fr-about.html')">À Propos</a>
                 </li>
                 <li>
                     <i class="fa-solid fa-arrow-right"></i>
-                    <span class="nav-link" onclick="transitionToPage('fr-work.html')">Projets</span>
+                    <a class="nav-link" onclick="transitionToPage('fr-work.html')">Projets</a>
                 </li>
                 <li>
                     <i class="fa-solid fa-arrow-right"></i>
-                    <span class="nav-link" onclick="transitionToPage('fr-contact.html')">Contact</span>
+                    <a class="nav-link" onclick="transitionToPage('fr-contact.html')">Contact</a>
                 </li>
             </ul>
-        </div>
+        </nav>
     </div>
     <div id="pop-up-div" class="hidden pop-up-div"></div>
     <header>
@@ -50,7 +50,7 @@
                     <i title="Theme" id="theme-switch" class="fa-solid fa-moon fa-xl"></i>
                 </li>
                 <li id="nav-button-container" class="nav-button-container">
-                    <i title="Menu" id="nav-button" class="fa-solid fa-bars fa-xl" aria-expanded="false"></i>
+                    <i title="Menu" id="nav-button" class="fa-solid fa-bars fa-xl" aria-expanded="false" role="navigation"></i>
                 </li>
             </ul>
         </div>
@@ -62,14 +62,14 @@
                     <h1>Sur Moi</h1>
                 </div>
                 <hr class="divider-line">
-                <p class="about-p">Bonjour, je m'appelle Victoria. Mes amis m'appellent Vic. Je suis un aspirant développeur Web à la recherche d'un poste de débutant dans le développement Web front-end. Mes points forts incluent un bon sens du design, des compétences exceptionnelles en grammaire et en rédaction, une maîtrise de la gestion du temps et de grandes capacités de travail en équipe. Si je semble convenir à votre équipe, <span class="message-link" onclick="transitionToPage('fr-contact.html')">envoyez-moi un message</span>.</p>
+                <p class="about-p">Bonjour, je m'appelle Victoria. Mes amis m'appellent Vic. Je suis un aspirant développeur Web à la recherche d'un poste de débutant dans le développement Web front-end. Mes points forts incluent un bon sens du design, des compétences exceptionnelles en grammaire et en rédaction, une maîtrise de la gestion du temps et de grandes capacités de travail en équipe. Si je semble convenir à votre équipe, <a class="message-link" onclick="transitionToPage('fr-contact.html')">envoyez-moi un message</a>.</p>
                     <!-- <a class="message-link" href="contact.html">send me a message</a>.</p> -->
                 <div class="about-button-container">
                     <div class="about-button-wrapper">
-                        <button class="about-button" id="education-button" href="education.html"><i class="fa-solid fa-arrow-right arrow"></i>Éducation</button>
+                        <button class="about-button" id="education-button"><i class="fa-solid fa-arrow-right arrow"></i>Éducation</button>
                     </div>
                     <div class="about-button-wrapper">
-                        <button class="about-button" id="skills-button" href="skills"><i class="fa-solid fa-arrow-right arrow"></i>Compétences</button>
+                        <button class="about-button" id="skills-button"><i class="fa-solid fa-arrow-right arrow"></i>Compétences</button>
                     </div>
                     <div class="about-button-wrapper">
                         <a class="about-button" id="resume-link" href="victoriafuselier_resume.pdf" target="_blank" download><i class="fa-solid fa-download download"></i>Curriculum vitae</a>

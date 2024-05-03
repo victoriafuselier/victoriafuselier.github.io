@@ -13,26 +13,26 @@
 </head>
 <body class="light">
     <div class="nav">
-        <div class="nav-wrapper">
+        <nav>
             <ul>
                 <li>
-                    <i class="fa-solid fa-arrow-right arrow"></i>
-                    <span class="nav-link" onclick="transitionToPage('index.html')">Home</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                    <a class="nav-link" onclick="transitionToPage('index.html')">Home</a>
                 </li>
                 <li>
-                    <i class="fa-solid fa-arrow-right arrow"></i>
-                    <span class="nav-link" onclick="transitionToPage('about.html')">About</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                    <a class="nav-link" onclick="transitionToPage('about.html')">About</a>
                 </li>
                 <li>
-                    <i class="fa-solid fa-arrow-right arrow"></i>
-                    <span class="nav-link" onclick="transitionToPage('work.html')">Work</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                    <a class="nav-link" onclick="transitionToPage('work.html')">Work</a>
                 </li>
                 <li>
-                    <i class="fa-solid fa-arrow-right arrow"></i>
-                    <span class="nav-link" onclick="transitionToPage('contact.html')">Contact</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                    <a class="nav-link" onclick="transitionToPage('contact.html')">Contact</a>
                 </li>
             </ul>
-        </div>
+        </nav>
     </div>
     <div id="pop-up-div" class="hidden pop-up-div"></div>
     <header>
@@ -50,7 +50,7 @@
                     <i title="Theme" id="theme-switch" class="fa-solid fa-moon fa-xl"></i>
                 </li>
                 <li id="nav-button-container" class="nav-button-container">
-                    <i title="Menu" id="nav-button" class="fa-solid fa-bars fa-xl" aria-expanded="false"></i>
+                    <i title="Menu" id="nav-button" class="fa-solid fa-bars fa-xl" aria-expanded="false" role="navigation"></i>
                 </li>
             </ul>
         </div>
@@ -62,7 +62,7 @@
                     <h1>About Me</h1>
                 </div>
                 <hr class="divider-line">
-                <p class="about-p">Hi, my name is Victoria. My friends call me Vic. I'm an aspiring web developer in search of an entry-level position in front-end web development. My strengths include a good eye for design, exceptional grammar/writing skills, time-management proficiency, and great teamwork capabilities. If I sound like a good fit for your team, please <span class="message-link" onclick="transitionToPage('contact.html')">send me a message</span>.</p>                        
+                <p class="about-p">Hi, my name is Victoria. My friends call me Vic. I'm an aspiring web developer in search of an entry-level position in front-end web development. My strengths include a good eye for design, exceptional grammar/writing skills, time-management proficiency, and great teamwork capabilities. If I sound like a good fit for your team, please <a class="message-link" onclick="transitionToPage('contact.html')">send me a message</a>.</p>                        
                     <!-- <a class="message-link" href="contact.html">send me a message</a>.</p> -->
                 <div class="about-button-container">
                     <div class="about-button-wrapper">

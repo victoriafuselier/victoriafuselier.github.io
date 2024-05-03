@@ -203,7 +203,7 @@ footer {
     opacity: 0;
 }
 
-.nav-wrapper {
+nav {
     height: 100%;
     display: flex;
     justify-content: flex-start;
