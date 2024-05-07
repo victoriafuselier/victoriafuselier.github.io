@@ -18,19 +18,19 @@
             <ul>
                 <li>
                     <i class="fa-solid fa-arrow-right"></i>
-                    <a class="nav-link" onclick="transitionToPage('index.html')">Home</a>
+                    <a class="nav-link" onclick="transitionToPage('index.html')" href="index.html">Home</a>
                 </li>
                 <li>
                     <i class="fa-solid fa-arrow-right"></i>
-                    <a class="nav-link" onclick="transitionToPage('about.html')">About</a>
+                    <a class="nav-link" onclick="transitionToPage('about.html')" href="about.html">About</a>
                 </li>
                 <li>
                     <i class="fa-solid fa-arrow-right"></i>
-                    <a class="nav-link" onclick="transitionToPage('work.html')">Work</a>
+                    <a class="nav-link" onclick="transitionToPage('work.html')" href="work.html">Work</a>
                 </li>
                 <li>
                     <i class="fa-solid fa-arrow-right"></i>
-                    <a class="nav-link" onclick="transitionToPage('contact.html')">Contact</a>
+                    <a class="nav-link" onclick="transitionToPage('contact.html')" href="contact.html">Contact</a>
                 </li>
             </ul>
         </nav>
@@ -43,14 +43,14 @@
         </div>
         <div class="header-right">
             <ul>
-                <li id="language-switch-container" class="language-switch-container">
-                    <i title="Language" id="language-switch" onclick="transitionToPage('fr-index.html')">FR</i>
+                <li>
+                    <button title="Language" id="language-button" class="header-buttons" onclick="transitionToPage('fr-index.html')">FR</button>
                 </li>
-                <li id="theme-switch-container" class="theme-switch-container">
-                    <i title="Theme" id="theme-switch" class="fa-solid fa-moon fa-xl"></i>
+                <li>
+                    <button title="Theme" id="theme-button" class="header-buttons"><i id="theme-icon" class="fa-solid fa-moon fa-xl header-icons"></i></button>
                 </li>
-                <li id="nav-button-container" class="nav-button-container">
-                    <i title="Menu" id="nav-button" class="fa-solid fa-bars fa-xl" aria-expanded="false" role="navigation"></i>
+                <li>
+                    <button title="Menu" id="nav-button" class="header-buttons" aria-expanded="false" role="navigation"><i id="nav-icon" class="fa-solid fa-bars fa-xl header-icons"></i></button>
                 </li>
             </ul>
         </div>
@@ -60,10 +60,10 @@
         <h2>Junior Front-End Web Developer</h2>
         <div class="home-links-container">
             <div class="home-link-wrapper">
-                <a class="home-link" onclick="transitionToPage('about.html')"><i class="fa-solid fa-arrow-right arrow"></i>About Me</a>
+                <a class="home-link" onclick="transitionToPage('about.html')" href="about.html"><i class="fa-solid fa-arrow-right arrow"></i>About Me</a>
             </div>
             <div class="home-link-wrapper">
-                <a class="home-link" onclick="transitionToPage('work.html')"><i class="fa-solid fa-arrow-right arrow"></i>My Work</a>
+                <a class="home-link" onclick="transitionToPage('work.html')" href="work.html"><i class="fa-solid fa-arrow-right arrow"></i>My Work</a>
             </div>
         </div>
     </main>

@@ -1,36 +1,57 @@
-const contactIconArray = document.getElementsByClassName('contact-icons');
+const contactIcons = document.getElementsByClassName('contact-icons');
+const headerIcons = document.getElementsByClassName('header-icons');
 
 function setDarkMode() {
+
     const body = document.querySelector('body');
-    const themeSwitch = document.querySelector('#theme-switch');
+    const themeIcon = document.querySelector('#theme-icon');
     const logo = document.getElementById('logo');
+    const languageButton = document.getElementById('language-button');
+
     body.classList.remove('light');
     body.classList.add('dark');
+
     logo.src = 'images/icons/logo-light.png';
-    for (let i = 0; i < contactIconArray.length; i++) {
-        contactIconArray[i].style.fill = "#edeff0";
+    languageButton.style.color = "#edeff0";
+    for (let i = 0; i < contactIcons.length; i++) {
+        contactIcons[i].style.fill = "#edeff0";
     }
-    if (themeSwitch.classList.contains('fa-moon')) {
-        themeSwitch.classList.remove('fa-moon');
-        themeSwitch.classList.add('fa-sun');
+    for (let i = 0; i < headerIcons.length; i++) {
+        headerIcons[i].style.color = "#edeff0";
     }
+
+    if (themeIcon.classList.contains('fa-moon')) {
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+    }
+
     localStorage.setItem('theme', 'dark');
 }
 
 function setLightMode() {
+
     const body = document.querySelector('body');
-    const themeSwitch = document.querySelector('#theme-switch');
+    const themeIcon = document.querySelector('#theme-icon');
     const logo = document.getElementById('logo');
+    const languageButton = document.getElementById('language-button');
+
     body.classList.add('light');
     body.classList.remove('dark');
+
     logo.src = 'images/icons/logo-dark.png';
-    for (let i = 0; i < contactIconArray.length; i++) {
-        contactIconArray[i].style.fill = "#163746";
+    languageButton.style.color = "#163746";
+    for (let i = 0; i < contactIcons.length; i++) {
+        contactIcons[i].style.fill = "#163746";
     }
-    if (themeSwitch.classList.contains('fa-sun')) {
-        themeSwitch.classList.remove('fa-sun');
-        themeSwitch.classList.add('fa-moon');
+    for (let i = 0; i < headerIcons.length; i++) {
+        headerIcons[i].style.color = "#163746";
     }
+
+    if (themeIcon.classList.contains('fa-sun')) {
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
+    }
+
     localStorage.setItem('theme', 'light');
 }
 
@@ -46,8 +67,8 @@ window.addEventListener('load', (e) => {
 
 window.addEventListener("DOMContentLoaded", () => {
     const body = document.querySelector('body');
-    const themeSwitch = document.querySelector('#theme-switch');
-    themeSwitch.addEventListener('click', () => {
+    const themeButton = document.querySelector('#theme-button');
+    themeButton.addEventListener('click', () => {
             if (body.classList.contains('light')) {
                 localStorage.clear();
                 localStorage.setItem('theme', 'dark');

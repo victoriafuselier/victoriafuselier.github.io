@@ -1,14 +1,14 @@
 const navButton = document.querySelector('#nav-button');
 const navDiv = document.querySelector('.nav');
+const navIcon = document.querySelector('#nav-icon');
 const main = document.querySelector('main'); 
 const footer = document.querySelector('footer');
 const body = document.querySelector('body');
-const languageSwitchContainer = document.querySelector('#language-switch-container');
-const themeSwitchContainer = document.querySelector('#theme-switch-container');
-const navButtonContainer = document.querySelector('#nav-button-container');
+const languageButton = document.querySelector('#language-button');
+const themeButton = document.querySelector('#theme-button');
 const header = document.querySelector("header");
 
-navButtonContainer.addEventListener('click', () => {
+navButton.addEventListener('click', () => {
     const isOpened = navButton.getAttribute('aria-expanded');
     if (isOpened === 'false') {
         body.style.opacity = 0;
@@ -18,12 +18,12 @@ navButtonContainer.addEventListener('click', () => {
         }
         setTimeout(function() {
             main.style.display = 'none';
-            themeSwitchContainer.style.display = 'none';
-            languageSwitchContainer.style.display = 'none';
+            themeButton.style.display = 'none';
+            languageButton.style.display = 'none';
             navButton.setAttribute('aria-expanded', 'true');
-            navButton.classList.remove('fa-bars');
-            navButton.classList.add('fa-xmark');
             navButton.setAttribute('title', '');
+            navIcon.classList.remove('fa-bars');
+            navIcon.classList.add('fa-xmark');
             navDiv.style.display ='block';
         }, 1000);
         setTimeout(function() {
@@ -35,15 +35,15 @@ navButtonContainer.addEventListener('click', () => {
         body.style.opacity = 0;
         header.style.top = '-6vh';
         setTimeout(function() {   
-            navButton.classList.remove('fa-xmark');
-            navButton.classList.add('fa-bars');
+            navIcon.classList.remove('fa-xmark');
+            navIcon.classList.add('fa-bars');
             navButton.setAttribute('title', 'Menu');
             navButton.setAttribute('aria-expanded', 'false');
             navDiv.style.display = 'none';
             main.style.display = 'flex';
             if (window.location.href === 'https://victoriafuselier.github.io/' || window.location.href.includes('fr-index.html') || window.location.href.includes('index.html')) {
-                themeSwitchContainer.style.display = 'block';
-                languageSwitchContainer.style.display = 'block';
+                themeButton.style.display = 'block';
+                languageButton.style.display = 'block';
             }
         }, 1000);
         setTimeout(function() {
@@ -86,8 +86,8 @@ document.addEventListener('DOMContentLoaded', function(event) {
             footer.style.bottom = '6vh';
         }
         if (window.location.href.includes("about.html") || window.location.href.includes("fr-about.html") || window.location.href.includes("work.html") || window.location.href.includes("fr-work.html") || window.location.href.includes("contact.html") || window.location.href.includes("fr-contact.html")) {
-            languageSwitchContainer.style.display = "none";
-            themeSwitchContainer.style.display= "none";
+            languageButton.style.display = "none";
+            themeButton.style.display= "none";
         }
     }, 500);
 });

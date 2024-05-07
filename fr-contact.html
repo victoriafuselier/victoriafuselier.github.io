@@ -17,19 +17,19 @@
             <ul>
                 <li>
                     <i class="fa-solid fa-arrow-right"></i>
-                    <a class="nav-link" onclick="transitionToPage('fr-index.html')">Accueil</a>
+                    <a class="nav-link" onclick="transitionToPage('fr-index.html')" href="fr-index.html">Accueil</a>
                 </li>
                 <li>
                     <i class="fa-solid fa-arrow-right"></i>
-                    <a class="nav-link" onclick="transitionToPage('fr-about.html')">À Propos</a>
+                    <a class="nav-link" onclick="transitionToPage('fr-about.html')" href="fr-about.html">À Propos</a>
                 </li>
                 <li>
                     <i class="fa-solid fa-arrow-right"></i>
-                    <a class="nav-link" onclick="transitionToPage('fr-work.html')">Projets</a>
+                    <a class="nav-link" onclick="transitionToPage('fr-work.html')" href="fr-work.html">Projets</a>
                 </li>
                 <li>
                     <i class="fa-solid fa-arrow-right"></i>
-                    <a class="nav-link" onclick="transitionToPage('fr-contact.html')">Contact</a>
+                    <a class="nav-link" onclick="transitionToPage('fr-contact.html')" href="fr-contact.html">Contact</a>
                 </li>
             </ul>
         </nav>
@@ -42,14 +42,14 @@
         </div>
         <div class="header-right">
             <ul>
-                <li id="language-switch-container" class="language-switch-container">
-                    <i title="Langue" id="language-switch" onclick="transitionToPage('index.html')">EN</i>
+                <li>
+                    <button title="Langue" id="language-button" class="header-buttons" onclick="transitionToPage('index.html')">EN</button>
                 </li>
-                <li id="theme-switch-container" class="theme-switch-container">
-                    <i title="Thème" id="theme-switch" class="fa-solid fa-moon fa-xl"></i>
+                <li>
+                    <button title="Thème" id="theme-button" class="header-buttons"><i id="theme-icon" class="fa-solid fa-moon fa-xl header-icons"></i></button>
                 </li>
-                <li id="nav-button-container" class="nav-button-container">
-                    <i title="Menu" id="nav-button" class="fa-solid fa-bars fa-xl" aria-expanded="false" role="navigation"></i>
+                <li>
+                    <button title="Menu" id="nav-button" class="header-buttons" aria-expanded="false" role="navigation"><i id="nav-icon" class="fa-solid fa-bars fa-xl header-icons"></i></button>
                 </li>
             </ul>
         </div>
