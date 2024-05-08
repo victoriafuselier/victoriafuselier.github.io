@@ -8,6 +8,12 @@ const languageButton = document.querySelector('#language-button');
 const themeButton = document.querySelector('#theme-button');
 const header = document.querySelector("header");
 
+// ===============================================================================================================
+                                                
+//                                         NAV FADE IN/OUT (NAV BUTTON)
+
+// ===============================================================================================================
+
 navButton.addEventListener('click', () => {
     const isOpened = navButton.getAttribute('aria-expanded');
     if (isOpened === 'false') {
@@ -56,7 +62,14 @@ navButton.addEventListener('click', () => {
     }
 });
 
-window.transitionToPage = function(href) {
+// ===============================================================================================================
+                                                
+//                                         TRANSITION TO PAGE (ALL LINKS)
+
+// ===============================================================================================================
+
+window.transitionToPage = function(href, event) {
+    event.preventDefault();
     document.querySelector('body').style.opacity = 0;
     header.style.top = '-6vh';
     if (footer !== null) {
@@ -77,6 +90,22 @@ window.transitionToPage = function(href) {
         document.querySelector('body').style.opacity = 1;
     }, 1500);
 };
+
+const links = document.getElementsByTagName('a');
+
+for (let i = 0; i < links.length; i++) {
+    links[i].addEventListener('click', function(event) {
+        var href = this.getAttribute('href');
+        transitionToPage(href, event);
+    });
+}
+
+// ===============================================================================================================
+                                                
+//                                         BODY FADE IN (PAGE LOAD)
+
+// ===============================================================================================================
+
 
 document.addEventListener('DOMContentLoaded', function(event) {
     setTimeout(function() {
