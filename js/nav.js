@@ -49,7 +49,7 @@ navButton.addEventListener('click', () => {
             main.style.display = 'flex';
             if (window.location.href === 'https://victoriafuselier.github.io/' || window.location.href.includes('fr-index.html') || window.location.href.includes('index.html')) {
                 themeButton.style.display = 'block';
-                languageButton.style.display = 'block';
+                languageButton.style.display = 'inline';
             }
         }, 1000);
         setTimeout(function() {
