@@ -1,6 +1,12 @@
 const contactIcons = document.getElementsByClassName('contact-icons');
 const headerIcons = document.getElementsByClassName('header-icons');
 
+/* ============================================================================================================
+                                                
+                                            DARK MODE FUNCTION
+
+===============================================================================================================*/
+
 function setDarkMode() {
 
     const body = document.querySelector('body');
@@ -28,6 +34,12 @@ function setDarkMode() {
     localStorage.setItem('theme', 'dark');
 }
 
+/* ============================================================================================================
+                                                
+                                            LIGHT MODE FUNCTION
+
+===============================================================================================================*/
+
 function setLightMode() {
 
     const body = document.querySelector('body');
@@ -54,6 +66,12 @@ function setLightMode() {
 
     localStorage.setItem('theme', 'light');
 }
+
+/* ============================================================================================================
+                                                
+                                            EVENT LISTENERS
+
+===============================================================================================================*/
 
 window.addEventListener('load', (e) => {
     e.preventDefault();
