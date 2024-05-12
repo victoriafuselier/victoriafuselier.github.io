@@ -13,12 +13,23 @@ function setDarkMode() {
     const themeIcon = document.querySelector('#theme-icon');
     const logo = document.getElementById('logo');
     const languageButton = document.getElementById('language-button');
+    const dividerLine = document.querySelector('.divider-line');
+    const profileImg = document.querySelector('.profile-img');
 
     body.classList.remove('light');
     body.classList.add('dark');
 
     logo.src = 'images/icons/logo-light.png';
     languageButton.style.color = "#edeff0";
+
+    if (dividerLine !== null) {
+        dividerLine.style.backgroundColor = '#edeff0';
+    }
+
+    if (profileImg !== null) {
+        profileImg.style.boxShadow = '4px 4px 10px #696969, -4px -4px 10px #696969, 4px -4px 10px #696969, -4px 4px 10px #696969';
+    }
+
     for (let i = 0; i < contactIcons.length; i++) {
         contactIcons[i].style.fill = "#edeff0";
     }
@@ -46,12 +57,23 @@ function setLightMode() {
     const themeIcon = document.querySelector('#theme-icon');
     const logo = document.getElementById('logo');
     const languageButton = document.getElementById('language-button');
+    const dividerLine = document.querySelector('.divider-line');
+    const profileImg = document.querySelector('.profile-img');
 
     body.classList.add('light');
     body.classList.remove('dark');
 
     logo.src = 'images/icons/logo-dark.png';
     languageButton.style.color = "#163746";
+
+    if (dividerLine !== null) {
+        dividerLine.style.backgroundColor = '#163746';
+    }
+
+    if (profileImg !== null) {
+        profileImg.style.boxShadow = '4px 4px 10px #163746, -4px -4px 10px #163746, 4px -4px 10px #163746, -4px 4px 10px #163746';
+    }
+
     for (let i = 0; i < contactIcons.length; i++) {
         contactIcons[i].style.fill = "#163746";
     }

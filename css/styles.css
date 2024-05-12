@@ -55,11 +55,6 @@ main,
     color: var(--dark-blue);
 }
 
-.light .divider-line {
-    background-color: var(--dark-blue);
-}
-
-.light .profile-img,
 .light #pop-up-box {
     box-shadow: 4px 4px 10px var(--dark-blue), -4px -4px 10px var(--dark-blue), 4px -4px 10px var(--dark-blue), -4px 4px 10px var(--dark-blue);
 }
@@ -69,11 +64,7 @@ main,
     color: var(--white);
 }
 
-.dark .divider-line {
-    background-color: var(--white);
-}
 
-.dark .profile-img,
 .dark #pop-up-box {
     box-shadow: 4px 4px 10px var(--grey), -4px -4px 10px var(--grey), 4px -4px 10px var(--grey), -4px 4px 10px var(--grey);
 }
