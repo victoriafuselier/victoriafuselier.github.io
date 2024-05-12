@@ -267,11 +267,11 @@ nav {
     letter-spacing: 1px;
 }
 
-.full-name {
+#full-name {
     font-size: 1.5rem;
 }
 
-.nickname {
+#nickname {
     font-size: 1.75rem;
 }
 
@@ -1009,11 +1009,11 @@ form,
         font-size: 1.25rem;
     }
 
-    .full-name {
+    #full-name {
         font-size: 2rem;
     }
 
-    .nickname {
+    #nickname {
         font-size: 2.5rem;
     }
 
@@ -1085,11 +1085,11 @@ form,
         font-size: 1.5rem;
     }
 
-    .full-name {
+    #full-name {
         font-size: 2.5rem;
     }
 
-    .nickname {
+    #nickname {
         font-size: 3rem;
     }
 
@@ -1206,11 +1206,11 @@ form,
         font-size: 2.5rem;
     }
 
-    .full-name {
+    #full-name {
         font-size: 3.3rem;
     }
 
-    .nickname {
+    #nickname {
         font-size: 3.75rem;
     }
 
