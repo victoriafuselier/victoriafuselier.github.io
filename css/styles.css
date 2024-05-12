@@ -107,7 +107,8 @@ footer p,
 
 button,
 a,
-.close {
+.close,
+.project-container {
     cursor: pointer;
 }
 
@@ -338,7 +339,7 @@ footer p {
 }
 
 .about h1,
-.projects h1,
+.work h1,
 .contact h1 {
     font-size: 2.75rem;
 }
@@ -552,34 +553,33 @@ scrollbar-width: none;  /* Firefox */
     justify-content: center;
 }
 
-.projects-wrapper {
+.work-wrapper {
     padding: 20px 10px;
+    width: 100%;
+    max-width: 1200px;
 }
 
-.projects h1,
-.projects .divider-line {
+.work h1,
+.work .divider-line {
     width: 90%;
     margin: 5px auto;
-    max-width: 950px;
+    max-width: 800px;
 }
 
-#portfolio-container {
-    width: 230px;
-    margin: 40px auto 60px;
-}
-
-.project-container {
-	text-align: center;
-	margin-bottom: 30px;
+#grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 300px));
+    grid-gap: 20px 20px;
+    justify-content: center;
+    align-content: center;
+    grid-auto-flow: dense;
+    padding: 40px 0 60px;
 }
 
 .project-container,
-.project-photo,
-.project-photo img,
+.project-container img,
 .photo-overlay {
     border-radius: 8px;
-    max-height: 129px;
-    max-width: 298px;
 }
 
 .project-container img,
@@ -587,8 +587,9 @@ scrollbar-width: none;  /* Firefox */
     max-width: 100%;
 }
 
-.project-photo {
+.project-container {
 	position: relative;
+    margin: 0 auto;
 }
 
 .project-container:hover .photo-overlay {
@@ -596,7 +597,7 @@ scrollbar-width: none;  /* Firefox */
     box-shadow: 5px 5px 18px rgba(0, 0, 0, 0.8), -5px -5px 18px rgba(0, 0, 0, 0.8);
 }
 
-.project-photo a {
+.project-container a {
     color: var(--white);
     font-weight: 600;
     font-size: .8rem;
@@ -610,8 +611,8 @@ scrollbar-width: none;  /* Firefox */
     text-decoration: none;
 }
 
-.project-photo a:hover,
-.project-photo a:focus {
+.project-container a:hover,
+.project-container a:focus {
     color: var(--white);
     background-color: var(--green);
     transform: scale(1.1);
@@ -874,10 +875,6 @@ form,
 
 @media screen and (min-width: 320px) {
 
-    #portfolio-container {
-        width: 300px;
-    }
-
     .photo-overlay h2 {
         font-size: 1.5rem;
     }
@@ -890,21 +887,14 @@ form,
         font-size: 1.1rem;
     }
 
-    .projects-wrapper {
+    .work-wrapper {
         font-size: 1.2rem;
-    }
-
-    .project-container,
-    .project-photo,
-    .project-photo img,
-    .photo-overlay {
-        max-height: 168px;
     }
 }
 
 @media screen and (min-width: 600px) { 
     .about h1,
-    .projects h1,
+    .work h1,
     .contact h1 {
         font-size: 3rem;
     }
@@ -1107,7 +1097,7 @@ form,
     }
 
     .about h1,
-    .projects h1,
+    .work h1,
     .contact h1 {
         font-size: 3.25rem;
     }
@@ -1139,29 +1129,6 @@ form,
 }
 
 @media screen and (min-width: 768px) {
-    .projects-wrapper {
-        padding: 40px 0;
-    }
-
-    #portfolio-container {
-        width: 700px;
-    }
-
-    #portfolio-container {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-
-    .project-container {
-		width: 47%;
-		float: left;
-	}
-
-    .projects-heading {
-        align-items: flex-start;
-    }
 
     .photo-overlay-p {
         font-size: 1.2rem;
@@ -1236,7 +1203,7 @@ form,
     }
 
     .about h1,
-    .projects h1,
+    .work h1,
     .contact h1 {
         font-size: 3.5rem;
     }
@@ -1268,18 +1235,6 @@ form,
 }
 
 @media screen and (min-width: 1024px) {
-    .projects-wrapper {
-        padding: 60px 0;
-    }
-
-    #portfolio-container {
-        width: 1000px;
-    }
-
-    .project-container {
-		width: 32%;
-		float: left;
-	}
 
     .photo-overlay h2 {
         font-size: 1.4rem;
