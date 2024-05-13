@@ -637,7 +637,8 @@ scrollbar-width: none;  /* Firefox */
     top: 10px;
 }
 
-.photo-overlay-p {
+.photo-overlay-p,
+.fr-photo-overlay-p {
     font-size: .9rem;
     text-align: center;
     margin: 0;
