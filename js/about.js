@@ -15,10 +15,11 @@ educationButton.addEventListener('click', () => {
                             <button class="close">x</button>
                             <h2>Education</h2>
                             <ul id="education">
-                                <li>Bachelor's Degree, Louisiana State University</li>
+                                <li>Bachelor's Degree,<br>Louisiana State University</li>
                                 <li>FreeCodeCamp</li>
-                                <li>Front-End Web Development Track, Treehouse</li>
-                                <li>Front-End Web Development Techdegree, Treehouse</li>
+                                <li>Front-End Web Development Track,<br>Treehouse</li>
+                                <li>Code Adventures,<br>Treehouse</li>
+                                <li><a target="_blank" href="techdegree.html">Front-End Web Development Techdegree  <i class="fa-regular fa-file-pdf"></i></a></li>
                             </ul>
                         </div>`;
 

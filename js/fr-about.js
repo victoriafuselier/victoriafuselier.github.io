@@ -10,17 +10,18 @@ educationButton.addEventListener('click', () => {
     popUpDiv.style.display = 'block';
     popUpDiv.style.height = '100%';
     popUpDiv.style.width = '100%';
-    
-    popUpDiv.innerHTML = `<div id='pop-up-box'>
-                            <button class="close">x</button>
-                            <h2>Éducation</h2>
-                            <ul id="education">
-                                <li>Baccalauréat, Université d'État de Louisiane</li>
-                                <li>FreeCodeCamp</li>
-                                <li>Piste de développement Web front-end, Treehouse</li>
-                                <li>Diplôme technologique en développement Web front-end, Treehouse</li>
-                            </ul>
-                        </div>`;
+
+    popUpDiv.innerHTML =    `<div id='pop-up-box'>
+                                <button class="close">x</button>
+                                <h2>Éducation</h2>
+                                <ul id="education">
+                                    <li>Baccalauréat,<br>Université d'État de Louisiane</li>
+                                    <li>FreeCodeCamp</li>
+                                    <li>Piste de développement Web front-end,<br>Treehouse</li>
+                                    <li>Code Adventures,<br>Treehouse</li>
+                                    <li><a target="_blank" href="techdegree.html">Diplôme technique en développement Web front-end  <i class="fa-regular fa-file-pdf"></i></a></li>
+                                </ul>
+                            </div>`;
 
     let closeButton = document.querySelector('.close');
     closeButton.focus();
