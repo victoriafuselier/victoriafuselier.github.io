@@ -123,6 +123,7 @@ window.transitionToPage = function(href, event) {
     }, 1500);
 };
 
+// Event listeners for all links
 const links = document.getElementsByTagName('a');
 for (let i = 0; i < links.length; i++) {
     links[i].addEventListener('click', function(event) {
