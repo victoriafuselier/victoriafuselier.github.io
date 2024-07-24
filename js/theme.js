@@ -19,7 +19,7 @@ function setDarkMode() {
     body.classList.remove('light');
     body.classList.add('dark');
 
-    logo.src = 'images/icons/logo-light.png';
+    logo.src = '../images/icons/logo-light.png';
     languageButton.style.color = "#edeff0";
 
     if (dividerLine !== null) {
@@ -63,7 +63,7 @@ function setLightMode() {
     body.classList.add('light');
     body.classList.remove('dark');
 
-    logo.src = 'images/icons/logo-dark.png';
+    logo.src = '../images/icons/logo-dark.png';
     languageButton.style.color = "#163746";
 
     if (dividerLine !== null) {

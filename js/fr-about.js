@@ -19,7 +19,7 @@ educationButton.addEventListener('click', () => {
                                     <li>FreeCodeCamp</li>
                                     <li>Piste de développement Web front-end,<br>Treehouse</li>
                                     <li>Code Adventures,<br>Treehouse</li>
-                                    <li><a target="_blank" href="techdegree.html">Diplôme technique en développement Web front-end  <i class="fa-regular fa-file-pdf"></i></a></li>
+                                    <li><a target="_blank" href="../html/techdegree.html">Diplôme technique en développement Web front-end  <i class="fa-regular fa-file-pdf"></i></a></li>
                                 </ul>
                             </div>`;
 
