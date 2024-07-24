@@ -8,12 +8,49 @@ const languageButton = document.querySelector('#language-button');
 const themeButton = document.querySelector('#theme-button');
 const header = document.querySelector("header");
 
-// ===============================================================================================================
-                                                
-//                                         NAV FADE IN/OUT (NAV BUTTON)
+// Function to restore state when page is loaded from bfcache
+function restorePageState() {
+    const isOpened = navButton.getAttribute('aria-expanded');
 
-// ===============================================================================================================
+    if (isOpened === 'true') {
+        // If navigation menu was open, restore its state
+        navIcon.classList.remove('fa-bars');
+        navIcon.classList.add('fa-xmark');
+        navButton.setAttribute('title', '');
+        navDiv.style.display = 'block';
+        navDiv.style.opacity = 1;
+    } else {
+        // If navigation menu was closed, restore its state
+        navIcon.classList.remove('fa-xmark');
+        navIcon.classList.add('fa-bars');
+        navButton.setAttribute('title', 'Menu');
+        navDiv.style.display = 'none';
+    }
 
+    // Restore other elements' styles
+    body.style.opacity = 1;
+    header.style.top = '6vh';
+    if (footer !== null) {
+        footer.style.bottom = '6vh';
+    }
+    if (window.location.href.includes("about.html") || window.location.href.includes("fr-about.html") || window.location.href.includes("work.html") || window.location.href.includes("fr-work.html") || window.location.href.includes("contact.html") || window.location.href.includes("fr-contact.html")) {
+        languageButton.style.display = "none";
+        themeButton.style.display= "none";
+    } else {
+        languageButton.style.display = "inline";
+        themeButton.style.display = "block";
+    }
+}
+
+// Event listener for pageshow event
+window.addEventListener('pageshow', function(event) {
+    if (event.persisted) {
+        // Page is loaded from the bfcache
+        restorePageState();
+    }
+});
+
+// Event listener for navButton click (toggle navigation)
 navButton.addEventListener('click', () => {
     const isOpened = navButton.getAttribute('aria-expanded');
     if (isOpened === 'false') {
@@ -62,12 +99,7 @@ navButton.addEventListener('click', () => {
     }
 });
 
-// ===============================================================================================================
-                                                
-//                                         TRANSITION TO PAGE (ALL LINKS)
-
-// ===============================================================================================================
-
+// Function to handle transition to another page
 window.transitionToPage = function(href, event) {
     event.preventDefault();
     document.querySelector('body').style.opacity = 0;
@@ -81,7 +113,7 @@ window.transitionToPage = function(href, event) {
         setTimeout(function() { 
             navDiv.style.display = 'none';
             body.style.display = 'block';
-    }, 1000);
+        }, 1000);
     }
     setTimeout(function() { 
         window.location.href = href;
@@ -92,7 +124,6 @@ window.transitionToPage = function(href, event) {
 };
 
 const links = document.getElementsByTagName('a');
-
 for (let i = 0; i < links.length; i++) {
     links[i].addEventListener('click', function(event) {
         var href = this.getAttribute('href');
@@ -100,13 +131,7 @@ for (let i = 0; i < links.length; i++) {
     });
 }
 
-// ===============================================================================================================
-                                                
-//                                         BODY FADE IN (PAGE LOAD)
-
-// ===============================================================================================================
-
-
+// Function to run when DOM content is loaded
 document.addEventListener('DOMContentLoaded', function(event) {
     setTimeout(function() {
         document.querySelector('body').style.opacity = 1;
@@ -114,10 +139,6 @@ document.addEventListener('DOMContentLoaded', function(event) {
         if (footer !== null) {
             footer.style.bottom = '6vh';
         }
-        if (window.location.href.includes("about.html") || window.location.href.includes("fr-about.html") || window.location.href.includes("work.html") || window.location.href.includes("fr-work.html") || window.location.href.includes("contact.html") || window.location.href.includes("fr-contact.html")) {
-            languageButton.style.display = "none";
-            themeButton.style.display= "none";
-        }
+        restorePageState(); // Restore page state on initial load
     }, 500);
 });
-
