@@ -23,3 +23,8 @@ for (let i = 0; i < projectContainers.length; i++) {
         projectContainers[i].querySelector('.photo-overlay').style.boxShadow = 'unset';
     });
 };
+
+const container = document.querySelector('#grid-container');
+const items = Array.from(container.children);
+
+items.reverse().forEach(item => container.appendChild(item));
