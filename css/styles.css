@@ -642,8 +642,11 @@ scrollbar-width: none;  /* Firefox */
 .fr-photo-overlay-p {
     font-size: .9rem;
     text-align: center;
-    margin: 0;
     line-height: 1;
+}
+
+.fr-photo-overlay-p {
+    text-transform: uppercase;
 }
 
 .projects-footer {
@@ -876,12 +879,12 @@ form,
         font-size: 1.1rem;
     }
 
-    .photo-overlay a {
-        font-size: 1.1rem;
+    .fr-photo-overlay-p {
+        font-size: .9rem;
     }
 
-    .work-wrapper {
-        font-size: 1.2rem;
+    .photo-overlay a {
+        font-size: 1.1rem;
     }
 }
 
@@ -1128,7 +1131,7 @@ form,
     }
     
     .fr-photo-overlay-p {
-        font-size: 1rem;
+        font-size: .9rem;
     }
 }
 
@@ -1237,6 +1240,10 @@ form,
     .photo-overlay-p {
         font-size: 1.2rem;
         padding: 0;
+    }
+
+    .fr-photo-overlay-p {
+        font-size: 1rem;
     }
 }
 
