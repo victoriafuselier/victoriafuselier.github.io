@@ -127,8 +127,9 @@ header {
 }
 
 footer {
-    bottom: -6vh;
+    /* bottom: -6vh; */
     transition: bottom 1s ease;
+    flex-direction: column;
 }
 
 .header-left,
@@ -309,6 +310,10 @@ footer p {
     text-align: center;
     font-weight: 600;
     font-family: 'Unica One', sans-serif;
+    font-size: xx-small;
+}
+
+footer p:first-of-type {
     font-size: x-small;
 }
 
@@ -1006,6 +1011,10 @@ form,
     }
 
     footer p {
+        font-size: x-small;
+    }
+
+    footer p:first-of-type {
         font-size: small;
     }
 
@@ -1074,9 +1083,13 @@ form,
     }
 
     footer p {
-        font-size: medium;
+        font-size: small;
     }
 
+    footer p:first-of-type {
+        font-size: medium;
+    }
+    
     .about h1,
     .work h1,
     .contact h1 {
@@ -1203,6 +1216,10 @@ form,
     }
 
     footer p {
+        font-size: medium;
+    }
+
+    footer p:first-of-type {
         font-size: large;
     }
 

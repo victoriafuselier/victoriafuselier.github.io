@@ -64,7 +64,7 @@ function setLightMode() {
     body.classList.remove('dark');
 
     logo.src = '../images/icons/logo-dark.png';
-    languageButton.style.color = "#163746";
+    fontButton.style.color = "#163746";
 
     if (dividerLine !== null) {
         dividerLine.style.backgroundColor = '#163746';
