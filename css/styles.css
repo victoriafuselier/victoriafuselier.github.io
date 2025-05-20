@@ -638,15 +638,10 @@ scrollbar-width: none;  /* Firefox */
     top: 10px;
 }
 
-.photo-overlay-p,
-.fr-photo-overlay-p {
+.photo-overlay-p {
     font-size: .9rem;
     text-align: center;
     line-height: 1;
-}
-
-.fr-photo-overlay-p {
-    text-transform: uppercase;
 }
 
 .projects-footer {
@@ -662,10 +657,6 @@ scrollbar-width: none;  /* Firefox */
 .projects-footer a {
     text-underline-offset: 5px;
     text-decoration: underline;
-}
-
-.fr-photo-overlay-p {
-    font-size: 12px;
 }
 
 /* ============================================================================================================
@@ -877,10 +868,6 @@ form,
 
     .photo-overlay-p {
         font-size: 1.1rem;
-    }
-
-    .fr-photo-overlay-p {
-        font-size: .9rem;
     }
 
     .photo-overlay a {
@@ -1129,10 +1116,6 @@ form,
     .photo-overlay-p {
         font-size: 1.2rem;
     }
-    
-    .fr-photo-overlay-p {
-        font-size: .9rem;
-    }
 }
 
 @media screen and (min-width: 1024px) and (min-height: 550px) {
@@ -1240,10 +1223,6 @@ form,
     .photo-overlay-p {
         font-size: 1.2rem;
         padding: 0;
-    }
-
-    .fr-photo-overlay-p {
-        font-size: 1rem;
     }
 }
 
