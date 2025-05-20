@@ -12,7 +12,7 @@ function setDarkMode() {
     const body = document.querySelector('body');
     const themeIcon = document.querySelector('#theme-icon');
     const logo = document.getElementById('logo');
-    const languageButton = document.getElementById('language-button');
+    const fontButton = document.getElementById('font-button');
     const dividerLine = document.querySelector('.divider-line');
     const profileImg = document.querySelector('.profile-img');
 
@@ -20,7 +20,7 @@ function setDarkMode() {
     body.classList.add('dark');
 
     logo.src = '../images/icons/logo-light.png';
-    languageButton.style.color = "#edeff0";
+    fontButton.style.color = "#edeff0";
 
     if (dividerLine !== null) {
         dividerLine.style.backgroundColor = '#edeff0';
