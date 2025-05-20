@@ -33,7 +33,7 @@ function restorePageState() {
     if (footer !== null) {
         footer.style.bottom = '6vh';
     }
-    if (window.location.href.includes("about.html") || window.location.href.includes("fr-about.html") || window.location.href.includes("work.html") || window.location.href.includes("fr-work.html") || window.location.href.includes("contact.html") || window.location.href.includes("fr-contact.html")) {
+    if (window.location.href.includes("about.html") || window.location.href.includes("work.html") || window.location.href.includes("contact.html")) {
         languageButton.style.display = "none";
         themeButton.style.display= "none";
     } else {
@@ -84,7 +84,7 @@ navButton.addEventListener('click', () => {
             navButton.setAttribute('aria-expanded', 'false');
             navDiv.style.display = 'none';
             main.style.display = 'flex';
-            if (window.location.href === 'https://victoriafuselier.github.io/' || window.location.href.includes('fr-index.html') || window.location.href.includes('index.html')) {
+            if (window.location.href === 'https://victoriafuselier.github.io/' || window.location.href.includes('index.html')) {
                 themeButton.style.display = 'block';
                 languageButton.style.display = 'inline';
             }
