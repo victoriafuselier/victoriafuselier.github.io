@@ -30,7 +30,6 @@ function restorePageState() {
     // Restore other elements' styles
     body.style.opacity = 1;
     header.style.top = '6vh';
-    footer.style.bottom = '6vh';
     if (window.location.href.includes("about.html") || window.location.href.includes("work.html") || window.location.href.includes("contact.html")) {
         fontButton.style.display = "none";
         themeButton.style.display= "none";
@@ -54,9 +53,9 @@ navButton.addEventListener('click', () => {
     if (isOpened === 'false') {
         body.style.opacity = 0;
         header.style.top = '-6vh';
-        footer.style.bottom = '-6vh';
         setTimeout(function() {
             main.style.display = 'none';
+            footer.style.display = 'none';
             themeButton.style.display = 'none';
             fontButton.style.display = 'none';
             navButton.setAttribute('aria-expanded', 'true');
@@ -80,6 +79,7 @@ navButton.addEventListener('click', () => {
             navButton.setAttribute('aria-expanded', 'false');
             navDiv.style.display = 'none';
             main.style.display = 'flex';
+            footer.style.display = 'flex';
             if (window.location.href === 'https://victoriafuselier.github.io/' || window.location.href.includes('index.html')) {
                 themeButton.style.display = 'block';
                 fontButton.style.display = 'inline';
@@ -88,7 +88,6 @@ navButton.addEventListener('click', () => {
         setTimeout(function() {
             body.style.opacity = 1;
             header.style.top = '6vh';
-            footer.style.bottom = '6vh';
         }, 1100);
     }
 });
@@ -98,7 +97,6 @@ window.transitionToPage = function(href, event) {
     event.preventDefault();
     document.querySelector('body').style.opacity = 0;
     header.style.top = '-6vh';
-    footer.style.bottom = '-6vh';
     if (navButton.getAttribute('aria-expanded') === 'true') {
         navButton.setAttribute('aria-expanded', 'false');
         navDiv.style.opacity = 0;
@@ -129,7 +127,6 @@ document.addEventListener('DOMContentLoaded', function(event) {
     setTimeout(function() {
         document.querySelector('body').style.opacity = 1;
         header.style.top = '6vh';
-        footer.style.bottom = '6vh';
         restorePageState(); // Restore page state on initial load
     }, 500);
 });
