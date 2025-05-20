@@ -4,7 +4,7 @@ const navIcon = document.querySelector('#nav-icon');
 const main = document.querySelector('main'); 
 const footer = document.querySelector('footer');
 const body = document.querySelector('body');
-const languageButton = document.querySelector('#language-button');
+const fontButton = document.querySelector('#font-button');
 const themeButton = document.querySelector('#theme-button');
 const header = document.querySelector("header");
 
@@ -34,10 +34,10 @@ function restorePageState() {
         footer.style.bottom = '6vh';
     }
     if (window.location.href.includes("about.html") || window.location.href.includes("work.html") || window.location.href.includes("contact.html")) {
-        languageButton.style.display = "none";
+        fontButton.style.display = "none";
         themeButton.style.display= "none";
     } else {
-        languageButton.style.display = "inline";
+        fontButton.style.display = "inline";
         themeButton.style.display = "block";
     }
 }
@@ -62,7 +62,7 @@ navButton.addEventListener('click', () => {
         setTimeout(function() {
             main.style.display = 'none';
             themeButton.style.display = 'none';
-            languageButton.style.display = 'none';
+            fontButton.style.display = 'none';
             navButton.setAttribute('aria-expanded', 'true');
             navButton.setAttribute('title', '');
             navIcon.classList.remove('fa-bars');
@@ -86,7 +86,7 @@ navButton.addEventListener('click', () => {
             main.style.display = 'flex';
             if (window.location.href === 'https://victoriafuselier.github.io/' || window.location.href.includes('index.html')) {
                 themeButton.style.display = 'block';
-                languageButton.style.display = 'inline';
+                fontButton.style.display = 'inline';
             }
         }, 1000);
         setTimeout(function() {
