@@ -247,7 +247,6 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-transform: uppercase;
 }
 
 .home h1 {
@@ -626,7 +625,6 @@ scrollbar-width: none;  /* Firefox */
 	background: rgba(0, 0, 0, .8); 
     opacity: 0;
     transition: 1s opacity ease;
-    text-transform: uppercase;
     font-weight: 600;
     letter-spacing: .5px;
 }
@@ -647,7 +645,6 @@ scrollbar-width: none;  /* Firefox */
 .projects-footer {
     margin: 0px auto;
     padding: 0 10px;
-    text-transform: uppercase;
     font-size: small;
     text-align: center;
     font-weight: 600;
