@@ -165,6 +165,7 @@ footer {
 
 .header-buttons {
     border: none;
+    color: inherit;
     background: transparent;
     height: 22px;
     width: 22px;
