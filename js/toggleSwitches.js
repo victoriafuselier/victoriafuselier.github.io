@@ -8,7 +8,6 @@ const headerIcons = document.getElementsByClassName('header-icons');
 ===============================================================================================================*/
 
 function setDarkMode() {
-
     const body = document.querySelector('body');
     const themeIcon = document.querySelector('#theme-icon');
     const logo = document.getElementById('logo');
@@ -52,11 +51,9 @@ function setDarkMode() {
 ===============================================================================================================*/
 
 function setLightMode() {
-
     const body = document.querySelector('body');
     const themeIcon = document.querySelector('#theme-icon');
     const logo = document.getElementById('logo');
-    const languageButton = document.getElementById('language-button');
     const dividerLine = document.querySelector('.divider-line');
     const profileImg = document.querySelector('.profile-img');
 
@@ -91,6 +88,32 @@ function setLightMode() {
 
 /* ============================================================================================================
                                                 
+                                            UNICA FONT FUNCTION
+
+===============================================================================================================*/
+
+function setUnicaFont() {
+    const body = document.querySelector('body');
+    body.classList.add('unica');
+    body.classList.remove('inter');
+    localStorage.setItem('font', 'unica');
+}
+
+/* ============================================================================================================
+                                                
+                                            INTER FONT FUNCTION
+
+===============================================================================================================*/
+
+function setInterFont() {
+    const body = document.querySelector('body');
+    body.classList.add('inter');
+    body.classList.remove('unica');
+    localStorage.setItem('font', 'inter');
+}
+
+/* ============================================================================================================
+                                                
                                             EVENT LISTENERS
 
 ===============================================================================================================*/
@@ -103,22 +126,40 @@ window.addEventListener('load', (e) => {
     } else {
         setLightMode();
     }
+    const font = localStorage.getItem('font');
+    if (font === 'unica') {
+        setUnicaFont();
+    } else {
+        setInterFont();
+    }
 });
 
 window.addEventListener("DOMContentLoaded", () => {
-    const body = document.querySelector('body');
     const themeButton = document.querySelector('#theme-button');
+    const body = document.querySelector('body');
     themeButton.addEventListener('click', () => {
-            if (body.classList.contains('light')) {
-                localStorage.clear();
-                localStorage.setItem('theme', 'dark');
-                setDarkMode();
-            } else if (body.classList.contains('dark')) {
-                localStorage.clear();
-                localStorage.setItem('theme', 'light');
-                setLightMode();
-            }
-        });
+        if (body.classList.contains('light')) {
+            localStorage.clear();
+            localStorage.setItem('theme', 'dark');
+            setDarkMode();
+        } else if (body.classList.contains('dark')) {
+            localStorage.clear();
+            localStorage.setItem('theme', 'light');
+            setLightMode();
+        }
+    });
+    const fontButton = document.querySelector('#font-button');
+    fontButton.addEventListener('click', () => {
+        if (body.classList.contains('inter')) {
+            // localStorage.clear();
+            localStorage.setItem('font', 'unica');
+            setUnicaFont();
+        } else if (body.classList.contains('unica')) {
+            // localStorage.clear();
+            localStorage.setItem('font', 'inter');
+            setInterFont();
+        }
+    })
 });
 
 

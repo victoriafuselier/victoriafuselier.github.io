@@ -74,27 +74,12 @@ footer {
     box-shadow: 4px 4px 10px var(--grey), -4px -4px 10px var(--grey), 4px -4px 10px var(--grey), -4px 4px 10px var(--grey);
 }
 
-body,
-#pop-up-box {
-    font-family: 'Fira Sans Condensed', sans-serif;
+.unica {
+  font-family: 'Unica One', sans-serif;
 }
 
-.home,
-h1,
-h2,
-.nav,
-.about-button,
-/* #pop-up-box h2, */
-.photo-overlay,
-footer p,
-.projects-footer {
-    font-family: 'Unica One', 'Varela Round', sans-serif;
-}
-
-.form-control,
-.form-control h2,
-#send-button {
-    font-family: "Varela Round", "Fira Sans Condensed", sans-serif;
+.inter {
+    font-family: 'Inter Tight', serif;
 }
 
 .hidden {
@@ -106,6 +91,10 @@ a,
 .close,
 .project-container {
     cursor: pointer;
+}
+
+button {
+    font-family: inherit;
 }
 
 /* ============================================================================================================
@@ -134,6 +123,14 @@ header {
 footer {
     bottom: 6vh;
     flex-direction: column;
+}
+
+footer p a {
+    transition: all .5s;
+}
+
+footer p a:hover {
+    text-decoration: underline;
 }
 
 .header-left,
@@ -174,13 +171,6 @@ footer {
     background: transparent;
     height: 22px;
     width: 22px;
-}
-
-#language-button {
-    font-weight: 600;
-    letter-spacing: 1px;
-    font-size: 10px;
-    font-style: normal;
 }
 
 /* ============================================================================================================
@@ -260,7 +250,6 @@ nav {
 }
 
 .name {
-    text-shadow: 2px 2px 4px var(--grey);
     letter-spacing: 1px;
 }
 
@@ -270,6 +259,7 @@ nav {
 
 #nickname {
     font-size: 1.75rem;
+    /* text-shadow: 2px 2px 4px var(--grey); */
 }
 
 .home h2 {
@@ -313,7 +303,6 @@ nav {
 footer p {
     text-align: center;
     font-weight: 600;
-    font-family: 'Unica One', sans-serif;
     font-size: xx-small;
 }
 
@@ -370,6 +359,7 @@ footer p:first-of-type {
 .about-p {
     font-size: 1rem;
     margin: 20px 0;
+    font-weight: 600;
 }
 
 .message-link,
@@ -481,7 +471,7 @@ scrollbar-width: none;  /* Firefox */
 
 .close {
     position: absolute;
-    top: 10px;
+    top: 30px;
     right: 15px;
     font-size: 1.5rem;
     color: var(--dark-blue);
@@ -500,6 +490,7 @@ scrollbar-width: none;  /* Firefox */
  
 #education li {
     line-height: 1.2;
+    font-weight: 600;
 }
 
 #education li:not(:last-of-type) {
@@ -515,6 +506,7 @@ scrollbar-width: none;  /* Firefox */
     text-align: left;
     margin: 0 auto;
     padding-left: 15px;
+    font-weight: 600;
 }
 
 .sublist {
@@ -658,7 +650,6 @@ scrollbar-width: none;  /* Firefox */
     font-size: small;
     text-align: center;
     font-weight: 600;
-    font-family: 'Unica One', sans-serif;
 }
 
 .projects-footer a {
@@ -763,25 +754,12 @@ form,
     margin-bottom: 10px;
     padding-bottom: 20px;
     position: relative;
-    text-transform: uppercase;
 }
 
 .form-control label {
     display: inline-block;
     margin-bottom: 5px;
     font-weight: 600;
-}
-
-.form-control input,
-.form-control textarea {
-    border-radius: 5px;
-    border: 3px solid var(--white);
-    color: var(--dark-blue);
-    display: block;
-    font-size: 1rem;
-    width: 100%;
-    padding: 10px 35px 10px 10px;
-    font-family: 'Varela Round', sans-serif;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -810,7 +788,6 @@ form,
     font-size: 12px;
     font-weight: 600;
     color: var(--white);
-    text-transform: none;
 }
 
 .send-button-container {
@@ -827,7 +804,6 @@ form,
     border-radius: 5px;
     font-size: 1rem;
     font-weight: 600;
-    text-transform: uppercase;
     transition: all .5s ease;
     border: none;
 }
@@ -969,14 +945,6 @@ form,
         font-size: 30px;
     }
 
-    #language-button {
-        font-size: 15px;
-    }
-
-    /* .header-right li {
-        margin-left: 20px;
-    } */
-
     .nav ul {
         max-height: 250px;
     }
@@ -1046,10 +1014,6 @@ form,
     
     .header-icons {
         font-size: 35px;
-    }
-
-    #language-button {
-        font-size: 20px;
     }
 
     .header-right li {
@@ -1146,14 +1110,6 @@ form,
     .header-icons {
         font-size: 40px;
     }
-
-    #language-button {
-        font-size: 25px;
-    }
-
-    /* .header-right li {
-        margin-left: 30px;
-    } */
 
     .nav ul {
         max-height: 400px;

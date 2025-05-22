@@ -30,13 +30,13 @@ function restorePageState() {
     // Restore other elements' styles
     body.style.opacity = 1;
     header.style.top = '6vh';
-    if (window.location.href.includes("about.html") || window.location.href.includes("work.html") || window.location.href.includes("contact.html")) {
-        fontButton.style.display = "none";
-        themeButton.style.display= "none";
-    } else {
-        fontButton.style.display = "inline";
-        themeButton.style.display = "block";
-    }
+    // if (window.location.href.includes("about.html") || window.location.href.includes("work.html") || window.location.href.includes("contact.html")) {
+    //     fontButton.style.display = "none";
+    //     themeButton.style.display= "none";
+    // } else {
+    //     fontButton.style.display = "inline";
+    //     themeButton.style.display = "block";
+    // }
 }
 
 // Event listener for pageshow event
