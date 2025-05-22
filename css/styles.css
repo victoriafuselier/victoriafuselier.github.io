@@ -348,10 +348,13 @@ footer p:first-of-type {
     justify-content: center;
 }
 
-.about-p {
+.about-text {
     font-size: 1rem;
     margin: 20px 0;
-    font-weight: 600;
+}
+
+.about-text p {
+    text-indent: 10%;
 }
 
 .message-link,
@@ -662,11 +665,10 @@ scrollbar-width: none;  /* Firefox */
 
 .contact-wrapper {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
     height: 100%;
-    margin: 0 0 40px;
 }
 
 .contact-left,
@@ -693,8 +695,20 @@ scrollbar-width: none;  /* Firefox */
 
 form,
 .contact-links-wrapper {
-    width: 100%;
+    /* width: 100%; */
     margin: 0 auto;
+}
+
+textarea {
+    width: 100%;
+}
+
+input,
+textarea {
+    padding: 6px;
+    font-family: inherit;
+    color: var(--dark-blue);
+    font-weight: 600;
 }
 
 .contact-links-wrapper {
@@ -731,11 +745,6 @@ form,
     color: var(--white);
     border-radius: 5px;
     letter-spacing: .5px;
-}
-
-.form-control h2 {
-    text-align: center;
-    font-size: 1.2rem;
 }
 
 .form-control {
@@ -880,8 +889,8 @@ form,
         padding: 0;
     }
 
-    .about-p {
-        margin: 20px 10px 20px 0;
+    .about-text {
+        margin: 20px 30px 20px 0;
         font-size: .8rem;
     }
 
@@ -1047,7 +1056,7 @@ form,
         width: 660px;
     }
 
-    .about-p {
+    .about-text {
         font-size: 1rem;
     }
 
@@ -1133,7 +1142,7 @@ form,
         font-size: 3.5rem;
     }
 
-    .about-p {
+    .about-text {
         font-size: 1.2rem;
     }
 
