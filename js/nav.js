@@ -1,5 +1,5 @@
 const navButton = document.querySelector('#nav-button');
-const navDiv = document.querySelector('.nav');
+const nav = document.querySelector('nav');
 const navIcon = document.querySelector('#nav-icon');
 const main = document.querySelector('main'); 
 const footer = document.querySelector('footer');
@@ -17,14 +17,14 @@ function restorePageState() {
         navIcon.classList.remove('fa-bars');
         navIcon.classList.add('fa-xmark');
         navButton.setAttribute('title', '');
-        navDiv.style.display = 'block';
-        navDiv.style.opacity = 1;
+        nav.style.display = 'block';
+        nav.style.opacity = 1;
     } else {
         // If navigation menu was closed, restore its state
         navIcon.classList.remove('fa-xmark');
         navIcon.classList.add('fa-bars');
         navButton.setAttribute('title', 'Menu');
-        navDiv.style.display = 'none';
+        nav.style.display = 'none';
     }
 
     // Restore other elements' styles
@@ -62,12 +62,12 @@ navButton.addEventListener('click', () => {
             navButton.setAttribute('title', '');
             navIcon.classList.remove('fa-bars');
             navIcon.classList.add('fa-xmark');
-            navDiv.style.display ='block';
+            nav.style.display ='block';
         }, 1000);
         setTimeout(function() {
             header.style.top = '6vh';
             body.style.opacity = 1;
-            navDiv.style.opacity = 1;
+            nav.style.opacity = 1;
         }, 1100);
     } else {
         body.style.opacity = 0;
@@ -77,7 +77,7 @@ navButton.addEventListener('click', () => {
             navIcon.classList.add('fa-bars');
             navButton.setAttribute('title', 'Menu');
             navButton.setAttribute('aria-expanded', 'false');
-            navDiv.style.display = 'none';
+            nav.style.display = 'none';
             main.style.display = 'flex';
             footer.style.display = 'flex';
             if (window.location.href === 'https://victoriafuselier.github.io/' || window.location.href.includes('index.html')) {
@@ -99,9 +99,9 @@ window.transitionToPage = function(href, event) {
     header.style.top = '-6vh';
     if (navButton.getAttribute('aria-expanded') === 'true') {
         navButton.setAttribute('aria-expanded', 'false');
-        navDiv.style.opacity = 0;
+        nav.style.opacity = 0;
         setTimeout(function() { 
-            navDiv.style.display = 'none';
+            nav.style.display = 'none';
             body.style.display = 'block';
         }, 1000);
     }

@@ -23,6 +23,24 @@
     --grey: #696969;
 }
 
+html,
+body {
+    height: 100%;
+}
+
+body {
+    transition: opacity 1s ease;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main,
+nav {
+    flex: 1;
+}
+
 :focus-visible {
     outline: 4px solid var(--orange);
     border-radius: 5px;
@@ -34,23 +52,8 @@ a:visited {
     text-decoration: none;
 }
 
-body {
-    transition: opacity 1s ease;
-    opacity: 0;
-}
-
 main,
-.nav {
-    position: fixed;
-    top: calc(6vh + 29px);
-    bottom: calc(6vh + 11px);
-    right: 0;
-    left: 0;
-    padding: 5vh 5vw;
-}
-
-main,
-.nav,
+nav,
 footer {
     transition: opacity 1s ease;
 }
@@ -105,23 +108,19 @@ button {
 
 header,
 footer {
-    padding: 0 6vw;
-    position: fixed;
+    padding: 6vh 6vw;
     display: flex;
     align-items: center;
     justify-content: center;
-    left: 0;
-    right: 0;
 }
 
 header {
     z-index: 3;
-    top: -6vh;
+    /* top: -6vh; */
     transition: top 1s ease;
 }
 
 footer {
-    bottom: 6vh;
     flex-direction: column;
 }
 
@@ -179,30 +178,25 @@ footer p a:hover {
 
 ===============================================================================================================*/
 
-.nav {
-    display: none;
-    opacity: 0;
-}
-
 nav {
-    height: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: row;
+    display: none;
+    opacity: 0;
 }
 
-.nav ul {
-    height: 80%;
+nav ul {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     list-style-type: none;
-    max-height: 200px;
-    padding-left: 15vw;
+    padding-left: 20vw;
+    justify-content: space-evenly;
+    height: 80%;
 }
 
-.nav li {
+nav li {
     font-size: 1.5rem;
     font-weight: 600;
 }
@@ -317,8 +311,6 @@ footer p:first-of-type {
 ===============================================================================================================*/
 
 .about {
-    position: absolute;
-    bottom: 0;
     padding: 20px;
 }
 
@@ -539,8 +531,6 @@ scrollbar-width: none;  /* Firefox */
 ===============================================================================================================*/
 
 .work {
-    position: absolute;
-    bottom: unset;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -665,8 +655,6 @@ scrollbar-width: none;  /* Firefox */
 
 
 .contact {
-    position: absolute;
-    bottom: unset;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -945,11 +933,7 @@ form,
         font-size: 30px;
     }
 
-    .nav ul {
-        max-height: 250px;
-    }
-
-    .nav li {
+    nav li {
         font-size: 2.5rem;
     }
 
@@ -1020,12 +1004,7 @@ form,
         margin-left: 25px;
     }
 
-    .nav ul {
-        max-height: 300px;
-        padding-left: 20vw;
-    }
-
-    .nav li {
+    nav li {
         font-size: 3rem;
     }
 
@@ -1111,11 +1090,7 @@ form,
         font-size: 40px;
     }
 
-    .nav ul {
-        max-height: 400px;
-    }
-
-    .nav li {
+    nav li {
         font-size: 3.75rem;
     }
 
