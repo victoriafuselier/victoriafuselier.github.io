@@ -634,7 +634,7 @@ scrollbar-width: none;  /* Firefox */
     line-height: 1;
 }
 
-.projects-footer {
+.cta {
     margin: 0px auto;
     padding: 0 10px;
     font-size: small;
@@ -642,7 +642,7 @@ scrollbar-width: none;  /* Firefox */
     font-weight: 600;
 }
 
-.projects-footer a {
+.cta a {
     text-underline-offset: 5px;
     text-decoration: underline;
 }
@@ -974,7 +974,7 @@ form,
         font-size: small;
     }
 
-    .projects-footer {
+    .cta {
         font-size: medium;
     }
 }
@@ -1064,7 +1064,7 @@ form,
         width: 55px;
     }
 
-    .projects-footer {
+    .cta {
         font-size: large;
     }
 }
@@ -1158,7 +1158,7 @@ form,
         font-size: large;
     }
 
-    .projects-footer {
+    .cta {
         font-size: x-large;
     }
 }
