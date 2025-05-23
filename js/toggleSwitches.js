@@ -95,21 +95,21 @@ function setLightMode() {
 function setUnicaFont() {
     const body = document.querySelector('body');
     body.classList.add('unica');
-    body.classList.remove('inter');
+    body.classList.remove('quicksand');
     localStorage.setItem('font', 'unica');
 }
 
 /* ============================================================================================================
                                                 
-                                            INTER FONT FUNCTION
+                                            QUICKSAND FONT FUNCTION
 
 ===============================================================================================================*/
 
-function setInterFont() {
+function setQuicksandFont() {
     const body = document.querySelector('body');
-    body.classList.add('inter');
+    body.classList.add('quicksand');
     body.classList.remove('unica');
-    localStorage.setItem('font', 'inter');
+    localStorage.setItem('font', 'quicksand');
 }
 
 /* ============================================================================================================
@@ -130,7 +130,7 @@ window.addEventListener('load', (e) => {
     if (font === 'unica') {
         setUnicaFont();
     } else {
-        setInterFont();
+        setQuicksandFont();
     }
 });
 
@@ -150,14 +150,14 @@ window.addEventListener("DOMContentLoaded", () => {
     });
     const fontButton = document.querySelector('#font-button');
     fontButton.addEventListener('click', () => {
-        if (body.classList.contains('inter')) {
+        if (body.classList.contains('quicksand')) {
             // localStorage.clear();
             localStorage.setItem('font', 'unica');
             setUnicaFont();
         } else if (body.classList.contains('unica')) {
             // localStorage.clear();
-            localStorage.setItem('font', 'inter');
-            setInterFont();
+            localStorage.setItem('font', 'quicksand');
+            setQuicksandFont();
         }
     })
 });

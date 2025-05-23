@@ -77,12 +77,12 @@ footer {
     box-shadow: 4px 4px 10px var(--grey), -4px -4px 10px var(--grey), 4px -4px 10px var(--grey), -4px 4px 10px var(--grey);
 }
 
-.unica {
-  font-family: 'Unica One', sans-serif;
+body.unica {
+    font-family: 'Unica One', sans-serif;
 }
 
-.inter {
-    font-family: 'Inter Tight', serif;
+body.quicksand {
+    font-family: "Quicksand", sans-serif;
 }
 
 .hidden {
