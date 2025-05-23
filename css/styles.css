@@ -330,7 +330,8 @@ footer p {
 .about h1,
 .work h1,
 .contact h1 {
-    font-size: 2.75rem;
+    font-size: 1.5rem;
+    text-align: center;
 }
 
 .divider-line {
@@ -339,6 +340,7 @@ footer p {
     background: var(--dark-blue);
     border: none;
     transition: background-color 1s ease;
+    display: none;
 }
 
 .about-right,
@@ -660,6 +662,7 @@ scrollbar-width: none;  /* Firefox */
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .contact-wrapper {
@@ -670,23 +673,20 @@ scrollbar-width: none;  /* Firefox */
     height: 100%;
 }
 
-.contact-left,
-.contact-right {
-    padding: 15px 10px;
-    margin: 0 auto;
-}
-
-.contact-left {
+.contact-form-wrapper {
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 0 15px;
 }
 
 .contact-heading {
     text-align: center;
 }
 
-.contact-right {
+.contact-form-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -694,7 +694,6 @@ scrollbar-width: none;  /* Firefox */
 
 form,
 .contact-links-wrapper {
-    /* width: 100%; */
     margin: 0 auto;
 }
 
@@ -707,10 +706,14 @@ textarea {
     padding: 6px;
     font-family: inherit;
     color: var(--dark-blue);
+    width: 100%;
+    font-weight: inherit;
+    font-size: inherit;
 }
 
 .contact-links-wrapper {
     margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .contact ul {
@@ -742,17 +745,22 @@ form,
     font-weight: 600;
 }
 
+form {
+    width: 100%;
+}
+
 .form {
     padding: 30px 15px;
     background-color: var(--blue);
     color: var(--white);
     border-radius: 5px;
     letter-spacing: .5px;
+    padding: 25px 15px;
 }
 
 .form-control {
     margin-bottom: 10px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     position: relative;
 }
 
@@ -859,7 +867,7 @@ form,
     .about h1,
     .work h1,
     .contact h1 {
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     .about-wrapper {
@@ -1049,7 +1057,7 @@ form,
     .about h1,
     .work h1,
     .contact h1 {
-        font-size: 3.25rem;
+        font-size: 2.5rem;
     }
 
     .about-wrapper {
@@ -1104,7 +1112,7 @@ form,
     }
 
     .home h1 {
-        font-size: 2.5rem;
+        font-size: 2.25rem;
     }
 
     #full-name {
@@ -1139,7 +1147,7 @@ form,
     .about h1,
     .work h1,
     .contact h1 {
-        font-size: 3.5rem;
+        font-size: 3rem;
     }
 
     .about-text {
