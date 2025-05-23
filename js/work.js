@@ -1,4 +1,4 @@
-const projectLinks = document.getElementsByClassName('project-links');
+const projectLinks = document.getElementsByClassName('project-link');
 
 for (let i = 0; i < projectLinks.length; i++) {
     projectLinks[i].addEventListener('focus', () => {

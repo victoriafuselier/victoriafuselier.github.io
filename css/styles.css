@@ -160,11 +160,11 @@ footer p a:hover {
     height: 30px;
 }
 
-.header-icons {
+.header-icon {
     font-size: 20px;
 }
 
-.header-buttons {
+.header-button {
     border: none;
     color: inherit;
     background: transparent;
@@ -729,7 +729,7 @@ textarea {
     transition: transform .5s ease, opacity 1s ease;
 }
 
-.contact-icons {
+.contact-icon {
     fill: var(--dark-blue);
     transition: fill 1s ease;
 }
@@ -933,12 +933,12 @@ textarea {
         height: 45px;
     }
 
-    .header-buttons {
+    .header-button {
         height: 35px;
         width: 35px;
     }
     
-    .header-icons {
+    .header-icon {
         font-size: 30px;
     }
 
@@ -1000,12 +1000,12 @@ textarea {
         height: 60px;
     }
 
-    .header-buttons {
+    .header-button {
         height: 45px;
         width: 45px;
     }
     
-    .header-icons {
+    .header-icon {
         font-size: 35px;
     }
 
@@ -1090,12 +1090,12 @@ textarea {
         height: 70px;
     }
 
-    .header-buttons {
+    .header-button {
         height: 55px;
         width: 55px;
     }
     
-    .header-icons {
+    .header-icon {
         font-size: 40px;
     }
 

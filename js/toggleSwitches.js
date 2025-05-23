@@ -1,5 +1,5 @@
-const contactIcons = document.getElementsByClassName('contact-icons');
-const headerIcons = document.getElementsByClassName('header-icons');
+const contactIcons = document.getElementsByClassName('contact-icon');
+const headerIcons = document.getElementsByClassName('header-icon');
 
 /* ============================================================================================================
                                                 
