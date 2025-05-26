@@ -317,14 +317,11 @@ footer p {
 
 ===============================================================================================================*/
 
-.about {
-    padding: 20px;
-}
-
 .about-wrapper {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     margin: 0 auto;
+    width: 80%;
 }
 
 .about h1,
@@ -343,18 +340,17 @@ footer p {
     display: none;
 }
 
-.about-right,
-.about-left {
+.headshot-div,
+.bio-div {
     margin: 0 auto;
-    max-width: 309px;
-    padding: 20px 10px;
 }
 
-.about-right {
+.headshot-div {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 20px 0px;
 }
 
 .about-text {
@@ -377,7 +373,7 @@ footer p {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    margin: 30px 0;
+    margin: 20px 0;
 }
 
 .about-button-wrapper:not(:last-of-type) {
@@ -402,6 +398,7 @@ footer p {
 .profile-img {
     width: 100%;
     border-radius: 20px;
+    max-width: 350px;
 }
 
 #message-link {
@@ -871,39 +868,29 @@ form {
     }
 
     .about-wrapper {
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 30px 0px;
-        max-width: unset;
-        width: 560px;
     }
     
-    .about-right,
-    .about-left {
-        width: 100%;
+    /* .headshot-div,
+    .bio-div {
         margin: 0;
-        max-width: unset;
-    }
+    } */
 
-    .about-left {
-        padding: 0;
+    .bio-div {
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
 
-    .about-right {
-        padding: 0;
+    .headshot-div {
+        padding: 50px 25px;
     }
 
     .about-text {
-        margin: 20px 30px 20px 0;
+        margin: 20px 0;
         font-size: .8rem;
-    }
-
-    .about-button-container {
-        margin: 0;
     }
 
     .about-button-wrapper:first-of-type {
@@ -914,10 +901,6 @@ form {
         font-size: 1.25rem;
     }
 
-    .profile-img {
-        max-width: 350px;
-    }
-    
     #pop-up-box {
         padding: 40px;
         font-size: 1.1rem;
@@ -1061,7 +1044,7 @@ form {
     }
 
     .about-wrapper {
-        width: 660px;
+        width: 70%;
     }
 
     .about-text {
@@ -1133,15 +1116,7 @@ form {
     }
 
     .about-wrapper {
-        width: 960px;
-    }
-
-    .about-left {
         width: 60%;
-    }
-
-    .about-right {
-        width: 40%;
     }
 
     .about h1,
@@ -1152,10 +1127,6 @@ form {
 
     .about-text {
         font-size: 1.2rem;
-    }
-
-    .about-button-container {
-        margin-top: 10px;
     }
 
     .about-button {
