@@ -364,14 +364,14 @@ h1 {
     text-align: center;
 }
 
-/* .divider-line {
+.divider-line {
     margin: 5px 0;
     height: 5px;
     background: var(--dark-blue);
     border: none;
     transition: background-color 1s ease;
     display: none;
-} */
+}
 
 .headshot-div,
 .bio-div {
