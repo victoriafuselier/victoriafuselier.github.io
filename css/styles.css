@@ -33,12 +33,12 @@ body {
     opacity: 0;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: calc(var(--vh, 1vh) * 100);
 }
 
 main,
 nav {
-    flex: 1;
+    flex: 1 0 auto;
     width: 80%;
     margin: 0 auto;
 }
@@ -52,12 +52,6 @@ a,
 a:visited {
     color: currentColor;
     text-decoration: none;
-}
-
-.home-link,
-.about-button,
-.nav-link {
-    font-weight: 600;
 }
 
 p {
@@ -92,12 +86,18 @@ body.unica {
     font-family: 'Unica One', sans-serif;
 }
 
-body.unica p {
-    font-weight: 600;
-}
-
 body.quicksand {
     font-family: "Quicksand", sans-serif;
+}
+
+body.unica p,
+.home-link,
+.about-button,
+.nav-link,
+.photo-overlay a,
+form,
+#send-button {
+    font-weight: 600;
 }
 
 .hidden {
@@ -122,54 +122,58 @@ button {
 ===============================================================================================================*/
 
 h1 {
-    font-size: clamp(2rem, 6vw, 3rem);
+    font-size: clamp(2rem, 4.3vw, 2.75rem);
 }
 
 p {
-    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-size: clamp(1rem, 2.3vw, 1.5rem);
 }
 
 footer p {
-    font-size: clamp(0.75rem, 2vw, 1.25rem);
+    font-size: clamp(0.75rem, 1.6vw, 1rem);
 }
 
 nav li {
-    font-size: clamp(1.5rem, 5vw, 3.75rem);
+    font-size: clamp(2rem, 5.9vw, 3.75rem);
 }
 
 .header-icon,
 .close {
-    font-size: clamp(1.25rem, 4vw, 2.5rem);
+    font-size: clamp(1.25rem, 3.9vw, 2.5rem);
 }
 
 .home h1 {
-    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-size: clamp(1.3rem, 3.5vw, 2.25rem);
 }
 
 #full-name {
-    font-size: clamp(1.75rem, 4.5vw, 2.75rem);
+    font-size: clamp(1.75rem, 4.7vw, 3rem);
 }
 
 #nickname {
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: clamp(2rem, 5.5vw, 3.5rem);
 }
 
-h2,
+.home h2 {
+    font-size: clamp(1.1rem, 2.8vw, 1.8rem);
+}
+
+.about-button,
 .home-link {
-    font-size: clamp(.9rem, 3vw, 2rem);
-}
-
-.about-button {
-    font-size: clamp(1.25rem, 2vw, 1.75rem);
+    font-size: clamp(1.2rem, 3vw, 1.9rem);
 }
 
 .photo-overlay h2 {
-    font-size: clamp(1.2rem, .6vw, 1.6rem);
+    font-size: clamp(1rem, 2vw, 1.3rem);
 }
 
-.photo-overlay a,
+.photo-overlay a {
+    font-size: clamp(.9rem, 1.9vw, 1.2rem);
+
+}
+
 .photo-overlay p {
-    font-size: clamp(.9rem, .4vw, 1.5rem);
+    font-size: clamp(.8rem, 1.6vw, 1rem);
 }
 
 /* ============================================================================================================
@@ -399,7 +403,7 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    margin: 25px 0 25px 30px;
+    margin: 30px auto;
 }
 
 .about-button-wrapper:not(:last-of-type) {
@@ -556,16 +560,16 @@ scrollbar-width: none;  /* Firefox */
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 90%;
 }
 
-.work-wrapper {
-    width: 100%;
+/* .work-wrapper {
     max-width: 1200px;
-}
+} */
 
 #grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 300px));
+    grid-template-columns: repeat(auto-fill, minmax(220px, 350px));
     grid-gap: 20px 20px;
     justify-content: center;
     align-content: center;
@@ -607,7 +611,6 @@ scrollbar-width: none;  /* Firefox */
     transition: transform .2s ease, background-color .2s ease;
     border: 1px solid var(--grey);
     text-decoration: none;
-    font-weight: 600;
     display: inline-block;
 }
 
@@ -724,11 +727,6 @@ textarea {
 .contact svg:hover,
 .contact svg:focus {
     transform: rotate(10deg) scale(1.2);
-}
-
-form,
-#send-button {
-    font-weight: 600;
 }
 
 form {
