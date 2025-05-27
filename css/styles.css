@@ -232,8 +232,9 @@ footer p a:hover {
     align-items: center;
 }
 
-.header-right li {
-    margin-left: 25px;
+#font-button,
+#theme-button {
+    margin-right: 30px;
 }
 
 #logo {
@@ -846,10 +847,6 @@ form {
     .header-button {
         height: 45px;
         width: 45px;
-    }
-
-    .header-right li {
-        margin-left: 25px;
     }
 
     .home h2 {
