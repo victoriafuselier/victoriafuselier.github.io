@@ -54,10 +54,6 @@ a:visited {
     text-decoration: none;
 }
 
-p {
-    font-weight: 500;
-}
-
 main,
 nav {
     transition: opacity 1s ease;
@@ -90,13 +86,17 @@ body.quicksand {
     font-family: "Quicksand", sans-serif;
 }
 
-body.unica p,
+p {
+    font-weight: 500;
+}
+
 .home-link,
 .about-button,
 .nav-link,
 .photo-overlay a,
 form,
-#send-button {
+#send-button,
+footer p {
     font-weight: 600;
 }
 
@@ -137,9 +137,12 @@ nav li {
     font-size: clamp(2rem, 5.9vw, 3.75rem);
 }
 
-.header-icon,
+.header-icon {
+    font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+}
+
 .close {
-    font-size: clamp(1.25rem, 3.9vw, 2.5rem);
+    font-size: clamp(1rem, 2.3vw, 1.5rem);
 }
 
 .home h1 {
@@ -164,16 +167,17 @@ nav li {
 }
 
 .photo-overlay h2 {
-    font-size: clamp(1rem, 2vw, 1.3rem);
+    font-size: clamp(1.3rem, 2.3vw, 1.5rem);
 }
 
-.photo-overlay a {
-    font-size: clamp(.9rem, 1.9vw, 1.2rem);
-
-}
-
+.photo-overlay a,
 .photo-overlay p {
-    font-size: clamp(.8rem, 1.6vw, 1rem);
+    font-size: clamp(.9rem, 1.7vw, 1.1rem);
+}
+
+.pop-up-p {
+    font-size: .9rem;
+    font-weight: 400;
 }
 
 /* ============================================================================================================
@@ -563,9 +567,9 @@ scrollbar-width: none;  /* Firefox */
     width: 90%;
 }
 
-/* .work-wrapper {
-    max-width: 1200px;
-} */
+.work-wrapper {
+    width: 100%;
+}
 
 #grid-container {
     display: grid;

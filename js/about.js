@@ -79,7 +79,7 @@ skillsButton.addEventListener('click', () => {
                                     <li>AJAX Basics</li>
                                     <li>Debugging with Chrome DevTools</li>
                                 </ul>
-                                <p>If you'd like to see a complete list of what I've been learning, check out my <a class="treehouse-link" href="https://teamtreehouse.com/profiles/victoriafuselier" target="_blank">Treehouse Profile</a>.</p>
+                                <p class="pop-up-p">If you'd like to see a complete list of what I've been learning, check out my <a class="treehouse-link" href="https://teamtreehouse.com/profiles/victoriafuselier" target="_blank">Treehouse Profile</a>.</p>
                             </div>
                         </div>`;
 
