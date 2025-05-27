@@ -65,8 +65,7 @@ p {
 }
 
 main,
-nav,
-footer {
+nav {
     transition: opacity 1s ease;
 }
 
@@ -93,6 +92,10 @@ body.unica {
     font-family: 'Unica One', sans-serif;
 }
 
+body.unica p {
+    font-weight: 600;
+}
+
 body.quicksand {
     font-family: "Quicksand", sans-serif;
 }
@@ -114,6 +117,63 @@ button {
 
 /* ============================================================================================================
                                                 
+                                        RESPONSIVE FONT-SIZING
+
+===============================================================================================================*/
+
+h1 {
+    font-size: clamp(2rem, 6vw, 3rem);
+}
+
+p {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+}
+
+footer p {
+    font-size: clamp(0.75rem, 2vw, 1.25rem);
+}
+
+nav li {
+    font-size: clamp(1.5rem, 5vw, 3.75rem);
+}
+
+.header-icon,
+.close {
+    font-size: clamp(1.25rem, 4vw, 2.5rem);
+}
+
+.home h1 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+}
+
+#full-name {
+    font-size: clamp(1.75rem, 4.5vw, 2.75rem);
+}
+
+#nickname {
+    font-size: clamp(2rem, 5vw, 3rem);
+}
+
+h2,
+.home-link {
+    font-size: clamp(.9rem, 3vw, 2rem);
+}
+
+.about-button {
+    font-size: clamp(1.25rem, 2vw, 1.75rem);
+}
+
+.photo-overlay h2 {
+    font-size: clamp(1.2rem, .6vw, 1.6rem);
+}
+
+.photo-overlay a,
+.photo-overlay p {
+    font-size: clamp(.9rem, .4vw, 1.5rem);
+}
+
+/* ============================================================================================================
+                                                
                                         HEADER/FOOTER STYLING
 
 ===============================================================================================================*/
@@ -128,8 +188,6 @@ footer {
 
 header {
     z-index: 3;
-    /* top: -6vh; */
-    transition: top 1s ease;
 }
 
 footer {
@@ -137,7 +195,7 @@ footer {
 }
 
 footer p a {
-    transition: all .5s;
+    transition: all .3s;
 }
 
 footer p a:hover {
@@ -172,10 +230,6 @@ footer p a:hover {
     height: 30px;
 }
 
-.header-icon {
-    font-size: 20px;
-}
-
 .header-button {
     border: none;
     color: inherit;
@@ -203,13 +257,9 @@ nav ul {
     display: flex;
     flex-direction: column;
     list-style-type: none;
-    padding-left: 20vw;
+    padding-left: 10vw;
     justify-content: space-evenly;
     height: 80%;
-}
-
-nav li {
-    font-size: 1.5rem;
 }
 
 .nav-link {
@@ -250,21 +300,8 @@ nav li {
     align-items: center;
 }
 
-.home h1 {
-    font-size: 1rem;
-}
-
 .name {
     letter-spacing: 1px;
-}
-
-#full-name {
-    font-size: 1.5rem;
-}
-
-#nickname {
-    font-size: 1.75rem;
-    /* text-shadow: 2px 2px 4px var(--grey); */
 }
 
 .home h2 {
@@ -276,26 +313,22 @@ nav li {
 
 .home h2 {
     margin: 5px 0 7px;
-    font-size: .8rem;
 }
 
 .home-links-container {
     display: flex;
     justify-content: space-between;
     width: fit-content;
-}
-
-.home-link-wrapper:first-of-type {
-    margin-right: 15px;
-}
-
-.home-link {
-    font-size: .9rem;
+    flex-direction: column;
 }
 
 .home-link-wrapper:hover,
 .home-link-wrapper:focus {
     transform: scale(1.2);
+}
+
+.home-link-wrapper:first-of-type {
+    margin: 10px 0px;
 }
 
 .arrow,
@@ -306,12 +339,7 @@ nav li {
 
 footer p {
     text-align: center;
-    font-size: xx-small;
 }
-
-/* footer p:first-of-type {
-    font-size: x-small;
-} */
 
 /* ============================================================================================================
                                                 
@@ -326,10 +354,7 @@ footer p {
     /* width: 80%; */
 }
 
-.about h1,
-.work h1,
-.contact h1 {
-    font-size: 1.25rem;
+h1 {
     text-align: center;
 }
 
@@ -356,7 +381,6 @@ footer p {
 }
 
 .about-text {
-    font-size: 1rem;
     margin: 25px 0;
 }
 
@@ -384,7 +408,6 @@ footer p {
 
 .about-button {
     border: none;
-    font-size: 1.5rem;
     background: transparent;
     color: currentColor;
     display: flex;
@@ -429,11 +452,9 @@ footer p {
 #pop-up-box h2 {
     text-align: center;
     margin-bottom: 20px;
-    font-size: 1.5rem;
 }
 
 #pop-up-box {
-    font-size: 1rem;
     background-color: white;
     color: var(--dark-blue);
     border: none;
@@ -474,14 +495,9 @@ scrollbar-width: none;  /* Firefox */
     position: absolute;
     top: 30px;
     right: 15px;
-    font-size: 1.5rem;
     color: var(--dark-blue);
     background-color: transparent;
     border: none;
-}
-
-#pop-up-box {
-    font-size: .9rem;
 }
 
 #education {
@@ -543,16 +559,8 @@ scrollbar-width: none;  /* Firefox */
 }
 
 .work-wrapper {
-    padding: 20px 10px;
     width: 100%;
     max-width: 1200px;
-}
-
-.work h1,
-.work .divider-line {
-    width: 90%;
-    margin: 5px auto;
-    max-width: 800px;
 }
 
 #grid-container {
@@ -562,7 +570,7 @@ scrollbar-width: none;  /* Firefox */
     justify-content: center;
     align-content: center;
     grid-auto-flow: dense;
-    padding: 40px 0 60px;
+    padding: 40px 0;
 }
 
 .project-container,
@@ -570,11 +578,6 @@ scrollbar-width: none;  /* Firefox */
 .photo-overlay {
     border-radius: 8px;
 }
-
-/* .project-container img,
-.photo-overlay {
-    max-width: 100%;
-} */
 
 .project-container img {
     display: block;
@@ -598,7 +601,6 @@ scrollbar-width: none;  /* Firefox */
 
 .photo-overlay a {
     color: var(--white);
-    font-size: .8rem;
     background-color: var(--grey);
     border-radius: 5px;
     padding: 2px 8px;
@@ -606,6 +608,7 @@ scrollbar-width: none;  /* Firefox */
     border: 1px solid var(--grey);
     text-decoration: none;
     font-weight: 600;
+    display: inline-block;
 }
 
 .photo-overlay a:hover,
@@ -624,39 +627,26 @@ scrollbar-width: none;  /* Firefox */
 	left: 0;
     display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: space-around;
 	align-items: center;
 	background: rgba(0, 0, 0, .8); 
     opacity: 0;
     visibility: hidden;
-    transition: .3s opacity ease, visibility 0s linear .3s;
-    letter-spacing: .5px;
+    transition: .1s opacity ease, visibility 0s linear .1s;
     padding: 10px;
     pointer-events: none;
 }
 
 .photo-overlay h2 {
-    font-size: 1rem;
     margin: 0;
-    /* position: absolute;
-    top: 10px; */
 }
 
-.photo-overlay-p {
-    font-size: .9rem;
+.photo-overlay p {
     text-align: center;
-    line-height: 1;
-}
-
-.photo-overlay a {
-    font-size: 0.9rem;
-    text-transform: uppercase;
 }
 
 .cta {
     margin: 0px auto;
-    padding: 0 10px;
-    font-size: small;
     text-align: center;
 }
 
@@ -679,14 +669,6 @@ scrollbar-width: none;  /* Firefox */
     flex-direction: column;
 }
 
-/* .contact-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex-wrap: wrap;
-    height: 100%;
-} */
-
 .contact-form-wrapper {
     display: flex;
     justify-content: center;
@@ -701,11 +683,6 @@ scrollbar-width: none;  /* Firefox */
     justify-content: center;
     align-items: center;
 }
-
-/* form,
-.contact-links-wrapper {
-    margin: 0 auto;
-} */
 
 textarea {
     width: 100%;
@@ -736,7 +713,7 @@ textarea {
 .contact svg {
     height: 40px;
     width: 50px;
-    transition: transform .5s ease, opacity 1s ease;
+    transition: transform .5s ease, opacity .5s ease;
 }
 
 .contact-icon {
@@ -857,139 +834,7 @@ form {
 
 ===============================================================================================================*/
 
-@media screen and (min-width: 320px) {
-
-    .photo-overlay h2 {
-        font-size: 1.25rem;
-    }
-}
-
-@media screen and (min-width: 600px) { 
-    .about h1,
-    .work h1,
-    .contact h1 {
-        font-size: 1.5rem;
-    }
-
-    .about-wrapper {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    /* .headshot-div,
-    .bio-div {
-        margin: 0;
-    } */
-
-    .bio-div {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .headshot-div {
-        padding: 50px 25px;
-    }
-
-    .about-text {
-        font-size: .8rem;
-    }
-
-    .about-button-wrapper:first-of-type {
-        margin-bottom: 10px;
-    }
-
-    .about-button {
-        font-size: 1.25rem;
-    }
-
-    #pop-up-box {
-        padding: 40px;
-        font-size: 1.1rem;
-        max-width: 400px;
-    }
-
-    #pop-up-box h2,
-    .close {
-        font-size: 2rem;
-    }
-}
-
-@media screen and (min-width: 566px) {
-    .contact {
-        bottom: 0;
-    }
-}
-
-@media screen and (min-width: 320px) and (min-height: 400px) {
-    #logo {
-        height: 45px;
-    }
-
-    .header-button {
-        height: 35px;
-        width: 35px;
-    }
-    
-    .header-icon {
-        font-size: 30px;
-    }
-
-    nav li {
-        font-size: 2.5rem;
-    }
-
-    .home h1 {
-        font-size: 1.25rem;
-    }
-
-    #full-name {
-        font-size: 2rem;
-    }
-
-    #nickname {
-        font-size: 2.5rem;
-    }
-
-    .home h2 {
-        margin: 15px 0 20px;
-        font-size: 1rem;
-    }
-
-    .home-links-container {
-        flex-direction: column;
-    }
-
-    .home-link-wrapper:first-of-type {
-        margin: 0 0 15px;
-    }
-
-    .home-link {
-        font-size: 1.5rem;
-    }
-
-    footer p {
-        font-size: x-small;
-    }
-
-    /* footer p:first-of-type {
-        font-size: small;
-    } */
-
-    .cta {
-        font-size: medium;
-    }
-}
-
-@media screen and (min-width: 600px) and (min-height: 500px) {
-    .about {
-        bottom: 0;
-        display: flex;
-    }
-}
-
-@media screen and (min-width: 768px) and (min-height: 400px) {
+@media screen and (min-width: 768px) {
     #logo {
         height: 60px;
     }
@@ -998,88 +843,31 @@ form {
         height: 45px;
         width: 45px;
     }
-    
-    .header-icon {
-        font-size: 35px;
-    }
 
     .header-right li {
         margin-left: 25px;
     }
 
-    nav li {
-        font-size: 3rem;
-    }
-
-    .home h1 {
-        font-size: 1.5rem;
-    }
-
-    #full-name {
-        font-size: 2.5rem;
-    }
-
-    #nickname {
-        font-size: 3rem;
-    }
-
     .home h2 {
         margin: 10px 0 15px;
-        font-size: 1.3rem;
-    }
-
-    .home-link {
-        font-size: 1.75rem;
-    }
-
-    footer p {
-        font-size: small;
-    }
-
-    /* footer p:first-of-type {
-        font-size: medium;
-    } */
-    
-    .about h1,
-    .work h1,
-    .contact h1 {
-        font-size: 2rem;
     }
 
     .about-wrapper {
         width: 70%;
     }
 
-    .about-text {
-        font-size: 1rem;
-    }
-
     #pop-up-box {
         width: fit-content;
-    }
-
-    .about-button {
-    font-size: 1.5rem;
     }
 
     .contact svg {
         height: 45px;
         width: 55px;
     }
-
-    .cta {
-        font-size: large;
-    }
 }
 
-@media screen and (min-width: 768px) {
 
-    .photo-overlay-p {
-        font-size: 1rem;
-    }
-}
-
-@media screen and (min-width: 1024px) and (min-height: 550px) {
+@media screen and (min-width: 1024px) {
     #logo {
         height: 70px;
     }
@@ -1088,82 +876,18 @@ form {
         height: 55px;
         width: 55px;
     }
-    
-    .header-icon {
-        font-size: 40px;
-    }
-
-    nav li {
-        font-size: 3.75rem;
-    }
-
-    .home h1 {
-        font-size: 2.25rem;
-    }
-
-    #full-name {
-        font-size: 3.3rem;
-    }
-
-    #nickname {
-        font-size: 3.75rem;
-    }
 
     .home h2 {
         margin: 15px 0 20px;
-        font-size: 1.75rem;
-    }
-
-    .home-link {
-        font-size: 2rem;
     }
 
     .about-wrapper {
         width: 60%;
     }
 
-    .about h1,
-    .work h1,
-    .contact h1 {
-        font-size: 2.5rem;
-    }
-
-    .about-text {
-        font-size: 1.2rem;
-    }
-
-    .about-button {
-        font-size: 1.75rem;
-    }
-
     .contact svg {
         height: 50px;
         width: 60px;
-    }
-
-    footer p {
-        font-size: medium;
-    }
-
-    /* footer p:first-of-type {
-        font-size: large;
-    } */
-
-    .cta {
-        font-size: x-large;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-
-    .photo-overlay h2 {
-        font-size: 1.3rem;
-        top: 10px;
-    }
-
-    .photo-overlay-p {
-        font-size: 1.1rem;
-        padding: 0;
     }
 }
 
