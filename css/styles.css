@@ -126,7 +126,7 @@ h1 {
 }
 
 p {
-    font-size: clamp(1rem, 2.3vw, 1.5rem);
+    font-size: clamp(.9rem, 2.3vw, 1.25rem);
 }
 
 footer p {
@@ -362,7 +362,6 @@ footer p {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    /* width: 80%; */
 }
 
 h1 {
@@ -854,7 +853,7 @@ form {
     }
 
     .about-wrapper {
-        width: 70%;
+        width: 90%;
     }
 
     #pop-up-box {
@@ -883,7 +882,8 @@ form {
     }
 
     .about-wrapper {
-        width: 60%;
+        width: 75%;
+        max-width: 700px;
     }
 
     .contact svg {
