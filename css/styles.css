@@ -204,10 +204,6 @@ footer {
     flex-direction: column;
 }
 
-footer p a {
-    transition: all .3s;
-}
-
 footer p a:hover {
     text-decoration: underline;
 }
@@ -727,7 +723,6 @@ textarea {
 
 .contact-icon {
     fill: var(--dark-blue);
-    transition: fill 1s ease;
 }
 
 .contact svg:hover,
