@@ -144,7 +144,7 @@ footer p {
 }
 
 nav li {
-    font-size: clamp(2rem, 5.9vw, 3.75rem);
+    font-size: clamp(2rem, 4.7vw, 3rem);
 }
 
 .header-icon {
@@ -273,7 +273,7 @@ nav ul {
     list-style-type: none;
     padding-left: 10vw;
     justify-content: space-evenly;
-    height: 80%;
+    height: 75%;
 }
 
 .nav-link {
