@@ -249,7 +249,11 @@ footer p a:hover {
 
 .header-button {
     height: 22px;
-    width: 22px;
+    width: fit-content;
+}
+
+#compass-icon {
+    display: none;
 }
 
 /* ============================================================================================================
@@ -846,13 +850,20 @@ form {
 }
 
 @media screen and (min-width: 768px) {
+    #hamburger-icon {
+        display: none;
+    }
+
+    #compass-icon {
+        display: block;
+    }
+
     #logo {
         height: 50px;
     }
 
     .header-button {
         height: 45px;
-        width: 45px;
     }
 
     .home h2 {
@@ -881,7 +892,6 @@ form {
 
     .header-button {
         height: 55px;
-        width: 55px;
     }
 
     .home h2 {

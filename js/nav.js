@@ -1,132 +1,114 @@
 const navButton = document.querySelector('#nav-button');
 const nav = document.querySelector('nav');
-const navIcon = document.querySelector('#nav-icon');
 const main = document.querySelector('main'); 
 const footer = document.querySelector('footer');
 const body = document.querySelector('body');
 const fontButton = document.querySelector('#font-button');
 const themeButton = document.querySelector('#theme-button');
-const header = document.querySelector("header");
+const header = document.querySelector('header');
+const hamburgerIcon = document.querySelector('#hamburger-icon');
+const compassIcon = document.querySelector('#compass-icon');
 
-// Function to restore state when page is loaded from bfcache
 function restorePageState() {
-    const isOpened = navButton.getAttribute('aria-expanded');
-
-    if (isOpened === 'true') {
-        // If navigation menu was open, restore its state
-        navIcon.classList.remove('fa-bars');
-        navIcon.classList.add('fa-xmark');
-        navButton.setAttribute('title', '');
+    const isOpened = navButton.getAttribute('aria-expanded') === 'true';
+    if (isOpened) {
+        // remove current nav icons
+        hamburgerIcon.classList.remove('fa-bars');
+        compassIcon.classList.remove('fa-compass');
+        // add nav close icon
+        hamburgerIcon.classList.add('fa-xmark');
+        compassIcon.classList.add('fa-xmark');
+        // adjust nav button attribute
+        navButton.setAttribute('title', 'Close');
+        // show nav
         nav.style.display = 'block';
+        // fade nav in
         nav.style.opacity = 1;
     } else {
-        // If navigation menu was closed, restore its state
-        navIcon.classList.remove('fa-xmark');
-        navIcon.classList.add('fa-bars');
+        // remove close icon
+        hamburgerIcon.classList.remove('fa-xmark');
+        compassIcon.classList.remove('fa-xmark');
+        // restore nav icon
+        compassIcon.classList.add('fa-compass');
+        hamburgerIcon.classList.add('fa-bars');
+        // adjust nav button attribute
         navButton.setAttribute('title', 'Menu');
+        // hide nav
         nav.style.display = 'none';
     }
-
-    // Restore other elements' styles
+    // fade body back in
     body.style.opacity = 1;
-    header.style.top = '6vh';
-    // if (window.location.href.includes("about.html") || window.location.href.includes("work.html") || window.location.href.includes("contact.html")) {
-    //     fontButton.style.display = "none";
-    //     themeButton.style.display= "none";
-    // } else {
-    //     fontButton.style.display = "inline";
-    //     themeButton.style.display = "block";
-    // }
 }
 
-// Event listener for pageshow event
 window.addEventListener('pageshow', function(event) {
     if (event.persisted) {
-        // Page is loaded from the bfcache
         restorePageState();
     }
 });
 
-// Event listener for navButton click (toggle navigation)
 navButton.addEventListener('click', () => {
-    const isOpened = navButton.getAttribute('aria-expanded');
-    if (isOpened === 'false') {
-        body.style.opacity = 0;
-        header.style.top = '-6vh';
-        setTimeout(function() {
+    const isOpened = navButton.getAttribute('aria-expanded') === 'true';
+    // fade body out
+    body.style.opacity = 0;
+    // after 1s, 
+    setTimeout(() => {
+        // if nav wasn't open,
+        if (!isOpened) {
+            // hide original elements except logo
             main.style.display = 'none';
             footer.style.display = 'none';
             themeButton.style.display = 'none';
             fontButton.style.display = 'none';
+            // adjust nav button attributes
             navButton.setAttribute('aria-expanded', 'true');
             navButton.setAttribute('title', '');
-            navIcon.classList.remove('fa-bars');
-            navIcon.classList.add('fa-xmark');
-            nav.style.display ='block';
-        }, 1000);
-        setTimeout(function() {
-            header.style.top = '6vh';
-            body.style.opacity = 1;
-            nav.style.opacity = 1;
-        }, 1100);
-    } else {
-        body.style.opacity = 0;
-        header.style.top = '-6vh';
-        setTimeout(function() {   
-            navIcon.classList.remove('fa-xmark');
-            navIcon.classList.add('fa-bars');
-            navButton.setAttribute('title', 'Menu');
+            // remove the current nav icon from button
+            hamburgerIcon.classList.remove('fa-bars');
+            compassIcon.classList.remove('fa-compass');
+            // add close icon to button
+            hamburgerIcon.classList.add('fa-xmark');
+            compassIcon.classList.add('fa-xmark'); 
+            // and show nav list
+            nav.style.display = 'block';
+        // or if nav was open,
+        } else {
+            // adjust nav button attributes
             navButton.setAttribute('aria-expanded', 'false');
+            navButton.setAttribute('title', 'Menu');
+            // hide nav list
             nav.style.display = 'none';
+            // show original elements
             main.style.display = 'flex';
             footer.style.display = 'flex';
-            if (window.location.href === 'https://victoriafuselier.github.io/' || window.location.href.includes('index.html')) {
-                themeButton.style.display = 'block';
-                fontButton.style.display = 'inline';
-            }
-        }, 1000);
-        setTimeout(function() {
-            body.style.opacity = 1;
-            header.style.top = '6vh';
-        }, 1100);
-    }
+            themeButton.style.display = 'block';
+            fontButton.style.display = 'block'; 
+            // remove close icon
+            hamburgerIcon.classList.remove('fa-xmark');
+            compassIcon.classList.remove('fa-xmark');
+            // and add nav icons
+            compassIcon.classList.add('fa-compass');
+            hamburgerIcon.classList.add('fa-bars');
+        }
+    }, 1000);
+
+    // After 1.1 s, fade body back in
+    setTimeout(() => {
+        body.style.opacity = 1;
+        // if nav is open mow,
+        if (!isOpened) {
+            // fade it back in
+            nav.style.opacity = 1;
+        }
+    }, 1100);
 });
 
-// Function to handle transition to another page
-window.transitionToPage = function(href, event) {
-    event.preventDefault();
-    document.querySelector('body').style.opacity = 0;
-    header.style.top = '-6vh';
-    if (navButton.getAttribute('aria-expanded') === 'true') {
-        navButton.setAttribute('aria-expanded', 'false');
-        nav.style.opacity = 0;
-        setTimeout(function() { 
-            nav.style.display = 'none';
-            body.style.display = 'block';
-        }, 1000);
-    }
-    setTimeout(function() { 
-        window.location.href = href;
-    }, 1000);
-    setTimeout(function() { 
-        document.querySelector('body').style.opacity = 1;
-    }, 1500);
-};
-
-// Event listeners for all links
-const links = document.getElementsByTagName('a');
-for (let i = 0; i < links.length; i++) {
-    links[i].addEventListener('click', function(event) {
-        var href = this.getAttribute('href');
-        transitionToPage(href, event);
-    });
-}
-
-// Function to run when DOM content is loaded
+// When DOM content is loaded
 document.addEventListener('DOMContentLoaded', function(event) {
+    // wait .5s, then
     setTimeout(function() {
+        // fade the body in
         document.querySelector('body').style.opacity = 1;
-        header.style.top = '6vh';
-        restorePageState(); // Restore page state on initial load
+        // restore page state
+        restorePageState(); 
     }, 500);
 });
