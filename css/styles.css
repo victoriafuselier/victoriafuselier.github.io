@@ -121,6 +121,10 @@ button {
     font-family: inherit;
 }
 
+.break-word {
+  display: inline;
+}
+
 /* ============================================================================================================
                                                 
                                         RESPONSIVE FONT-SIZING
@@ -128,7 +132,7 @@ button {
 ===============================================================================================================*/
 
 h1 {
-    font-size: clamp(2rem, 4.3vw, 2.75rem);
+    font-size: clamp(2rem, 3.9vw, 2.5rem);
 }
 
 p {
@@ -682,7 +686,7 @@ scrollbar-width: none;  /* Firefox */
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 400px;
+    max-width: 450px;
     padding: 0 15px;
 }
 
@@ -834,6 +838,12 @@ form {
                                             MEDIA QUERIES
 
 ===============================================================================================================*/
+
+@media (max-width: 600px) {
+  .break-word {
+    display: block;
+  }
+}
 
 @media screen and (min-width: 768px) {
     #logo {
