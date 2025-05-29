@@ -614,11 +614,17 @@ scrollbar-width: none;  /* Firefox */
 }
 
 .project-container:hover .photo-overlay,
+.project-container:focus .photo-overlay,
 .project-container:focus-within .photo-overlay {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
-    box-shadow: 5px 5px 18px rgba(0, 0, 0, 0.8), -5px -5px 18px rgba(0, 0, 0, 0.8);
+    /* box-shadow: 5px 5px 18px rgba(0, 0, 0, 0.8), -5px -5px 18px rgba(0, 0, 0, 0.8); */
+}
+
+.project-container:focus-visible {
+    outline: 4px solid var(--orange);
+    border-radius: 8px;
 }
 
 .photo-overlay a {
