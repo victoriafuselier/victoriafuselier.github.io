@@ -304,11 +304,6 @@ nav ul {
     transition: width .25s ease-out;
 }
 
-.nav-link:hover::before,
-.nav-link:focus::before {
-    width: 100%;
-}
-
 /* ============================================================================================================
                                                 
                                        HOME PAGE STYLING
@@ -842,6 +837,12 @@ form {
                                             MEDIA QUERIES
 
 ===============================================================================================================*/
+@media (hover: hover) and (pointer: fine) {
+    .nav-link:hover::before,
+    .nav-link:focus::before {
+        width: 100%;
+    }
+}
 
 @media (max-width: 600px) {
   .break-word {
