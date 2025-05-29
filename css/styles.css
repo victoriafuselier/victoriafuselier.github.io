@@ -29,7 +29,7 @@ body {
 }
 
 body {
-    transition: opacity .5s ease;
+    transition: opacity 1s ease;
     opacity: 0;
     display: flex;
     flex-direction: column;
@@ -62,7 +62,7 @@ button {
 
 main,
 nav {
-    transition: opacity .5s ease;
+    transition: opacity 1s ease;
 }
 
 .light {
