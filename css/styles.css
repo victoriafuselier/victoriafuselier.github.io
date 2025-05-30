@@ -84,15 +84,6 @@ nav {
     box-shadow: 4px 4px 10px var(--grey), -4px -4px 10px var(--grey), 4px -4px 10px var(--grey), -4px 4px 10px var(--grey);
 }
 
-/* body.unica,
-body.unica footer p {
-    font-family: 'Unica One', sans-serif;
-}
-
-body.unica p {
-    font-family: 'Quicksand', sans-serif;
-} */
-
 body.roboto {
     font-family: 'Roboto', serif;
 }
