@@ -8,7 +8,7 @@ const modals = {
 let activeModal = null;
 let focusTrapHandler = null;
 
-function showModal(type) {
+function openModal(type) {
     const modal = modals[type];
     if (!modal) return;
     activeModal = modal;
@@ -61,11 +61,14 @@ function trapFocus(modal) {
     modal.addEventListener('keydown', focusTrapHandler); 
 }
 
-educationButton.addEventListener('click', () => showModal('education'));
-skillsButton.addEventListener('click', () => showModal('skills'));
+educationButton.addEventListener('click', () => openModal('education'));
+skillsButton.addEventListener('click', () => openModal('skills'));
+document.querySelectorAll('.close-button').forEach(btn => {
+    btn.addEventListener('click', closeModal);
+});
 
 popUpDiv.addEventListener('click', (e) => {
-    if (e.target.classList.contains('close-button') || e.target.id === 'pop-up-div') {
+    if (e.target.id === 'pop-up-div') {
         closeModal();
     }
 });
