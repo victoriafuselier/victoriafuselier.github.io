@@ -340,8 +340,7 @@ nav ul {
     flex-direction: column;
 }
 
-.home-link-wrapper:hover,
-.home-link-wrapper:focus {
+.home-link-wrapper:hover {
     transform: scale(1.2);
 }
 
@@ -429,8 +428,7 @@ h1 {
     align-items: center;
 }
 
-.about-button-wrapper:hover,
-.about-button-wrapper:focus {
+.about-button-wrapper:hover {
     transform: scale(1.1);
 }
 
@@ -603,7 +601,6 @@ h1 {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
-    /* box-shadow: 5px 5px 18px rgba(0, 0, 0, 0.8), -5px -5px 18px rgba(0, 0, 0, 0.8); */
 }
 
 .project-container:focus-visible {
