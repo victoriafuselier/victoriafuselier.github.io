@@ -19,11 +19,6 @@ function setDarkMode() {
     body.classList.add('dark');
 
     logo.src = '../images/icons/logo-light.png';
-    fontButton.style.color = "#edeff0";
-
-    if (dividerLine !== null) {
-        dividerLine.style.backgroundColor = '#edeff0';
-    }
 
     if (profileImg !== null) {
         profileImg.style.boxShadow = '4px 4px 10px #696969, -4px -4px 10px #696969, 4px -4px 10px #696969, -4px 4px 10px #696969';
@@ -32,9 +27,10 @@ function setDarkMode() {
     for (let i = 0; i < contactIcons.length; i++) {
         contactIcons[i].style.fill = "#edeff0";
     }
-    for (let i = 0; i < headerIcons.length; i++) {
-        headerIcons[i].style.color = "#edeff0";
-    }
+
+    // for (let i = 0; i < headerIcons.length; i++) {
+    //     headerIcons[i].style.color = "#edeff0";
+    // }
 
     if (themeIcon.classList.contains('fa-moon')) {
         themeIcon.classList.remove('fa-moon');
@@ -61,11 +57,6 @@ function setLightMode() {
     body.classList.remove('dark');
 
     logo.src = '../images/icons/logo-dark.png';
-    fontButton.style.color = "#163746";
-
-    if (dividerLine !== null) {
-        dividerLine.style.backgroundColor = '#163746';
-    }
 
     if (profileImg !== null) {
         profileImg.style.boxShadow = '4px 4px 10px #163746, -4px -4px 10px #163746, 4px -4px 10px #163746, -4px 4px 10px #163746';
@@ -73,9 +64,6 @@ function setLightMode() {
 
     for (let i = 0; i < contactIcons.length; i++) {
         contactIcons[i].style.fill = "#163746";
-    }
-    for (let i = 0; i < headerIcons.length; i++) {
-        headerIcons[i].style.color = "#163746";
     }
 
     if (themeIcon.classList.contains('fa-sun')) {

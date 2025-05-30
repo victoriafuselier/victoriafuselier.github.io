@@ -29,6 +29,7 @@ body {
 }
 
 body {
+    transition: background-color 0.3s ease, color 0.3s ease;
     transition: opacity 1s ease;
     opacity: 0;
     display: flex;
@@ -52,6 +53,52 @@ a,
 a:visited {
     color: currentColor;
     text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 3px;
+}
+
+.dark a:not(.nav-link, .project-link):hover,
+.dark button:not(.toggle-button):hover,
+.dark #nav-button:hover {
+    text-decoration-color: var(--yellow);
+    color: var(--yellow);
+}
+
+.light a:not(.nav-link, .project-link):hover,
+.light button:not(.toggle-button):hover,
+.dark #nav-button:hover {
+    text-decoration-color: var(--blue);
+    color: var(--blue);
+}
+
+.home-link:hover,
+.nav-link:hover,
+#resume-link:hover {
+    text-decoration: none;
+}
+
+.dark .home-link:hover,
+.dark #nav-button:hover {
+    color: var(--yellow);
+}
+
+.light .home-link:hover,
+.light #nav-button .nav-icon:hover {
+    color: var(--blue);
+}
+
+#pop-up-div a:hover {
+    color: var(--blue);
+    text-decoration-color: var(--blue);
+}
+
+#pop-up-div .close-button:hover {
+    color: var(--blue);
+    transform: scale(1.3);
 }
 
 button {
@@ -78,7 +125,6 @@ nav {
     background-color: var(--dark-blue);
     color: var(--white);
 }
-
 
 .dark .pop-up-box {
     box-shadow: 4px 4px 10px var(--grey), -4px -4px 10px var(--grey), 4px -4px 10px var(--grey), -4px 4px 10px var(--grey);
@@ -214,10 +260,6 @@ footer {
     flex-direction: column;
 }
 
-footer p a:hover {
-    text-decoration: underline;
-}
-
 .header-left,
 .header-right {
     width: 50%;
@@ -238,8 +280,11 @@ footer p a:hover {
     align-items: center;
 }
 
-#font-button,
-#theme-button {
+.header-button:hover {
+  transform: scale(1.2);
+}
+
+.toggle-button {
     margin-right: 30px;
 }
 
@@ -297,6 +342,10 @@ nav ul {
     height: 6px;
     background-color: var(--yellow);
     transition: width .25s ease-out;
+}
+
+.nav-icon {
+    color: currentColor;
 }
 
 /* ============================================================================================================
@@ -494,7 +543,6 @@ h1 {
 }
 
 .close {
-    color: var(--dark-blue);
     background-color: transparent;
     border: none;
 }
