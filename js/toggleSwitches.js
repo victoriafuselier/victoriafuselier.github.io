@@ -88,15 +88,15 @@ function setLightMode() {
 
 /* ============================================================================================================
                                                 
-                                            UNICA FONT FUNCTION
+                                            ROBOTO FONT FUNCTION
 
 ===============================================================================================================*/
 
-function setUnicaFont() {
+function setRobotoFont() {
     const body = document.querySelector('body');
-    body.classList.add('unica');
+    body.classList.add('roboto');
     body.classList.remove('quicksand');
-    localStorage.setItem('font', 'unica');
+    localStorage.setItem('font', 'roboto');
 }
 
 /* ============================================================================================================
@@ -108,7 +108,7 @@ function setUnicaFont() {
 function setQuicksandFont() {
     const body = document.querySelector('body');
     body.classList.add('quicksand');
-    body.classList.remove('unica');
+    body.classList.remove('roboto');
     localStorage.setItem('font', 'quicksand');
 }
 
@@ -127,8 +127,8 @@ window.addEventListener('load', (e) => {
         setLightMode();
     }
     const font = localStorage.getItem('font');
-    if (font === 'unica') {
-        setUnicaFont();
+    if (font === 'roboto') {
+        setRobotoFont();
     } else {
         setQuicksandFont();
     }
@@ -152,9 +152,9 @@ window.addEventListener("DOMContentLoaded", () => {
     fontButton.addEventListener('click', () => {
         if (body.classList.contains('quicksand')) {
             // localStorage.clear();
-            localStorage.setItem('font', 'unica');
-            setUnicaFont();
-        } else if (body.classList.contains('unica')) {
+            localStorage.setItem('font', 'roboto');
+            setRobotoFont();
+        } else if (body.classList.contains('roboto')) {
             // localStorage.clear();
             localStorage.setItem('font', 'quicksand');
             setQuicksandFont();
