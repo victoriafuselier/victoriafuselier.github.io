@@ -1,6 +1,6 @@
 /* ============================================================================================================
                                                 
-                                            GENERAL STYLING
+                                                RESET/NORMALIZE
 
 ===============================================================================================================*/
 
@@ -11,6 +11,25 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+button {
+    border: none;
+    background-color: transparent;
+    color: currentColor;
+    font-family: inherit;
+}
+
+a,
+a:visited {
+    color: currentColor;
+    text-decoration: none;
+}
+
+/* ============================================================================================================
+                                                
+                                                VARIABLES
+
+===============================================================================================================*/
 
 :root {
     --dark-blue: #163746;
@@ -23,14 +42,32 @@
     --grey: #696969;
 }
 
+/* ============================================================================================================
+                                                
+                                                UTILITY CLASSES
+
+===============================================================================================================*/
+
+.hidden {
+    display: none;
+}
+
+.break-word {
+  display: inline;
+}
+
+/* ============================================================================================================
+                                                
+                                            PAGE LAYOUT
+
+===============================================================================================================*/
+
 html,
 body {
     height: 100%;
 }
 
 body {
-    transition: background-color 0.3s ease, color 0.3s ease, opacity 1s ease;
-    opacity: 0;
     display: flex;
     flex-direction: column;
     min-height: calc(var(--vh, 1vh) * 100);
@@ -41,18 +78,78 @@ nav {
     flex: 1 0 auto;
     width: 80%;
     margin: 0 auto;
+}
+
+h1,
+h2,
+#education li,
+.photo-overlay p,
+.cta {
+    text-align: center;
+}
+
+header,
+footer,
+nav,
+main,
+.headshot-div,
+.about-button-container,
+.send-button-container,
+.contact ul,
+.contact-form-wrapper,
+.contact-links-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header,
+nav,
+.about-button,
+.contact ul {
+        flex-direction: row;
+}
+
+/* ============================================================================================================
+                                                
+                                            GENERAL STYLING
+
+===============================================================================================================*/
+
+.home-link,
+.about-button,
+.nav-link,
+.photo-overlay a,
+form,
+#send-button,
+footer p {
+    font-weight: 600;
+}
+
+p {
+    font-weight: 500;
+}
+
+/* ============================================================================================================
+                                                
+                                        TRANSITIONS/INTERACTIONS
+
+===============================================================================================================*/
+
+body {
+    transition: background-color 0.3s ease, color 0.3s ease, opacity 1s ease;
+    opacity: 0;
+}
+
+main,
+nav {
     transition: opacity 1s ease;
 }
 
 :focus-visible {
     outline: 4px solid var(--orange);
     border-radius: 5px;
-}
-
-a,
-a:visited {
-    color: currentColor;
-    text-decoration: none;
 }
 
 a:hover {
@@ -101,12 +198,6 @@ a:hover {
     transform: scale(1.3);
 }
 
-button {
-    border: none;
-    background-color: transparent;
-    color: currentColor;
-}
-
 .light {
     background-color: var(--white);
     color: var(--dark-blue);
@@ -133,24 +224,6 @@ body.quicksand {
     font-family: 'Quicksand', sans-serif;
 }
 
-p {
-    font-weight: 500;
-}
-
-.home-link,
-.about-button,
-.nav-link,
-.photo-overlay a,
-form,
-#send-button,
-footer p {
-    font-weight: 600;
-}
-
-.hidden {
-    display: none;
-}
-
 button,
 a,
 .close,
@@ -158,12 +231,8 @@ a,
     cursor: pointer;
 }
 
-button {
-    font-family: inherit;
-}
-
-.break-word {
-  display: inline;
+.home-link-wrapper:hover {
+    transform: scale(1.2);
 }
 
 /* ============================================================================================================
@@ -242,9 +311,6 @@ nav li {
 header,
 footer {
     padding: 6vh 6vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 header {
@@ -306,7 +372,6 @@ nav {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    flex-direction: row;
     display: none;
     opacity: 0;
 }
@@ -349,14 +414,6 @@ nav ul {
 
 ===============================================================================================================*/
 
-.home {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 .name {
     letter-spacing: 1px;
 }
@@ -379,10 +436,6 @@ nav ul {
     flex-direction: column;
 }
 
-.home-link-wrapper:hover {
-    transform: scale(1.2);
-}
-
 .home-link-wrapper:first-of-type {
     margin: 10px 0px;
 }
@@ -391,10 +444,6 @@ nav ul {
 .download,
 .pdf {
     margin-right: 10px;
-}
-
-footer p {
-    text-align: center;
 }
 
 /* ============================================================================================================
@@ -407,10 +456,6 @@ footer p {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-}
-
-h1 {
-    text-align: center;
 }
 
 .divider-line {
@@ -428,10 +473,6 @@ h1 {
 }
 
 .headshot-div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     padding: 20px 0px;
 }
 
@@ -450,9 +491,6 @@ h1 {
 }
 
 .about-button-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: flex-start;
     margin: 30px auto;
 }
@@ -463,7 +501,6 @@ h1 {
 
 .about-button {
     display: flex;
-    flex-direction: row;
     align-items: center;
 }
 
@@ -501,7 +538,6 @@ h1 {
 }
 
 .pop-up-box h2 {
-    text-align: center;
     margin: 15px 0;
 }
 
@@ -536,10 +572,6 @@ h1 {
 .close {
     background-color: transparent;
     border: none;
-}
-
-#education {
-    text-align: center;
 }
  
 #education li {
@@ -576,7 +608,6 @@ h1 {
 
 .pop-up-box p {
     margin-top: 20px;
-    text-align: center;
 }
 
 .pop-up-box a {
@@ -591,9 +622,6 @@ h1 {
 ===============================================================================================================*/
 
 .work {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 90%;
 }
 
@@ -630,7 +658,6 @@ h1 {
 }
 
 .project-container:hover .photo-overlay,
-.project-container:focus .photo-overlay,
 .project-container:focus-within .photo-overlay {
     opacity: 1;
     visibility: visible;
@@ -654,7 +681,7 @@ h1 {
 }
 
 .photo-overlay a:hover,
-.photo-overlay a:focus {
+.photo-overlay a:focus-visible {
     color: var(--white);
     background-color: var(--green);
     transform: scale(1.1);
@@ -683,13 +710,9 @@ h1 {
     margin: 0;
 }
 
-.photo-overlay p {
-    text-align: center;
-}
 
 .cta {
     margin: 0px auto;
-    text-align: center;
 }
 
 .cta a {
@@ -703,18 +726,7 @@ h1 {
 
 ===============================================================================================================*/
 
-
-.contact {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
 .contact-form-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     max-width: 450px;
     padding: 0 15px;
@@ -740,10 +752,6 @@ textarea {
 
 .contact ul {
     list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    justify-content: center;
 }
 
 .contact svg {
@@ -810,12 +818,6 @@ form {
     visibility: hidden;
     font-size: 12px;
     color: var(--white);
-}
-
-.send-button-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 #send-button {
