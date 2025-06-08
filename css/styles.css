@@ -92,7 +92,7 @@ header,
 footer,
 nav,
 main,
-.headshot-div,
+.bio-img-container,
 .about-button-container,
 .send-button-container,
 .contact ul,
@@ -502,12 +502,12 @@ nav ul {
     display: none;
 }
 
-.headshot-div,
+.bio-img-container,
 .bio-div {
     margin: 0 auto;
 }
 
-.headshot-div {
+.bio-img-container {
     padding: 20px 0px;
 }
 
@@ -543,7 +543,7 @@ nav ul {
     transform: scale(1.1);
 }
 
-.profile-img {
+#bio-img {
     width: 100%;
     border-radius: 20px;
     max-width: 350px;
