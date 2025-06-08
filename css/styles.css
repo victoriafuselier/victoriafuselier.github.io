@@ -37,7 +37,7 @@ a:visited {
     --green: #5C8F21;
     --red: #BF1717;
     --orange: #e09407;
-    --dark-orange: #FF8C42	;
+    --dark-orange: #B34700	;
     --yellow: #D4A200;
     --white: #edeff0;
     --grey: #696969;
@@ -185,11 +185,15 @@ a,
 .light {
     background-color: var(--white);
     color: var(--dark-blue);
+    --fill: var(--dark-blue);
+    --hover-fill:var(--dark-orange);
 }
 
 .dark {
     background-color: var(--dark-blue);
     color: var(--white);
+    --fill: var(--white);
+    --hover-fill: var(--yellow);
 }
 
 .light .pop-up-box {
@@ -232,12 +236,16 @@ a,
 
 .dark .photo-overlay a:hover {
     background-color: var(--yellow);
-    color: var(--dark-blue);
+    color: var(--white);
 }
 
 .light .photo-overlay a:hover {
     background-color: var(--dark-orange);
     color: var(--white);
+}
+
+.contact-icon-container:hover .contact-icon {
+    fill: var(--hover-fill);
 }
 
 /* ============================================================================================================
@@ -775,13 +783,15 @@ textarea {
     transition: transform .25s ease, opacity .25s ease;
 }
 
-.contact-icon {
-    fill: var(--dark-blue);
+.contact-icon-container {
+    height: 100%;
+    width: 100%;
+    display: block;
 }
 
-.contact svg:hover,
-.contact svg:focus {
-    transform: rotate(10deg) scale(1.2);
+.contact-icon {
+    fill: var(--fill);
+    transition: fill 0.2s ease-in-out;
 }
 
 form {
