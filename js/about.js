@@ -17,7 +17,7 @@ function openModal(type) {
     popUpDiv.style.display = 'block';
     popUpDiv.style.height = '100%';
     popUpDiv.style.width = '100%';
-    const closeButton = modal.querySelector('.close-button');
+    const closeButton = modal.querySelector('.modal-close-button');
     if (closeButton) {
         requestAnimationFrame(() => closeButton.focus());
     }
@@ -63,7 +63,7 @@ function trapFocus(modal) {
 
 educationButton.addEventListener('click', () => openModal('education'));
 skillsButton.addEventListener('click', () => openModal('skills'));
-document.querySelectorAll('.close-button').forEach(btn => {
+document.querySelectorAll('.modal-close-button').forEach(btn => {
     btn.addEventListener('click', closeModal);
 });
 

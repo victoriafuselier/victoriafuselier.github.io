@@ -16,8 +16,8 @@
 <body class="light">
     <div id="pop-up-div" class="hidden">
         <div id="education-modal" class="pop-up-box hidden">
-            <button class="close-button">
-                <i class="fa-solid fa-xmark close"></i>
+            <button class="modal-close-button">
+                <i class="fa-solid fa-xmark modal-close-icon"></i>
             </button>
             <h2>Education</h2>
                 <ul id="education">
@@ -25,17 +25,15 @@
                     <li>FreeCodeCamp</li>
                     <li>Front-End Web Development Track,<br>Treehouse</li>
                     <li>Code Adventures,<br>Treehouse</li>
-                    <li>
-                        <a target="_blank" href="../html/techdegree.html">
-                            <i class="fa-solid fa-up-right-from-square new-window-icon"></i>
-                            Front-End Web Development Techdegree  
-                        </a>
-                    </li>
                 </ul>
+                <a target="_blank" href="../html/techdegree.html" id="techdegree-link">
+                    <i class="fa-solid fa-up-right-from-square new-window-icon"></i>
+                    Techdegree  
+                </a>
         </div>
         <div id="skills-modal" class="pop-up-box hidden">
-            <button class="close-button">
-                <i class="fa-solid fa-xmark close"></i>
+            <button class="modal-close-button">
+                <i class="fa-solid fa-xmark modal-close-icon"></i>
             </button>
             <h2>Skills</h2>
                 <div id="skills">
@@ -115,6 +113,9 @@
         </div>
     </header>
     <nav>
+        <button id="nav-close-button">
+            <i id="nav-close-icon" class="fa-solid fa-xmark nav-icon header-icon" aria-hidden="true"></i>
+        </button>
         <ul>
             <li>
                 <i class="fa-solid fa-arrow-right"></i>
