@@ -37,8 +37,8 @@ a:visited {
     --green: #5C8F21;
     --red: #BF1717;
     --orange: #e09407;
-    --dark-orange: #D35C2E	;
-    --yellow: #C28800;
+    --dark-orange: #FF8C42	;
+    --yellow: #D4A200;
     --white: #edeff0;
     --grey: #696969;
 }
@@ -698,7 +698,6 @@ nav ul {
     border-radius: 5px;
     padding: 2px 8px;
     transition: transform .2s ease, background-color .2s ease;
-    border: 1px solid var(--grey);
     text-decoration: none;
     display: inline-block;
 }
