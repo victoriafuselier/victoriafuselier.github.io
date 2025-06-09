@@ -760,7 +760,7 @@ nav ul {
     justify-content: center;
     align-content: center;
     grid-auto-flow: dense;
-    padding: 40px 0;
+    padding: 50px 0;
 }
 
 .project-container:focus-visible,
