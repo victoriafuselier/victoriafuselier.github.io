@@ -596,15 +596,6 @@ nav ul {
     margin: 0 auto;
 }
 
-.divider-line {
-    margin: 5px 0;
-    height: 5px;
-    background: var(--dark-blue);
-    border: none;
-    transition: background-color 1s ease;
-    display: none;
-}
-
 .bio-img-container,
 .bio-div {
     margin: 0 auto;
