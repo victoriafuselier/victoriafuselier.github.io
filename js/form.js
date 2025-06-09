@@ -25,21 +25,21 @@ function checkInputs() {
 	const messageValue = message.value.trim();
 	
 	if (userNameValue === '') {
-		setErrorFor(userName, '*Field cannot be blank');
+		setErrorFor(userName, 'Name field cannot be blank');
 	} else {
 		setSuccessFor(userName);
 	}
 	
 	if (emailValue === '') {
-		setErrorFor(email, '*Field cannot be blank');
+		setErrorFor(email, 'Email field cannot be blank');
 	} else if (!isEmail(emailValue)) {
-		setErrorFor(email, '*Not a valid email');
+		setErrorFor(email, 'Not a valid email');
 	} else {
 		setSuccessFor(email);
 	}
 	
 	if (messageValue === '') {
-		setErrorFor(message, '*Field cannot be blank');
+		setErrorFor(message, 'Message field cannot be blank');
 	} else {
 		setSuccessFor(message);
 	}

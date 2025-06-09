@@ -146,16 +146,21 @@ body {
     border-radius: 5px;
 }
 
-a:hover {
+a:hover,
+a:focus-visible {
     text-decoration: underline;
     text-decoration-thickness: 2px;
     text-underline-offset: 3px;
 }
 
 .home-link:hover,
+.home-link:focus-visible,
 .nav-link:hover,
+.nav-link:focus-visible,
 #resume-link:hover,
-#techdegree-link:hover {
+#resume-link:focus-visible,
+#techdegree-link:hover,
+#techdegree-link:focus-visible {
     text-decoration: none;
 }
 
@@ -167,20 +172,32 @@ a,
 }
 
 #pop-up-div .modal-close-button:hover,
+#pop-up-div .modal-close-button:focus-visible,
 .home-link-wrapper:hover,
-.project-link:hover,
+.home-link-wrapper:focus-visible,
 #nav-close-button:hover,
+#nav-close-button:focus-visible,
 .header-button:hover,
+.header-button:focus-visible,
 #send-button:hover,
-#send-button:focus {
+#send-button:focus-visible {
     transform: scale(1.3);
 }
 
-.light #logo-container:hover {
+.project-link:hover,
+.project-link:focus-visible,
+.about-button-wrapper:hover,
+.about-button-wrapper:focus-visible {
+    transform: scale(1.1);
+}
+
+.light #logo-container:hover,
+.light #logo-container:focus-visible {
     background-image: url('/images/icons/logo-light-hover.png');
 }
 
-.dark #logo-container:hover {
+.dark #logo-container:hover,
+.dark #logo-container:focus-visible {
     background-image: url('/images/icons/logo-dark-hover.png');
 }
 
@@ -215,13 +232,17 @@ a,
 }
 
 .light a:hover,
-.light nav ul li:hover {
+.light a:focus-visible,
+.light nav ul li:hover,
+.light nav ul li:focus-visible {
     text-decoration-color: var(--dark-orange);
     color: var(--dark-orange);
 }
 
 .dark a:hover,
-.dark nav ul li:hover {
+.dark a:focus-visible,
+.dark nav ul li:hover,
+.dark nav ul li:focus-visible {
     text-decoration-color: var(--yellow);
     color: var(--yellow);
 }
@@ -242,17 +263,20 @@ a,
     background-color: var(--yellow)
 }
 
-.dark .photo-overlay a:hover {
+.dark .photo-overlay a:hover,
+.dark .photo-overlay a:focus-visible {
     background-color: var(--yellow);
     color: var(--white);
 }
 
-.light .photo-overlay a:hover {
+.light .photo-overlay a:hover,
+.light .photo-overlay a:focus-visible {
     background-color: var(--dark-orange);
     color: var(--white);
 }
 
-.contact-icon-container:hover .contact-icon {
+.contact-icon-container:hover .contact-icon,
+.contact-icon-container:focus-visible .contact-icon {
     fill: var(--hover-fill);
 }
 
@@ -415,7 +439,7 @@ footer {
 ===============================================================================================================*/
 
 nav {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     opacity: 0;
@@ -427,13 +451,13 @@ nav {
     z-index: 2;
 }
 
-nav.open {
+.open {
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
 }
 
-body.nav-open {
+.nav-open {
     overflow: hidden;
 }
 
@@ -573,10 +597,6 @@ nav ul {
     align-items: center;
 }
 
-.about-button-wrapper:hover {
-    transform: scale(1.1);
-}
-
 #bio-img {
     width: 100%;
     border-radius: 20px;
@@ -696,10 +716,10 @@ nav ul {
     padding: 40px 0;
 }
 
-.project-container,
+.project-container:focus-visible,
 .project-container img,
 .photo-overlay {
-    border-radius: 8px;
+    border-radius: 6px;
 }
 
 .project-container img {
@@ -712,31 +732,11 @@ nav ul {
 	position: relative;
     margin: 0 auto;
     display: inline-block;
+    border: 2px solid var(--dark-blue);
+    border-radius: 10px;
 }
 
-.project-container:hover .photo-overlay,
-.project-container:focus-within .photo-overlay {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-}
-
-.project-container:focus-visible {
-    outline: 4px solid var(--orange);
-    border-radius: 8px;
-}
-
-.photo-overlay a {
-    color: var(--white);
-    background-color: var(--grey);
-    border-radius: 5px;
-    padding: 2px 8px;
-    transition: transform .2s ease, background-color .2s ease;
-    text-decoration: none;
-    display: inline-block;
-}
-
-.photo-overlay {
+.project-container .photo-overlay {
 	color: var(--white);
 	position: absolute;
 	top: 0;
@@ -750,9 +750,26 @@ nav ul {
 	background: rgba(0, 0, 0, .8); 
     opacity: 0;
     visibility: hidden;
-    transition: .1s opacity ease, visibility 0s linear .1s;
+    transition: .3s opacity ease;
     padding: 10px;
     pointer-events: none;
+}
+
+.project-container.hover .photo-overlay,
+.project-container.focused .photo-overlay {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.photo-overlay a {
+    color: var(--white);
+    background-color: var(--grey);
+    border-radius: 5px;
+    padding: 2px 8px;
+    transition: transform .2s ease, background-color .2s ease;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .photo-overlay h2 {
@@ -787,12 +804,14 @@ textarea {
 
 input,
 textarea {
-    padding: 6px;
+    padding: 6px 35px 6px 6px;
     font-family: inherit;
     color: var(--dark-blue);
     width: 100%;
     font-weight: inherit;
     font-size: inherit;
+    border-radius: 5px;
+    border: 3px solid var(--blue);
 }
 
 .contact-links-wrapper {
@@ -834,8 +853,7 @@ form {
 }
 
 .form-control {
-    margin-bottom: 10px;
-    padding-bottom: 10px;
+    margin-bottom: 25px;
     position: relative;
 }
 
@@ -857,22 +875,22 @@ form {
 
 .form-control i {
     position: absolute;
-    top: 38px;
-    right: 10px;
+    top: 34px;
+    right: 8px;
     visibility: hidden;
 }
 
 .form-control small {
     position: absolute;
-    bottom: 0;
-    left: 5px;
+    bottom: -17px;
+    right: 0px;
     visibility: hidden;
     font-size: 12px;
     color: var(--white);
 }
 
 #send-button {
-    margin: 0 auto;
+    margin: 5px auto;
     padding: 5px 40px;
     background-color: var(--dark-blue);
     color: var(--white);

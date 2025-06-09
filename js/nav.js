@@ -8,6 +8,7 @@ const footer = document.querySelector('footer');
 
 function openNav() {
     nav.classList.add('open');
+    nav.style.display = 'flex';
     body.classList.add('nav-open');
     navButton.setAttribute('aria-expanded', 'true');
 
@@ -18,6 +19,7 @@ function openNav() {
 
 function closeNav() {
     nav.classList.remove('open');
+    nav.style.display = 'none';
     body.classList.remove('nav-open');
     navButton.setAttribute('aria-expanded', 'false');
 
