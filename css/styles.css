@@ -144,6 +144,7 @@ body {
 :focus-visible {
     outline: 4px solid var(--orange);
     border-radius: 5px;
+    outline-offset: 2px;
 }
 
 a:hover,
