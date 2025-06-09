@@ -1,15 +1,10 @@
 // GLOBAL VARIABLES
-let bodyElement, logo, bioImg, contactIcons, themeIcon, themeButton, fontButton;
+let bodyElement, bioImg, contactIcons, themeIcon, themeButton, fontButton;
 
 // THEME
 function applyTheme(theme) {
     bodyElement.classList.remove('light', 'dark');
     bodyElement.classList.add(theme);
-
-    // Update logo 
-    if (logo) {
-        logo.src = theme === 'dark' ? '/images/icons/logo-light.png' : '/images/icons/logo-dark.png';
-    }
 
     // Update bio img box shadow
     if (bioImg) {
@@ -57,7 +52,6 @@ function toggleFont() {
 // EVENT LISTENER
 window.addEventListener('DOMContentLoaded', () => {
     bodyElement = document.querySelector('body');
-    logo = document.getElementById('logo');
     bioImg = document.querySelector('#bio-img');
     contactIcons = document.querySelectorAll('.contact-icon');
     themeIcon = document.getElementById('theme-icon');

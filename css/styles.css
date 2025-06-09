@@ -176,6 +176,14 @@ a,
     transform: scale(1.3);
 }
 
+.light #logo-container:hover {
+    background-image: url('/images/icons/logo-light-hover.png');
+}
+
+.dark #logo-container:hover {
+    background-image: url('/images/icons/logo-dark-hover.png');
+}
+
 /* ============================================================================================================
                                                 
                                             THEME TOGGLE
@@ -246,6 +254,14 @@ a,
 
 .contact-icon-container:hover .contact-icon {
     fill: var(--hover-fill);
+}
+
+.light #logo-container {
+    background-image: url('/images/icons/logo-light.png');
+}
+
+.dark #logo-container {
+    background-image: url('/images/icons/logo-dark.png');
 }
 
 /* ============================================================================================================
@@ -369,8 +385,18 @@ footer {
     margin-right: 30px;
 }
 
-#logo {
-    height: 40px;
+#logo-container {
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background-image 0.3s ease;
+}
+
+.home #logo-link {
+  pointer-events: none;
+  cursor: default;
 }
 
 .header-button {
@@ -910,8 +936,9 @@ form {
         display: block;
     }
 
-    #logo {
-        height: 50px;
+    #logo-container {
+        height: 57px;
+        width: 57px;
     }
 
     .header-button {
@@ -938,8 +965,9 @@ form {
 
 
 @media screen and (min-width: 1024px) {
-    #logo {
-        height: 60px;
+    #logo-container {
+        height: 65px;
+        width: 65px;
     }
 
     .header-button {
