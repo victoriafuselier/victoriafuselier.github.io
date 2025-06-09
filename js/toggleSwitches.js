@@ -34,6 +34,7 @@ function initializeSettings() {
     const savedFont = localStorage.getItem('font') || 'quicksand';
     applyTheme(savedTheme);
     applyFont(savedFont);
+    bodyElement.classList.add('theme-ready');
 }
 
 // TOGGLE HANDLERS

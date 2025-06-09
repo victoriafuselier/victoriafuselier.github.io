@@ -226,6 +226,26 @@ a,
     --hover-fill: var(--yellow);
 }
 
+button,
+.home-link-wrapper,
+.header-right {
+  visibility: hidden;
+}
+
+.theme-ready button,
+.theme-ready .home-link-wrapper,
+.theme-ready .header-right {
+  visibility: visible;
+}
+
+.dark button {
+    color: var(--white);
+}
+
+.light button {
+    color: var(--dark-blue);
+}
+
 .light .pop-up-box {
     background-color: var(--dark-blue);
     color: var(--white);
