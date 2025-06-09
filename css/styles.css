@@ -226,6 +226,14 @@ a,
     --hover-fill: var(--yellow);
 }
 
+.dark .modal-close-button {
+    color: var(--dark-blue);
+}
+
+.light .modal-close-button {
+    color: var(--white);
+}
+
 button,
 .home-link-wrapper,
 .header-right {
@@ -660,6 +668,7 @@ nav ul {
     top: 0;
     bottom: 0;
     margin: auto;
+    z-index: 1000;
 }
 
 .pop-up-box h2 {
@@ -668,6 +677,7 @@ nav ul {
 
 .pop-up-box {
     border: none;
+    position: relative;
     padding: 25px;
     z-index: 3;
     width: 80vw;
@@ -686,15 +696,12 @@ nav ul {
     scrollbar-width: thin;
 }
 
-.pop-up-box button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-}
-
 .modal-close-button {
     background-color: transparent;
     border: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
  
 #education li {
@@ -713,16 +720,28 @@ nav ul {
 }
 
 .sublist {
-    list-style-type: disc;
+    list-style-type: none;
 }
 
 .sublist-level-2 {
     list-style-type: disclosure-closed;
+    margin-left: 40px;
+    margin-top: -30px;
 }
 
-.sublist,
-.sublist-level-2 {
-    margin-left: 20px;
+.sublist-container {
+    list-style-type: none;
+}
+
+#skills ul li > ul {
+    list-style-type: none;
+    padding-left: 5px;
+    margin-top: 0.25rem;
+}
+
+#skills .sublist li::before {
+    content: '-';
+    color: var(--grey);
 }
 
 .pop-up-box p {
