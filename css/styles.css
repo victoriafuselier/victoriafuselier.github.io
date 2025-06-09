@@ -141,17 +141,21 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease, opacity .5s ease;
 }
 
-:focus-visible {
+:focus-visible,
+#logo-link:focus-visible,
+nav ul li:has(.nav-link:focus-visible) {
     outline: 4px solid var(--orange);
     border-radius: 5px;
-    outline-offset: 2px;
+    outline-offset: 3px;
+}
+
+.nav-link:focus-visible {
+    outline: none;
 }
 
 a:hover,
 a:focus-visible {
     text-decoration: underline;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 3px;
 }
 
 .home-link:hover,
@@ -192,13 +196,13 @@ a,
     transform: scale(1.1);
 }
 
-.light #logo-container:hover,
-.light #logo-container:focus-visible {
+.light #logo-link:hover #logo-container,
+.light #logo-link:focus-visible #logo-container {
     background-image: url('/images/icons/logo-light-hover.png');
 }
 
-.dark #logo-container:hover,
-.dark #logo-container:focus-visible {
+.dark #logo-link:hover #logo-container,
+.dark #logo-link:focus-visible #logo-container {
     background-image: url('/images/icons/logo-dark-hover.png');
 }
 
@@ -235,6 +239,7 @@ a,
 .light a:hover,
 .light a:focus-visible,
 .light nav ul li:hover,
+.light nav ul li:focus,
 .light nav ul li:focus-visible {
     text-decoration-color: var(--dark-orange);
     color: var(--dark-orange);
@@ -243,6 +248,7 @@ a,
 .dark a:hover,
 .dark a:focus-visible,
 .dark nav ul li:hover,
+.dark nav ul li:focus,
 .dark nav ul li:focus-visible {
     text-decoration-color: var(--yellow);
     color: var(--yellow);
@@ -256,13 +262,13 @@ a,
     background-color: var(--dark-blue);
 }
 
-.light.nav-link:before {
+/* .light.nav-link:before {
     background-color: var(--yellow);
 }
 
 .dark.nav-link:before {
     background-color: var(--yellow)
-}
+} */
 
 .dark .photo-overlay a:hover,
 .dark .photo-overlay a:focus-visible {
@@ -410,9 +416,13 @@ footer {
     margin-right: 30px;
 }
 
+#logo-link,
 #logo-container {
     width: 50px;
     height: 50px;
+}
+
+#logo-container {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -422,6 +432,12 @@ footer {
 .home #logo-link {
   pointer-events: none;
   cursor: default;
+}
+
+#logo-link {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
 }
 
 .header-button {
@@ -472,13 +488,13 @@ nav ul {
 }
 
 .nav-link {
-    transition: border .25s ease;
+    /* transition: border .25s ease; */
     display: inline-block;
     position: relative;
     padding-bottom: 7px;
 }
 
-.nav-link::before {
+/* .nav-link::before {
     content: "";
     position: absolute;
     left: 0;
@@ -486,7 +502,7 @@ nav ul {
     width: 0;
     height: 6px;
     transition: width .25s ease-out;
-}
+} */
 
 .nav-icon {
     color: currentColor;
@@ -933,12 +949,12 @@ form {
                                             MEDIA QUERIES
 
 ===============================================================================================================*/
-@media (hover: hover) and (pointer: fine) {
+/* @media (hover: hover) and (pointer: fine) {
     .nav-link:hover::before,
     .nav-link:focus::before {
         width: 100%;
     }
-}
+} */
 
 @media (max-width: 600px) {
   .break-word {
@@ -955,6 +971,7 @@ form {
         display: block;
     }
 
+    #logo-link,
     #logo-container {
         height: 57px;
         width: 57px;
@@ -984,6 +1001,7 @@ form {
 
 
 @media screen and (min-width: 1024px) {
+    #logo-link,
     #logo-container {
         height: 65px;
         width: 65px;
